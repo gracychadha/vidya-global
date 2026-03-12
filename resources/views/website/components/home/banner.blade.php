@@ -8,9 +8,9 @@
                     <div class="number animate-2">#1</div>
                     <h1 class="title animate-1">Vidya Global <br> Education Portal </h1>
                     <div class="btn-box animate-3">
-                        <a href="page-about.html" class="theme-btn btn-style-one"><span class="btn-title">Explore
+                        <a href="{{ route('about-us') }}" class="theme-btn btn-style-one"><span class="btn-title">Explore
                                 now</span></a>
-                        <a href="page-contact.html" class="theme-btn btn-style-two"><span class="btn-title">Contact
+                        <a href="{{ route('contact-us') }}" class="theme-btn btn-style-two"><span class="btn-title">Contact
                                 now</span></a>
                     </div>
                 </div>
@@ -25,9 +25,9 @@
                     <div class="number animate-2">#1</div>
                     <h1 class="title animate-1">Vidya Global <br> Education Portal </h1>
                     <div class="btn-box animate-3">
-                        <a href="page-about.html" class="theme-btn btn-style-one"><span class="btn-title">Explore
+                        <a href="{{ route('about-us') }}" class="theme-btn btn-style-one"><span class="btn-title">Explore
                                 now</span></a>
-                        <a href="page-contact.html" class="theme-btn btn-style-two"><span class="btn-title">Contact
+                        <a href="{{ route('contact-us') }}" class="theme-btn btn-style-two"><span class="btn-title">Contact
                                 now</span></a>
                     </div>
                 </div>

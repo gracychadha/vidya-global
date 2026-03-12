@@ -28,7 +28,7 @@
                             <span class="designation">CEO & CO Founder</span>
                         </div>
 
-                        <a href="page-about.html" class="theme-btn btn-style-one hvr-dark"><span
+                        <a href="{{ route('about-us') }}" class="theme-btn btn-style-one hvr-dark"><span
                                 class="btn-title">Explore More</span></a>
                     </div>
                 </div>

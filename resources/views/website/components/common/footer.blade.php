@@ -21,7 +21,7 @@
 				</li>
 			</ul>
 			<div class="btn-box">
-				<a href="page-contact.html" class="theme-btn btn-style-four"><span class="btn-title">Book
+				<a href="{{route('contact-us')}}" class="theme-btn btn-style-four"><span class="btn-title">Book
 						Consultation</span></a>
 			</div>
 		</div>

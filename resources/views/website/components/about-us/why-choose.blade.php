@@ -13,7 +13,7 @@
                 <div class="inner-box">
                     <i class="icon flaticon-graduation-cap"></i>
                     <span class="cat">Expert Guidance</span>
-                    <h6 class="title"><a href="page-about.html">University Selection</a></h6>
+                    <h6 class="title"><a href="{{route('about-us')}}">University Selection</a></h6>
                 </div>
             </div>
 
@@ -23,7 +23,7 @@
                     <div class="content">
                         <i class="icon flaticon-visa"></i>
                         <span class="cat">Admission Support</span>
-                        <h6 class="title"><a href="page-about.html">Application Assistance</a></h6>
+                        <h6 class="title"><a href="{{route('about-us')}}">Application Assistance</a></h6>
                     </div>
                 </div>
             </div>
@@ -34,7 +34,7 @@
                     <div class="content">
                         <i class="icon flaticon-loyalty"></i>
                         <span class="cat">Trusted by Students</span>
-                        <h6 class="title"><a href="page-about.html">Proven Success</a></h6>
+                        <h6 class="title"><a href="{{route('about-us')}}">Proven Success</a></h6>
                     </div>
                 </div>
             </div>
@@ -45,15 +45,16 @@
                     <div class="content">
                         <i class="icon flaticon-online-support"></i>
                         <span class="cat">Dedicated Support</span>
-                        <h6 class="title"><a href="page-about.html">Student Assistance</a></h6>
+                        <h6 class="title"><a href="{{route('about-us')}}">Student Assistance</a></h6>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="bottom-text">
-            Trusted by thousands of students worldwide for quality education guidance and successful university placements.
-            <a href="page-service.html" class="theme-btn btn-style-two">Discover More</a>
+            Trusted by thousands of students worldwide for quality education guidance and successful university
+            placements.
+            <a href="\" class="theme-btn btn-style-two">Discover More</a>
         </div>
     </div>
 </section>

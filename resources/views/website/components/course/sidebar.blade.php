@@ -6,28 +6,28 @@
                 <div class="service-list">
                     <ul>
                         <li>
-                            <a href="page-service-details.html" class="current">
+                            <a href="#" class="current">
                                 <i class="fas fa-angle-right"></i>
                                 <span>Admission Guidance</span>
                             </a>
                         </li>
 
                         <li>
-                            <a href="page-service-details.html">
+                            <a href="#">
                                 <i class="fas fa-angle-right"></i>
                                 <span>Career Counseling</span>
                             </a>
                         </li>
 
                         <li>
-                            <a href="page-service-details.html">
+                            <a href="#">
                                 <i class="fas fa-angle-right"></i>
                                 <span>Diploma Admission</span>
                             </a>
                         </li>
 
                         <li>
-                            <a href="page-service-details.html">
+                            <a href="#">
                                 <i class="fas fa-angle-right"></i>
                                 <span>Engineering Admission</span>
                             </a>
@@ -48,7 +48,8 @@
                         <i class="lnr lnr-icon-pie-chart"></i>
                     </div>
                     <h3>Be healthy & eat only fresh</h3>
-                    <a href="page-contact.html" class="theme-btn btn-style-one light"><span class="btn-title"> Contact
+                    <a href="{{route('contact-us')}}" class="theme-btn btn-style-one light"><span class="btn-title">
+                            Contact
                             us</span></a>
                 </div>
             </div>
