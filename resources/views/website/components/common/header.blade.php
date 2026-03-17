@@ -41,14 +41,14 @@
                 <nav class="nav main-menu">
                     <ul class="navigation">
                         <li class="current"><a href="{{ route('home') }}">Home</a> </li>
-                        <li class="dropdown"><a href="#">Who We Are</a>
+                        <li class="dropdown"><a href="javascript:void(0)">Who We Are</a>
                             <ul>
                                 <li><a href="{{ route('about-us') }}">About Us</a></li>
                                 <li><a href="{{ route('director-message') }}">Director's Message</a></li>
                                 <li><a href="{{ route('vision-mission') }}">Vision Mission</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown"><a href="#">Associate Colleges</a>
+                        <li class="dropdown"><a href="javascript:void(0)">Associate Colleges</a>
                             <ul>
                                 <li><a href="{{ route('associate-colleges') }}">Andhra Pradesh</a></li>
                                 <li><a href="{{ route('associate-colleges') }}">Punjab</a></li>
@@ -56,7 +56,7 @@
                                 <li><a href="{{ route('associate-colleges') }}">Delhi</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown"><a href="#">Courses</a>
+                        <li class="dropdown"><a href="javascript:void(0)">Courses</a>
                             <ul>
                                 <li><a href="{{ route('course-details') }}">Admission Guidance</a></li>
                                 <li><a href="{{ route('course-details') }}">Career Counseling</a></li>
