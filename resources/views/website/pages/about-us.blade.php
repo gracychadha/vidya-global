@@ -8,7 +8,7 @@
 				<ul class="page-breadcrumb">
 					<li><a href="{{ route('home') }}">Home</a></li>
 					<li><a href="#">Who We Are</a></li>
-					<li><a href="{{ route('about-us') }}">About</a></li>
+					<li><a href="{{ route('about-us') }}">About Us</a></li>
 				</ul>
 			</div>
 		</div>

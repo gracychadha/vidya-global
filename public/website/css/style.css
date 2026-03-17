@@ -172,7 +172,9 @@ p, .text {
   font-weight: var(--body-font-weight);
   line-height: var(--body-line-height);
 }
-
+.text-justify{
+  text-align: justify;
+}
 /* -------- Headings ---------- */
 h1, h2, h3, h4, h5, h6 {
   color: var(--headings-color);

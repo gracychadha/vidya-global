@@ -44,6 +44,8 @@
                         <li class="dropdown"><a href="#">Who We Are</a>
                             <ul>
                                 <li><a href="{{ route('about-us') }}">About Us</a></li>
+                                <li><a href="{{ route('director-message') }}">Director's Message</a></li>
+                                <li><a href="{{ route('vision-mission') }}">Vision Mission</a></li>
                             </ul>
                         </li>
                         <li class="dropdown"><a href="#">Associate Colleges</a>

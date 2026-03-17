@@ -29,3 +29,10 @@ Route::get('/course-details', function () {
 Route::get('/associate-colleges', function () {
     return view('website.pages.associate-colleges');
 })->name('associate-colleges');
+
+Route::get('/director-message',function(){
+    return view('website.pages.director-message');
+})->name('director-message');
+Route::get('/vision-mission',function(){
+    return view('website.pages.vision-mission');
+})->name('vision-mission');
