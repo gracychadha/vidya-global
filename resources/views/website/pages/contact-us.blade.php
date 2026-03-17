@@ -8,7 +8,7 @@
             <div class="title-outer">
                 <h1 class="title">Contact Us</h1>
                 <ul class="page-breadcrumb">
-                    <li><a href="{{ route('index') }}">Home</a></li>
+                    <li><a href="">Home</a></li>
                     <li>Contact</li>
                 </ul>
             </div>
