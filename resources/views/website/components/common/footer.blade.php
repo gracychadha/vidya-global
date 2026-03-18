@@ -37,27 +37,27 @@
 						<div class="footer-widget col-lg-4 col-md-4 col-ms-12">
 							<h6 class="widget-title">Quick Links</h6>
 							<ul class="user-links">
-								<li><a href="#">About Us</a></li>
-								<li><a href="#">FAQ's</a></li>
-								<li><a href="#">Our Blogs</a></li>
+								<li><a href="{{ route('about-us') }}">About Us</a></li>
+								<li><a href="{{ route('director-message') }}">Director's Message</a></li>
+								<li><a href="{{ route('vision-mission') }}">Vision Mission</a></li>
 							</ul>
 						</div>
 						<div class="footer-widget col-lg-4 col-md-4 col-ms-12">
 							<h6 class="widget-title">Associate Colleges</h6>
 							<ul class="user-links">
-								<li><a href="#">Andhra Pradesh</a></li>
-								<li><a href="#">Punjab</a></li>
-								<li><a href="#">Haryana</a></li>
-								<li><a href="#">Delhi</a></li>
+								<li><a href="{{ route('associate-colleges') }}">Andhra Pradesh</a></li>
+								<li><a href="{{ route('associate-colleges') }}">Punjab</a></li>
+								<li><a href="{{ route('associate-colleges') }}">Haryana</a></li>
+								<li><a href="{{ route('associate-colleges') }}">Delhi</a></li>
 							</ul>
 						</div>
 						<div class="footer-widget col-lg-4 col-md-4 col-ms-12">
 							<h6 class="widget-title">Courses</h6>
 							<ul class="user-links">
-								<li><a href="#">Admission Guidance</a></li>
-								<li><a href="#">Career Counseling</a></li>
-								<li><a href="#">Diploma Admission</a></li>
-								<li><a href="#">Engineering Admission</a></li>
+								<li><a href="{{ route('course-details') }}">Admission Guidance</a></li>
+								<li><a href="{{ route('course-details') }}">Career Counseling</a></li>
+								<li><a href="{{ route('course-details') }}">Diploma Admission</a></li>
+								<li><a href="{{ route('course-details') }}">Engineering Admission</a></li>
 							</ul>
 						</div>
 
@@ -70,9 +70,9 @@
 					<div class="footer-widget gallery-widget">
 						<h6 class="widget-title">Important Links</h6>
 						<ul class="user-links">
-							<li><a href="#">Contact Us</a></li>
-							<li><a href="#">Privacy Policy</a></li>
-							<li><a href="#">Terms & Conditions</a></li>
+							<li><a href="{{ route('contact-us') }}">Contact Us</a></li>
+							<li><a href="{{ route('privacy-policy') }}">Privacy Policy</a></li>
+							<li><a href="{{ route('terms-condition') }}">Terms & Conditions</a></li>
 						</ul>
 						{{-- <div class="widget-content">
 							<div class="outer clearfix">

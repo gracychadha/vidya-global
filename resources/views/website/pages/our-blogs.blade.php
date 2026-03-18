@@ -7,7 +7,7 @@
             <div class="title-outer">
                 <h1 class="title">Our Blogs</h1>
                 <ul class="page-breadcrumb">
-                    <li><a href="">Home</a></li>
+                    <li><a href="{{ route('home') }}">Home</a></li>
                     <li>Our Blogs</li>
                 </ul>
             </div>

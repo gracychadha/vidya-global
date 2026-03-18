@@ -36,3 +36,9 @@ Route::get('/director-message',function(){
 Route::get('/vision-mission',function(){
     return view('website.pages.vision-mission');
 })->name('vision-mission');
+Route::get('/privacy-policy', function(){
+    return view('website.pages.privacy-policy');
+})->name('privacy-policy');
+Route::get('/terms-condition', function(){
+    return view('website.pages.terms-condition');
+})->name('terms-condition');
