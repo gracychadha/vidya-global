@@ -6,7 +6,7 @@
             <div class="auto-container">
                 <div class="content-box">
                     <div class="number animate-2">#1</div>
-                    <h1 class="title animate-1">Vidya Global <br> Education Portal </h1>
+                    <h1 class="title animate-1">Choose Right. <br> Study Smart. </h1>
                     <div class="btn-box animate-3">
                         <a href="{{ route('about-us') }}" class="theme-btn btn-style-one"><span class="btn-title">Explore
                                 now</span></a>
@@ -23,7 +23,7 @@
             <div class="auto-container">
                 <div class="content-box">
                     <div class="number animate-2">#1</div>
-                    <h1 class="title animate-1">Vidya Global <br> Education Portal </h1>
+                    <h1 class="title animate-1">Choose Right. <br> Study Smart.  </h1>
                     <div class="btn-box animate-3">
                         <a href="{{ route('about-us') }}" class="theme-btn btn-style-one"><span class="btn-title">Explore
                                 now</span></a>

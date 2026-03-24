@@ -2,7 +2,7 @@
     <div class="auto-container">
         <div class="sec-title text-center">
             <span class="sub-title">What do we offer</span>
-            <h2>Outstanding Education<br> Guidance <span class="color3">Services.</span></h2>
+            <h2>Expert <br> Education  <span class="color3">Guidance.</span></h2>
         </div>
 
         <div class="row">
@@ -16,7 +16,7 @@
                     <div class="overlay-content">
                         <i class="icon fa fa-graduation-cap"></i>
                         <h6 class="title"><a href="#">Admission Guidance</a></h6>
-                        <div class="text">There are many text of pass.</div>
+                        <div class="text">Right college. Smooth admissions.</div>
                     </div>
                 </div>
             </div>
@@ -31,7 +31,7 @@
                     <div class="overlay-content">
                         <i class="icon fa fa-briefcase"></i>
                         <h6 class="title"><a href="#">Career Counseling</a></h6>
-                        <div class="text">There are many text of pass.</div>
+                        <div class="text">Choose your perfect career path.</div>
                     </div>
                 </div>
             </div>
@@ -46,7 +46,7 @@
                     <div class="overlay-content">
                         <i class="icon fa fa-family"></i>
                         <h6 class="title"><a href="#">Diploma Admission</a></h6>
-                        <div class="text">There are many text of pass.</div>
+                        <div class="text">Easy diploma admissions.</div>
                     </div>
                 </div>
             </div>
@@ -61,7 +61,7 @@
                     <div class="overlay-content">
                         <i class="icon fa fa-camera"></i>
                         <h6 class="title"><a href="#">Engineering Admission</a></h6>
-                        <div class="text">There are many text of pass.</div>
+                        <div class="text">Get into top engineering colleges.</div>
                     </div>
                 </div>
             </div>
