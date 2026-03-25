@@ -10,26 +10,28 @@
 
             <div class="col-lg-6 col-md-12">
                 <div class="country-content">
-                    <h3>Colleges in Andhra Pradesh</h3>
+                    <h3>Colleges in Punjab</h3>
 
                     <p>
-                        Andhra Pradesh has a conducive learning environment with different colleges imparting education
-                        in different fields. Andhra Pradesh is especially known for its planned course curriculum and
-                        focus on technical education.
-                       
+                        Punjab provides a dynamic learning environment with reputed institutions offering programs in
+                        engineering, management, pharmacy, and more. The state emphasizes practical learning, industry
+                        exposure, and overall personality development.
+
+
+
 
                     </p>
 
                     <p>
-                         We, at Vidya Global, will help you choose colleges based on your academic qualifications and
-                        career goals. We are there to help you right from the beginning, including the process of
-                        filtering out colleges.
+                        Vidya Global supports students in exploring suitable colleges and understanding admission
+                        pathways. With clear guidance and reliable information, we help you make confident academic
+                        choices and move forward with ease.
                     </p>
 
                     <ul class="country-details-list">
                         <li>
                             <span>Location</span>
-                            <span>Andhra Pradesh, India</span>
+                            <span>Punjab, India</span>
                         </li>
 
                         <li>
@@ -39,12 +41,13 @@
 
                         <li>
                             <span>Admission Process</span>
-                            <span>Based on Eligibility & Entrance Exams</span>
+                            <span>Merit & Entrance-Based</span>
                         </li>
 
                         <li>
                             <span>Education Facilities</span>
-                            <span>Advanced Infrastructure & Skilled Faculty</span>
+                            <span>Industry-Focused Learning & Modern Campuses
+                            </span>
                         </li>
                     </ul>
 

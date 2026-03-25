@@ -4,38 +4,32 @@
             <div class="content-column col-xl-6 col-lg-6 col-md-12 col-sm-12 wow fadeInRight" data-wow-delay="600ms">
                 <div class="inner-column">
                     <div class="sec-title">
-                        <span class="sub-title">about vidya global portal</span>
-                        <h2>Empowering Students with Global <span class="color3">Education Opportunities</span></h2>
-                        <h4>Your trusted partner for international education and career guidance.</h4>
-                        <div class="text">
-                            Vidya Global Portal helps students explore world-class education opportunities across top
-                            universities worldwide.
-                            From selecting the right course and university to application support and career guidance,
-                            we assist students at every step of their academic journey abroad.
+                        <span class="sub-title">About Us</span>
+                        <h2>Guiding Your Future, <span class="color3">Simplifying Admissions</span></h2>
+                        {{-- <h4>Your trusted partner for international education and career guidance.</h4> --}}
+                        <div class="text text-justify">
+                            Vidya Global is a trusted education consultancy committed to empowering students to make
+                            informed academic choices. Our mission is to provide clear, reliable guidance at every stage
+                            of the higher education journey, ensuring that students connect with the right opportunities
+                            to shape their future.
+                            <br>
+                            We specialize in helping students navigate the complex college admission process, providing
+                            personalized support tailored to individual goals and aspirations. From course selection to
+                            understanding admission requirements, we assist students in choosing the best colleges
+                            across Andhra Pradesh, Punjab, Delhi, and Haryana, making the transition from school to
+                            higher education seamless and stress-free.We believe that every student deserves access to
+                            quality education and career guidance. Our student-first approach focuses on transparency,
+                            trust, and clarity, ensuring that families feel confident and supported throughout the
+                            journey.
+
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="about-block col-lg-6 col-md-6">
-                            <div class="inner">
-                                <i class="icon flaticon-graduation-cap"></i>
-                                <h6 class="title">Global Education<br> Guidance</h6>
-                            </div>
-                        </div>
-
-                        <div class="text-block col-lg-6 col-md-6">
-                            <div class="inner">
-                                <div class="text">
-                                    Our experts guide students in choosing the best universities, courses, and career
-                                    paths for their future success.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                  
 
                     <div class="btm-box">
-                        <a href="{{route('about-us')}}" class="theme-btn btn-style-one">
-                            <span class="btn-title">Discover More</span>
+                        <a href="{{route('contact-us')}}" class="theme-btn btn-style-one">
+                            <span class="btn-title">Contact Us</span>
                         </a>
                     </div>
                 </div>

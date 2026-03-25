@@ -7,15 +7,14 @@
                     <div class="sec-title">
                         <span class="sub-title">Director's Message</span>
                         <h2> Guidance from the Director</h2>
-                        <div class="text text-justify">Delhi NCR (National Capital Region) is a metropolitan city which
-                            encompasses
-                            the entire NCR of Delhi plus several surrounding urban areas of the states of Haryana, Uttar
-                            Pradesh, and Rajasthan. In these regions, there are many institutions/colleges which impart
-                            higher studies education to the students in the field of engineering. The overall literacy
-                            rate of Delhi NCR region is 80.4%, according to the census 2011. Here, we are providing
-                            details about examinations through which candidates will get admission to the engineering
-                            programme. Candidates may read this article to get complete knowledge about Top Engineering
-                            Colleges in Delhi NCR Region 2020.</div>
+                        <div class="text text-justify">At Vidya Global, our vision is to empower students with the right
+                            guidance and opportunities to shape a successful future. We understand that choosing the
+                            right college and career path is a crucial decision, and our goal is to make this journey
+                            simple, transparent, and stress-free. With a commitment to trust, personalized support, and
+                            excellence, we strive to guide every student toward the best academic choices aligned with
+                            their aspirations. We believe that with the right direction and support, every student can
+                            achieve their dreams and build a bright future.
+                        </div>
                     </div>
 
 

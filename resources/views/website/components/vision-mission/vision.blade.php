@@ -5,18 +5,14 @@
             <div class="col-xl-6 col-lg-7 col-md-12 col-sm-12 wow fadeInRight" data-wow-delay="600ms">
                 <div class="sec-title">
                     <span class="sub-title">Our Vision</span>
-                    <h2>Vision of <span class="color3">Vidya Global Educational Welfare Foundation</span></h2>
+                    <h2>Building a Trusted <span class="color3">Pathway to Every Student’s Success.</span></h2>
 
-                    <div class="text">
-                        Our vision at Vidya Global Educational Welfare Foundation is to become a trusted and leading 
-                        platform for educational guidance and career development across India. We aspire to create 
-                        opportunities for students from every background by connecting them with quality education 
-                        and reputable institutions.
-                        <br><br>
-                        We envision a future where students are empowered with the right knowledge, guidance, and 
-                        resources to achieve their academic and professional goals. Through innovation, dedication, 
-                        and strong educational partnerships, we aim to contribute to the growth of skilled, confident, 
-                        and responsible individuals who will shape the future of our society.
+                    <div class="text text-justify">
+                        Our vision is to be a highly trusted and recognized name in the field of education consultancy,
+                        known for transforming the future of our students with the right guidance and opportunities. Our
+                        vision is to build a platform that bridges the gap between the students and quality education,
+                        helping every individual to achieve their potential and succeed in the career of their choice.
+
                     </div>
                 </div>
             </div>

@@ -20,15 +20,35 @@ Route::get('/blog-details', function () {
 // Route::get('/blog-details/{id}', function ($id) {
 //     return view('website.pages.blog-details', compact('id'));
 // })->name('blog-details');
-Route::get('/course-details', function () {
-    return view('website.pages.course-details');
-})->name('course-details');
+
+Route::get('/career-counselling', function () {
+    return view('website.pages.career-counselling');
+})->name('career-counselling');
+Route::get('/diploma-admission', function () {
+    return view('website.pages.diploma-guidance');
+})->name('diploma-admission');
+Route::get('/admission-guidance', function () {
+    return view('website.pages.admission-guidance');
+})->name('admission-guidance');
+Route::get('/engineering-admission', function () {
+    return view('website.pages.engineering');
+})->name('engineering-admission');
 // Route::get('/course-details/{id}', function ($id) {
 //     return view('website.pages.course-details', compact('id'));
 // })->name('course-details');
-Route::get('/associate-colleges', function () {
+Route::get('/andhra-pradesh', function () {
     return view('website.pages.associate-colleges');
-})->name('associate-colleges');
+})->name('andhra-pradesh');
+Route::get('/punjab', function () {
+    return view('website.pages.punjab-colleges');
+})->name('punjab');
+Route::get('/haryana', function () {
+    return view('website.pages.harayana');
+})->name('haryana');
+Route::get('/delhi', function () {
+    return view('website.pages.delhi');
+})->name('delhi');
+
 
 Route::get('/director-message',function(){
     return view('website.pages.director-message');
@@ -42,3 +62,4 @@ Route::get('/privacy-policy', function(){
 Route::get('/terms-condition', function(){
     return view('website.pages.terms-condition');
 })->name('terms-condition');
+

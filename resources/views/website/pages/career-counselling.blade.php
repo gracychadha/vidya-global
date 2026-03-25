@@ -1,14 +1,14 @@
 @extends('website.layout.app')
-@section('title', 'Admission Guidance | Vidya Global Portal')
+@section('title', 'Career Counselling | Vidya Global Portal')
 @section('content')
     <!-- Start main-content -->
     <section class="page-title" style="background-image: url(website/images/background/page-title.jpg);">
         <div class="auto-container">
             <div class="title-outer">
-                <h1 class="title">Admission Guidance</h1>
+                <h1 class="title">Career Counselling</h1>
                 <ul class="page-breadcrumb">
                     <li><a href="{{ route('home') }}">Home</a></li>
-                    <li>Admission Guidance</li>
+                    <li>Career Counselling</li>
                 </ul>
             </div>
         </div>
@@ -22,8 +22,8 @@
                 {{-- course sidebar --}}
                 @include('website.components.course.sidebar')
 
-               {{-- main section --}}
-               @include('website.components.course.adminssion-guidance')
+                {{-- main section --}}
+                @include('website.components.course.career-counselling')
             </div>
         </div>
     </section>

@@ -50,18 +50,18 @@
                         </li>
                         <li class="dropdown"><a href="javascript:void(0)">Associate Colleges</a>
                             <ul>
-                                <li><a href="{{ route('associate-colleges') }}">Andhra Pradesh</a></li>
-                                <li><a href="{{ route('associate-colleges') }}">Punjab</a></li>
-                                <li><a href="{{ route('associate-colleges') }}">Haryana</a></li>
-                                <li><a href="{{ route('associate-colleges') }}">Delhi</a></li>
+                                <li><a href="{{ route('andhra-pradesh') }}">Andhra Pradesh</a></li>
+                                <li><a href="{{ route('punjab') }}">Punjab</a></li>
+                                <li><a href="{{ route('haryana') }}">Haryana</a></li>
+                                <li><a href="{{ route('delhi') }}">Delhi</a></li>
                             </ul>
                         </li>
                         <li class="dropdown"><a href="javascript:void(0)">Courses</a>
                             <ul>
-                                <li><a href="{{ route('course-details') }}">Admission Guidance</a></li>
-                                <li><a href="{{ route('course-details') }}">Career Counseling</a></li>
-                                <li><a href="{{ route('course-details') }}">Diploma Admission</a></li>
-                                <li><a href="{{ route('course-details') }}">Engineering Admission</a></li>
+                                <li><a href="{{ route('admission-guidance') }}">Admission Guidance</a></li>
+                                <li><a href="{{ route('career-counselling') }}">Career Counseling</a></li>
+                                <li><a href="{{ route('diploma-admission') }}">Diploma Admission</a></li>
+                                <li><a href="{{ route('engineering-admission') }}">Engineering Admission</a></li>
                             </ul>
                         </li>
 

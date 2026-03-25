@@ -2,31 +2,24 @@
     <div class="services-details__content">
         <img src="{{ asset('website/images/resource/service-details.jpg') }}" alt="" />
 
-        <h2 class="mt-4">Admission Guidance</h2>
-        <p>
-            Navigating the college admission process can be overwhelming, given the different eligibility criteria,
-            entrance exams, and deadlines. At Vidya Global, we provide comprehensive admission guidance to help students
-            make informed decisions. Our experts assist in selecting the right colleges and courses based on individual
-            interests, academic performance, and career goals, ensuring a smooth and confident transition into higher
-            education.
-
-
+        <h2 class="mt-4">Engineering Admission</h2>
+        <p>Engineering is one of the most sought-after streams for students aiming for a successful technical career. At
+            Vidya Global, we guide students in selecting the right engineering branch and college based on their
+            interests, academic performance, and career aspirations. Whether you are interested in computer science,
+            mechanical, civil, or electronics engineering, our experts ensure that you make informed choices to build a
+            strong foundation for your future.
         </p>
 
-        <p>
-            We offer personalized guidance at every step of the admission process, from knowing the admission criteria
-            to filling the forms accurately. We help the students understand the entrance examinations, documentation,
-            and other vital aspects of the admission process, which enables the students to take the right decision
-            confidently and gain admission into the top colleges of Andhra Pradesh, Punjab, Delhi, and Haryana.
+        <p> We also provide support in understanding eligibility criteria, entrance exams, and application requirements
+            for top engineering colleges. Students can navigate the admission process efficiently, secure admission in
+            reputed institutions, and begin a rewarding engineering career with confidence.
         </p>
 
         <div class="content mt-40">
             <div class="text">
                 <h3>Admission Support Services</h3>
                 <p>
-                    We provide complete admission assistance to help students smoothly apply to universities and achieve
-                    their academic goals.
-                    Our team ensures proper documentation, application accuracy, and timely submission.
+                    Making Engineering Admissions Easy, Clear, and Stress-Free
                 </p>
             </div>
 
@@ -36,7 +29,22 @@
                     <div class="col-lg-6 col-md-6 col-sm-12 column">
                         <div class="single-item">
                             <div class="icon-box"><i class="fas fa-check-circle"></i></div>
-                            <h6 class="title">Application Assistance</h6>
+                            <h6 class="title">Branch & College Selection
+                            </h6>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-12 column">
+                        <div class="single-item">
+                            <div class="icon-box"><i class="fas fa-check-circle"></i></div>
+                            <h6 class="title">Application Assistance </h6>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-12 column">
+                        <div class="single-item">
+                            <div class="icon-box"><i class="fas fa-check-circle"></i></div>
+                            <h6 class="title">Entrance Exam Guidance</h6>
                         </div>
                     </div>
 
@@ -50,21 +58,8 @@
                     <div class="col-lg-6 col-md-6 col-sm-12 column">
                         <div class="single-item">
                             <div class="icon-box"><i class="fas fa-check-circle"></i></div>
-                            <h6 class="title">Scholarship Guidance</h6>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 col-md-6 col-sm-12 column">
-                        <div class="single-item">
-                            <div class="icon-box"><i class="fas fa-check-circle"></i></div>
-                            <h6 class="title">Interview Preparation</h6>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 col-md-6 col-sm-12 column">
-                        <div class="single-item">
-                            <div class="icon-box"><i class="fas fa-check-circle"></i></div>
-                            <h6 class="title">College-Specific Insights</h6>
+                            <h6 class="title">Scholarship Guidance
+                            </h6>
                         </div>
                     </div>
 
@@ -90,16 +85,16 @@
 
                 <li class="accordion block active-block">
                     <div class="acc-btn active">
-                        What is the role of Vidya Global in college admissions?
+                        Which engineering streams do you offer guidance for?
+
 
                         <div class="icon fa fa-plus"></div>
                     </div>
                     <div class="acc-content current">
                         <div class="content">
                             <div class="text">
-                                We provide personalized guidance, help select suitable colleges, and support students
-                                through the entire admission process.
-
+                                We assist students across major branches, including Computer Science, Mechanical, Civil,
+                                Electronics, and more
                             </div>
                         </div>
                     </div>
@@ -107,16 +102,16 @@
 
                 <li class="accordion block">
                     <div class="acc-btn">
-                        Do you provide support for entrance exams?
+                        How do I choose the right engineering college?
+
 
                         <div class="icon fa fa-plus"></div>
                     </div>
                     <div class="acc-content">
                         <div class="content">
                             <div class="text">
-                                Yes, we help students understand the requirements and prepare for college-specific
-                                entrance exams.
-
+                                Our experts provide personalized guidance based on your interests, academic performance,
+                                and career goals.
                             </div>
                         </div>
                     </div>

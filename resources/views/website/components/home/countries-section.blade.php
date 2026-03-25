@@ -1,8 +1,8 @@
 <section class="countries-section">
     <div class="auto-container">
         <div class="sec-title text-center">
-            <span class="sub-title">states you can visit</span>
-            <h2>States we’re supporting <br>for the <span class="color3">admission</span></h2>
+            <span class="sub-title">States We Support</span>
+            <h2>Explore top colleges<br> across key states  with expert <br> admission <span class="color3">guidance</span></h2>
         </div>
 
         <div class="carousel-outer">

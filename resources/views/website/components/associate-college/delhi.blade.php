@@ -10,26 +10,25 @@
 
             <div class="col-lg-6 col-md-12">
                 <div class="country-content">
-                    <h3>Colleges in Andhra Pradesh</h3>
+                    <h3>Colleges in Delhi</h3>
 
                     <p>
-                        Andhra Pradesh has a conducive learning environment with different colleges imparting education
-                        in different fields. Andhra Pradesh is especially known for its planned course curriculum and
-                        focus on technical education.
+                        Delhi stands as a premier destination for higher education, with top institutions offering
+                        diverse programs in engineering, management, arts, science, and commerce. The city provides
+                        unmatched academic exposure and career opportunities.
                        
-
                     </p>
-
                     <p>
-                         We, at Vidya Global, will help you choose colleges based on your academic qualifications and
-                        career goals. We are there to help you right from the beginning, including the process of
-                        filtering out colleges.
+                        We help you explore the best-fit colleges and simplify the admission process with step-by-step
+                        support. We ensure that you make informed decisions and begin your academic journey with
+                        confidence.
+
                     </p>
 
                     <ul class="country-details-list">
                         <li>
                             <span>Location</span>
-                            <span>Andhra Pradesh, India</span>
+                            <span>Haryana, India</span>
                         </li>
 
                         <li>
@@ -39,12 +38,13 @@
 
                         <li>
                             <span>Admission Process</span>
-                            <span>Based on Eligibility & Entrance Exams</span>
+                            <span>Merit & Entrance-Based</span>
                         </li>
 
                         <li>
                             <span>Education Facilities</span>
-                            <span>Advanced Infrastructure & Skilled Faculty</span>
+                            <span>Industry-Focused Learning & Modern Campuses
+                            </span>
                         </li>
                     </ul>
 
@@ -53,4 +53,5 @@
 
         </div>
     </div>
+
 </section>

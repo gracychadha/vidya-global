@@ -22,8 +22,8 @@
                 {{-- course sidebar --}}
                 @include('website.components.course.sidebar')
 
-               {{-- main section --}}
-               @include('website.components.course.adminssion-guidance')
+                {{-- main section --}}
+                @include('website.components.course.adminssion-guidance')
             </div>
         </div>
     </section>

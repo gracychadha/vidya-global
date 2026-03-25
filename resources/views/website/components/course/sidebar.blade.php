@@ -6,28 +6,28 @@
                 <div class="service-list">
                     <ul>
                         <li>
-                            <a href="#" class="current">
+                            <a href="{{ route('admission-guidance') }}" class="current">
                                 <i class="fas fa-angle-right"></i>
                                 <span>Admission Guidance</span>
                             </a>
                         </li>
 
                         <li>
-                            <a href="#">
+                            <a href="{{ route('career-counselling') }}">
                                 <i class="fas fa-angle-right"></i>
                                 <span>Career Counseling</span>
                             </a>
                         </li>
 
                         <li>
-                            <a href="#">
+                            <a href="{{ route('diploma-admission') }}">
                                 <i class="fas fa-angle-right"></i>
                                 <span>Diploma Admission</span>
                             </a>
                         </li>
 
                         <li>
-                            <a href="#">
+                            <a href="{{ route('engineering-admission') }}">
                                 <i class="fas fa-angle-right"></i>
                                 <span>Engineering Admission</span>
                             </a>

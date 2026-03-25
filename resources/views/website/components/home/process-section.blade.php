@@ -8,9 +8,9 @@
                     <div class="inner">
                         <div class="content">
                             <i class="icon far fa-plus"></i>
-                            <div class="count-box"><span class="count-text" data-speed="3000" data-stop="870">0</span>
+                            <div class="count-box"><span class="count-text" data-speed="3000" data-stop="10000">0</span>
                             </div>
-                            <h6 class="counter-title">Admission Rate</h6>
+                            <h6 class="counter-title">Students Guided</h6>
                         </div>
                     </div>
                 </div>
@@ -20,9 +20,9 @@
                     <div class="inner">
                         <div class="content">
                             <i class="icon far fa-plus"></i>
-                            <div class="count-box"><span class="count-text" data-speed="3000" data-stop="480">0</span>
+                            <div class="count-box"><span class="count-text" data-speed="3000" data-stop="50">0</span>
                             </div>
-                            <h6 class="counter-title">Success Stories</h6>
+                            <h6 class="counter-title">Expert Counselors</h6>
                         </div>
                     </div>
                 </div>
@@ -34,7 +34,7 @@
                             <i class="icon far fa-plus"></i>
                             <div class="count-box"><span class="count-text" data-speed="3000" data-stop="620">0</span>
                             </div>
-                            <h6 class="counter-title">Team Members</h6>
+                            <h6 class="counter-title">Support Channels</h6>
                         </div>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
                             <i class="icon far fa-plus"></i>
                             <div class="count-box"><span class="count-text" data-speed="3000" data-stop="970">0</span>
                             </div>
-                            <h6 class="counter-title">Approvals</h6>
+                            <h6 class="counter-title">Success Rate</h6>
                         </div>
                     </div>
                 </div>

@@ -6,21 +6,20 @@
                 <div class="inner-column">
                     <div class="sec-title">
                         <span class="sub-title">Our Mission</span>
-                        <h2>Mission of <span class="color3">Vidya Global Educational Welfare Foundation</span></h2>
-                        
-                        <div class="text">
-                            At Vidya Global Educational Welfare Foundation, our mission is to empower students by 
-                            providing accurate guidance, quality educational opportunities, and career support. 
-                            We aim to bridge the gap between students and leading educational institutions across 
-                            India by offering reliable consultancy and transparent admission assistance.
-                            <br><br>
-                            Our focus is to help students choose the right career path by connecting them with 
-                            reputed universities and colleges. Through continuous support, guidance, and mentorship, 
-                            we strive to create a future where every student has access to the education they deserve.
+                        <h2>Empowering Every <span class="color3">Student to Choose the Right Path with
+                                Confidence.</span></h2>
+
+                        <div class="text text-justify">
+                            Our mission is to provide students with the right knowledge and guidance to make confident
+                            educational decisions. We want to make the college admission process easier for you by
+                            providing transparent information, guidance, and step-by-step assistance. By understanding
+                            each student’s unique goals and aspirations, we want to provide students with the right
+                            guidance and support to ensure a smooth and successful academic journey.
+
                         </div>
                     </div>
 
-                   
+
                 </div>
             </div>
 

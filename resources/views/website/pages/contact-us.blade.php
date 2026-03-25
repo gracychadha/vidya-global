@@ -72,8 +72,8 @@
                         <div class="sec-title">
                             <span class="sub-title">Need any help?</span>
                             <h2>Get in touch with us</h2>
-                            <div class="text">Lorem ipsum is simply free text available dolor sit amet consectetur notted
-                                adipisicing elit sed do eiusmod tempor incididunt simply dolore magna.</div>
+                            <div class="text">We’re Here to Help You Take the Next Step in Your Education Journey.
+                            </div>
                         </div>
                         <ul class="list-unstyled contact-details__info">
                             <li>
