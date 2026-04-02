@@ -8,7 +8,7 @@
 					<i class="icon fa fa-phone-square"></i>
 					<span class="title">Phone:</span>
 					<div class="text">
-						<a href="tel:+917539910692">+91 753 991 0692</a>
+						<a href="tel:+917539910692">+91 753 991 0692</a><br>
 						<a href="tel:+918102851589">+91 810 285 1589</a>
 					</div>
 				</li>
