@@ -82,7 +82,8 @@
                                 </div>
                                 <div class="text">
                                     <h6>Have any question?</h6>
-                                    <a href="tel:980089850"><span>Free</span> +92 (020)-9850</a>
+                                    <a href="tel:+918102851589"> +91 810 285 1589</a><br>
+                                    <a href="tel:+917539910692"> +91 753 991 0692</a>
                                 </div>
                             </li>
                             <li>
@@ -91,7 +92,7 @@
                                 </div>
                                 <div class="text">
                                     <h6>Write email</h6>
-                                    <a href="mailto:needhelp@company.com">needhelp@company.com</a>
+                                    <a href="mailto:info@vidyaglobal.com">info@vidyaglobal.com</a>
                                 </div>
                             </li>
                             <li>
@@ -100,7 +101,7 @@
                                 </div>
                                 <div class="text">
                                     <h6>Visit anytime</h6>
-                                    <span>66 broklyn golden street. New York</span>
+                                    <span>Nearby Bsnl Office, Koeri Tola, Ward No.26, Bettiah, Bihar-845438</span>
                                 </div>
                             </li>
                         </ul>
@@ -116,9 +117,14 @@
         <div class="container-fluid p-0">
             <div class="row">
                 <!-- Google Map HTML Codes -->
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.843149788316!2d144.9537131159042!3d-37.81714274201087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sbn!2sbd!4v1583760510840!5m2!1sbn!2sbd"
-                    data-tm-width="100%" height="500" frameborder="0" allowfullscreen=""></iframe>
+               <iframe
+    src="https://maps.google.com/maps?q=BSNL%20Office%20Koeri%20Tola%20Ward%20No%2026%20Bettiah%20Bihar%20845438&output=embed"
+    width="100%"
+    height="500"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy">
+</iframe>
             </div>
         </div>
     </section>

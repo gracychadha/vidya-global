@@ -7,7 +7,7 @@
 				<li>
 					<i class="icon fa fa-phone-square"></i>
 					<span class="title">Phone:</span>
-					<div class="text"><a href="tel:+917903134933">+91 790 313 4933</a></div>
+					<div class="text"><a href="tel:+917539910692">+91 753 991 0692</a></div>
 				</li>
 				<li>
 					<i class="icon fa fa-envelope"></i>
@@ -17,7 +17,7 @@
 				<li>
 					<i class="icon fa fa-map-marker"></i>
 					<span class="title">Address:</span>
-					<div class="text"> Bihar - India</div>
+					<div class="text"> Nearby Bsnl Office,<br> Koeri Tola, Ward No.26, Bettiah,<br> Bihar-845438</div>
 				</li>
 			</ul>
 			<div class="btn-box">

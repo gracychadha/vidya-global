@@ -8,7 +8,7 @@
                 <ul class="list-style-one">
                     <li><i class="fa fa-envelope"></i> <a href="mailto:info@vidyaglobal.com">info@vidyaglobal.com</a>
                     </li>
-                    <li><i class="fa fa-map-marker"></i> Roari West Chamaran Bihar -845453 - India</li>
+                    <li><i class="fa fa-map-marker"></i>  Bettiah, Bihar</li>
                     <li><i class="fa fa-clock"></i>Mon - Fri : 9:00 AM to 6:00 PM</li>
                 </ul>
             </div>
