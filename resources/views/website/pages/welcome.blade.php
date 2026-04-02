@@ -35,13 +35,15 @@
     {{-- why choose us --}}
     @include('website.components.home.why-choose')
 
-   {{-- our blogs --}}
+    {{-- our blogs --}}
     @include('website.components.home.our-blogs')
 
     <!-- Map Section-->
     <section class="map-section">
-        <iframe class="map"
-            src="https://maps.google.com/maps?width=100%25&height=600&hl=en&q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&t=&z=14&ie=UTF8&iwloc=B&output=embed"></iframe>
+        <iframe
+            src="https://maps.google.com/maps?q=BSNL%20Office%20Koeri%20Tola%20Ward%20No%2026%20Bettiah%20Bihar%20845438&output=embed"
+            width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
     </section>
     <!--End Map Section-->
 @endsection
