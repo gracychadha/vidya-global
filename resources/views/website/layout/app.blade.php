@@ -8,8 +8,8 @@
     <link href="{{ asset('website/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('website/css/style.css') }}" rel="stylesheet">
 
-    <link rel="shortcut icon" href="{{ asset('website/images/favicon.png') }}" type="image/x-icon">
-    <link rel="icon" href="{{ asset('website/images/favicon.png') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('website/images/fav.png') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('website/images/fav.png') }}" type="image/x-icon">
 
     <!-- Responsive -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

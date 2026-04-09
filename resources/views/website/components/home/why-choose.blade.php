@@ -8,7 +8,7 @@
             <div class="title-column col-xl-4 col-lg-12 col-md-12 col-sm-12">
                 <div class="inner-column wow fadeInLeft">
                     <div class="sec-title light">
-                        <h2>You <br>should choose the only quality cosnultation</h2>
+                        <h2>You <br>should choose the only quality Consultant</h2>
                     </div>
                     <a href="{{route('about-us')}}" class="theme-btn btn-style-four small">Read More</a>
                 </div>

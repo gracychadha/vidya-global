@@ -26,50 +26,66 @@
                         <h2>Feel free to write</h2>
                     </div>
                     <!-- Contact Form -->
-                    <form id="contact_form" name="contact_form" class="" action="includes/sendmail.php" method="post">
+                    <form id="contact-form" action="{{ route('contact-us.store') }}" method="POST">
+                        @csrf
+
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="mb-3">
-                                    <input name="form_name" class="form-control" type="text" placeholder="Enter Name">
+                                    <input name="name" class="form-control" type="text" placeholder="Enter Name" required>
                                 </div>
                             </div>
+
                             <div class="col-sm-6">
                                 <div class="mb-3">
-                                    <input name="form_email" class="form-control required email" type="email"
-                                        placeholder="Enter Email">
+                                    <input name="email" class="form-control" type="email" placeholder="Enter Email"
+                                        required>
                                 </div>
                             </div>
                         </div>
+
                         <div class="row">
+
                             <div class="col-sm-6">
                                 <div class="mb-3">
-                                    <input name="form_subject" class="form-control required" type="text"
-                                        placeholder="Enter Subject">
+                                    <input name="phone" class="form-control" type="text" placeholder="9876543210"
+                                        pattern="[6-9]{1}[0-9]{9}" maxlength="10" required>
                                 </div>
                             </div>
+
                             <div class="col-sm-6">
                                 <div class="mb-3">
-                                    <input name="form_phone" class="form-control" type="text" placeholder="Enter Phone">
+                                    <select name="enquiry_for" class="form-control">
+                                        <option value="">Select Enquiry</option>
+                                        <option value="College ">College </option>
+                                        <option value="Course ">Course </option>
+                                        <option value="Service ">Service </option>
+                                        <option value="General ">General </option>
+                                    </select>
                                 </div>
                             </div>
+
                         </div>
+
                         <div class="mb-3">
-                            <textarea name="form_message" class="form-control required" rows="7"
-                                placeholder="Enter Message"></textarea>
+                            <textarea name="message" class="form-control" rows="7" placeholder="Enter Message"></textarea>
                         </div>
+
+                        <!-- recaptcha hidden input -->
+                        <input type="hidden" name="g-recaptcha-response" id="recaptcha-token">
+
                         <div class="mb-3">
-                            <input name="form_botcheck" class="form-control" type="hidden" value="" />
-                            <button type="submit" class="theme-btn btn-style-one" data-loading-text="Please wait..."><span
-                                    class="btn-title">Send message</span></button>
-                            <button type="reset" class="theme-btn btn-style-one bg-theme-color5"><span
-                                    class="btn-title">Reset</span></button>
+                            <button type="submit" class="theme-btn btn-style-one">
+                                <span class="btn-title">Send Message</span>
+                            </button>
                         </div>
+
                     </form>
                     <!-- Contact Form Validation-->
                 </div>
                 <div class="col-xl-5 col-lg-6">
                     <div class="contact-details__right">
-                        <div class="sec-title">
+                        <div class="sec-title mb-0">
                             <span class="sub-title">Need any help?</span>
                             <h2>Get in touch with us</h2>
                             <div class="text">We’re Here to Help You Take the Next Step in Your Education Journey.
@@ -92,16 +108,16 @@
                                 </div>
                                 <div class="text">
                                     <h6>Write email</h6>
-                                    <a href="mailto:info@vidyaglobal.com">info@vidyaglobal.com</a>
+                                    <a href="mailto:info@vidyaglobal.in">info@vidyaglobal.in</a>
                                 </div>
                             </li>
                             <li>
                                 <div class="icon">
-                                    <span class="lnr-icon-location"></span>
+                                    <span class="fa fa-map-marker"></span>
                                 </div>
                                 <div class="text">
                                     <h6>Visit anytime</h6>
-                                    <span>Nearby Bsnl Office, Koeri Tola, Ward No.26, Bettiah, Bihar-845438</span>
+                                    <span>Nearby Bsnl Office, Koeri Tola,<br> Ward No.26, Bettiah, Bihar-845438</span>
                                 </div>
                             </li>
                         </ul>
@@ -113,15 +129,74 @@
     <!--Contact Details End-->
 
     <!-- Divider: Google Map -->
-    <section>
-        <div class="container-fluid p-0">
-            <div class="row">
-                <!-- Google Map HTML Codes -->
-                <iframe
-                    src="https://maps.google.com/maps?q=BSNL%20Office%20Koeri%20Tola%20Ward%20No%2026%20Bettiah%20Bihar%20845438&output=embed"
-                    width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy">
-                </iframe>
-            </div>
-        </div>
-    </section>
+    <!-- <section>
+                <div class="container-fluid p-0">
+                    <div class="row">
+                        <iframe
+                            src="https://maps.google.com/maps?q=BSNL%20Office%20Koeri%20Tola%20Ward%20No%2026%20Bettiah%20Bihar%20845438&output=embed"
+                            width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </section> -->
 @endsection
+@push('scripts')
+
+    <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.site_key') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.site_key') }}"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const form = document.getElementById('contact-form');
+            const tokenInput = document.getElementById('recaptcha-token');
+
+            if (!form || !tokenInput) {
+                return;
+            }
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                grecaptcha.ready(function () {
+                    grecaptcha.execute("{{ config('services.recaptcha.site_key') }}", { action: 'lead' })
+                        .then(function (token) {
+
+                            tokenInput.value = token;
+                            form.submit();
+
+                        });
+                });
+
+            });
+
+        });
+    </script>
+
+
+
+    @if(session('success'))
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: 'Success',
+                text: "{{ session('success') }}",
+                confirmButtonColor: '#3085d6'
+            });
+        </script>
+    @endif
+
+    @if ($errors->any())
+        <script>
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                html: `{!! implode('<br>', $errors->all()) !!}`,
+                confirmButtonColor: '#d33'
+            });
+        </script>
+    @endif
+
+@endpush

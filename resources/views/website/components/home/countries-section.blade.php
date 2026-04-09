@@ -12,7 +12,7 @@
                 <div class="country-block">
                     <div class="inner-box">
                         <div class="flag"><img src="{{ asset('website/images/resource/flag-1.png') }}" alt=""></div>
-                        <a href="#" class="theme-btn">Australia</a>
+                        <a href="#" class="theme-btn">Haryana</a>
                     </div>
                 </div>
 
@@ -20,7 +20,7 @@
                 <div class="country-block">
                     <div class="inner-box">
                         <div class="flag"><img src="{{ asset('website/images/resource/flag-2.png') }}" alt=""></div>
-                        <a href="#" class="theme-btn">Germany</a>
+                        <a href="#" class="theme-btn">Punjab</a>
                     </div>
                 </div>
 
@@ -28,7 +28,7 @@
                 <div class="country-block">
                     <div class="inner-box">
                         <div class="flag"><img src="{{ asset('website/images/resource/flag-3.png') }}" alt=""></div>
-                        <a href="#" class="theme-btn">Brazil</a>
+                        <a href="#" class="theme-btn">Chandigarh</a>
                     </div>
                 </div>
 
@@ -36,7 +36,7 @@
                 <div class="country-block">
                     <div class="inner-box">
                         <div class="flag"><img src="{{ asset('website/images/resource/flag-4.png') }}" alt=""></div>
-                        <a href="#" class="theme-btn">Russia</a>
+                        <a href="#" class="theme-btn">Delhi</a>
                     </div>
                 </div>
 
@@ -44,7 +44,7 @@
                 <div class="country-block">
                     <div class="inner-box">
                         <div class="flag"><img src="{{ asset('website/images/resource/flag-5.png') }}" alt=""></div>
-                        <a href="#" class="theme-btn">England</a>
+                        <a href="#" class="theme-btn">Andhra Pradesh</a>
                     </div>
                 </div>
 
@@ -52,7 +52,7 @@
                 <div class="country-block">
                     <div class="inner-box">
                         <div class="flag"><img src="{{ asset('website/images/resource/flag-6.png') }}" alt=""></div>
-                        <a href="#" class="theme-btn">India</a>
+                        <a href="#" class="theme-btn">Tamil Nadu</a>
                     </div>
                 </div>
             </div>

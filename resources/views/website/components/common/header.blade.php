@@ -6,9 +6,9 @@
             <div class="top-left">
                 <!-- Info List -->
                 <ul class="list-style-one">
-                    <li><i class="fa fa-envelope"></i> <a href="mailto:info@vidyaglobal.com">info@vidyaglobal.com</a>
+                    <li><i class="fa fa-envelope"></i> <a href="mailto:info@vidyaglobal.in">info@vidyaglobal.in</a>
                     </li>
-                    <li><i class="fa fa-map-marker"></i>  Bettiah, Bihar</li>
+                    <li><i class="fa fa-map-marker"></i> Bettiah, Bihar</li>
                     <li><i class="fa fa-clock"></i>Mon - Fri : 9:00 AM to 6:00 PM</li>
                 </ul>
             </div>
@@ -16,9 +16,7 @@
             <div class="top-right">
                 <ul class="social-icon-one">
                     <li><span class="text-white">Follow us on :</span></li>
-                    <li><a href="#"><span class="fa fa-x"></span></a></li>
                     <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
-                    <li><a href="#"><span class="fab fa-pinterest-p"></span></a></li>
                     <li><a href="#"><span class="fab fa-instagram"></span></a></li>
                 </ul>
             </div>
@@ -51,9 +49,9 @@
                         <li class="dropdown"><a href="javascript:void(0)">Associate Colleges</a>
                             <ul>
                                 <li><a href="{{ route('andhra-pradesh') }}">Andhra Pradesh</a></li>
-                                <li><a href="{{ route('punjab') }}">Punjab</a></li>
-                                <li><a href="{{ route('haryana') }}">Haryana</a></li>
                                 <li><a href="{{ route('delhi') }}">Delhi</a></li>
+                                <li><a href="{{ route('haryana') }}">Haryana</a></li>
+                                <li><a href="{{ route('punjab') }}">Punjab</a></li>
                             </ul>
                         </li>
                         <li class="dropdown"><a href="javascript:void(0)">Courses</a>
@@ -78,14 +76,14 @@
                         <strong class="text">+91 790 313 4933</strong>
                     </a>
 
-                    <div class="ui-btn-outer">
+                    {{-- <div class="ui-btn-outer">
                         <button class="ui-btn ui-btn search-btn">
                             <span class="icon lnr lnr-icon-search"></span>
                         </button>
-                    </div>
+                    </div> --}}
 
-                    <a href="" class="theme-btn btn-style-one"><span class="btn-title">Book
-                            Consultation</span></a>
+                    <a href="{{ route('contact-us') }}" class="theme-btn btn-style-one"><span class="btn-title">Contact
+                            Us</span></a>
 
                     <!-- Mobile Nav toggler -->
                     <div class="mobile-nav-toggler"><span class="icon lnr-icon-bars"></span></div>
@@ -124,7 +122,7 @@
                     <div class="contact-info-box">
                         <span class="icon lnr-icon-envelope1"></span>
                         <span class="title">Send Email</span>
-                        <a href="mailto:info@vidyaglobal.com">info@vidyaglobal.com</a>
+                        <a href="mailto:info@vidyaglobal.in">info@vidyaglobal.in</a>
                     </div>
                 </li>
                 <li>
@@ -148,7 +146,7 @@
     </div><!-- End Mobile Menu -->
 
     <!-- Header Search -->
-    <div class="search-popup">
+    {{-- <div class="search-popup">
         <span class="search-back-drop"></span>
         <button class="close-search"><span class="fa fa-times"></span></button>
 
@@ -160,7 +158,7 @@
                 </div>
             </form>
         </div>
-    </div>
+    </div> --}}
     <!-- End Header Search -->
 
     <!-- Sticky Header  -->
@@ -169,8 +167,8 @@
             <div class="inner-container">
                 <!--Logo-->
                 <div class="logo">
-                    <a href="{{ route('home') }}" title=""><img src="{{ asset('website/images/vidyaglobal-logo.png') }}" alt=""
-                            title=""></a>
+                    <a href="{{ route('home') }}" title=""><img src="{{ asset('website/images/vidyaglobal-logo.png') }}"
+                            alt="" title=""></a>
                 </div>
 
                 <!--Right Col-->

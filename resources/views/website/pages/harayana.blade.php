@@ -17,6 +17,8 @@
     {{-- main section --}}
     @include('website.components.associate-college.haryana')
 
+    @include('website.components.associate-college.haryana-colleges')
+
     {{-- countries section --}}
     @include('website.components.home.countries-section')
 @endsection

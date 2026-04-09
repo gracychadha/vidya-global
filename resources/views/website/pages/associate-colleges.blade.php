@@ -16,7 +16,8 @@
     <!-- end main-content -->
     {{-- main section --}}
     @include('website.components.associate-college.main')
-
+    <!-- college grid  -->
+    @include('website.components.associate-college.college-swiper')
     {{-- countries section --}}
     @include('website.components.home.countries-section')
 @endsection

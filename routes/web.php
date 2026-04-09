@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactLeadController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -63,3 +64,5 @@ Route::get('/terms-condition', function(){
     return view('website.pages.terms-condition');
 })->name('terms-condition');
 
+// contact leads store
+Route::post('/contact-us/store', [ContactLeadController::class, 'store'])->name('contact-us.store');

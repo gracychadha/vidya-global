@@ -8,7 +8,7 @@
                     <div class="sec-title">
                         <span class="sub-title">about us</span>
                         <h2>Guiding Your Future, <span class="color3">Simplifying Admissions.</span></h2>
-                        <div class="text">Vidya Global is a trusted education consultancy platform that is committed to
+                        <div class="text" align="justify">Vidya Global is a trusted education consultancy platform that is committed to
                             helping students make informed decisions about their academic future. We specialize in
                             guiding students through the admission process and connecting them with top colleges across
                             Andhra Pradesh, Punjab, Delhi, and Haryana. We believe that every student deserves access to

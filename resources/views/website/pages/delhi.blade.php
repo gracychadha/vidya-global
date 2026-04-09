@@ -16,7 +16,8 @@
     <!-- end main-content -->
     {{-- main section --}}
     @include('website.components.associate-college.delhi')
-
+    
+    @include('website.components.associate-college.delhi-colleges')
     {{-- countries section --}}
     @include('website.components.home.countries-section')
 @endsection

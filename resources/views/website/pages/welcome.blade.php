@@ -39,11 +39,11 @@
     @include('website.components.home.our-blogs')
 
     <!-- Map Section-->
-    <section class="map-section">
+    <!-- <section class="map-section">
         <iframe
             src="https://maps.google.com/maps?q=BSNL%20Office%20Koeri%20Tola%20Ward%20No%2026%20Bettiah%20Bihar%20845438&output=embed"
             width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy">
         </iframe>
-    </section>
+    </section> -->
     <!--End Map Section-->
 @endsection

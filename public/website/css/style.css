@@ -3556,7 +3556,7 @@ Section Title
 }
 @media only screen and (max-width: 767px) {
   .banner-section .content-box {
-    padding: 120px 0;
+    padding: 60px 0;
   }
 }
 .banner-section .content-box .sub-title {
@@ -3881,6 +3881,7 @@ Section Title
   background-image: url(../images/icons/shape-11.png);
   content: "";
   z-index: 2;
+  display:none;
 }
 @media only screen and (max-width: 1439px) {
   .banner-section-two .bottom-box:before {
@@ -4145,7 +4146,7 @@ Section Title
 .features-section-two .features-column .image {
   position: absolute;
   top: -58px;
-  right: -33px;
+  right: -75px;
   margin-bottom: 0;
 }
 @media only screen and (max-width: 1199px) {
@@ -5377,7 +5378,7 @@ Section Title
 ***/
 .training-section {
   position: relative;
-  padding: 120px 0;
+  padding: 60px 0;
 }
 .training-section .sec-title {
   padding-left: 300px;
@@ -5810,7 +5811,7 @@ Section Title
 ***/
 .training-section-three {
   position: relative;
-  padding: 120px 0;
+  padding: 60px 0;
 }
 .training-section-three .carousel-outer {
   margin: 0 -200px;
@@ -6071,7 +6072,7 @@ Section Title
 ***/
 .countries-section {
   position: relative;
-  padding: 120px 0;
+  padding: 60px 0;
 }
 
 .country-block {
@@ -7129,7 +7130,7 @@ Section Title
 ***/
 .why-choose-us {
   position: relative;
-  padding: 120px 0;
+  padding: 60px 0;
 }
 .why-choose-us .bg {
   max-height: 278px;
@@ -8763,7 +8764,7 @@ Section Title
 ***/
 .products-section {
   position: relative;
-  padding: 120px 0;
+  padding: 60px 0;
 }
 
 .products-section .bg-image {
@@ -12246,7 +12247,7 @@ Sidebar
 .contact-details__info {
   position: relative;
   display: block;
-  margin-top: 41px;
+  margin-top: 20px;
 }
 .contact-details__info li {
   position: relative;

@@ -15,7 +15,7 @@
 				<li>
 					<i class="icon fa fa-envelope"></i>
 					<span class="title">Email:</span>
-					<div class="text"><a href="mailto:info@vidyaglobal.com">info@vidyaglobal.com</a></div>
+					<div class="text"><a href="mailto:info@vidyaglobal.in">info@vidyaglobal.in</a></div>
 				</li>
 				<li>
 					<i class="icon fa fa-map-marker"></i>
@@ -43,6 +43,10 @@
 								<li><a href="{{ route('about-us') }}">About Us</a></li>
 								<li><a href="{{ route('director-message') }}">Director's Message</a></li>
 								<li><a href="{{ route('vision-mission') }}">Vision Mission</a></li>
+							</ul>
+							<ul class="social-icon-two">
+								<li><a href="#"><i class="fab fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fab fa-instagram"></i></a></li>
 							</ul>
 						</div>
 						<div class="footer-widget col-lg-4 col-md-4 col-ms-12">
@@ -77,57 +81,29 @@
 							<li><a href="{{ route('privacy-policy') }}">Privacy Policy</a></li>
 							<li><a href="{{ route('terms-condition') }}">Terms & Conditions</a></li>
 						</ul>
-						{{-- <div class="widget-content">
-							<div class="outer clearfix">
-								<figure class="image">
-									<a href="#"><img src="{{ asset('website/images/resource/project-thumb-1.jpg') }}"
-											alt=""></a>
-								</figure>
-								<figure class="image">
-									<a href="#"><img src="{{ asset('website/images/resource/project-thumb-2.jpg') }}"
-											alt=""></a>
-								</figure>
-								<figure class="image">
-									<a href="#"><img src="{{ asset('website/images/resource/project-thumb-3.jpg') }}"
-											alt=""></a>
-								</figure>
-								<figure class="image">
-									<a href="#"><img src="{{ asset('website/images/resource/project-thumb-4.jpg') }}"
-											alt=""></a>
-								</figure>
-								<figure class="image">
-									<a href="#"><img src="{{ asset('website/images/resource/project-thumb-5.jpg') }}"
-											alt=""></a>
-								</figure>
-								<figure class="image">
-									<a href="#"><img src="{{ asset('website/images/resource/project-thumb-6.jpg') }}"
-											alt=""></a>
-								</figure>
-							</div>
-						</div> --}}
+
 					</div>
 				</div>
 
 				<!--Footer Column-->
 				<div class="footer-column col-xl-3 col-lg-3 col-md-6">
 					<div class="footer-widget">
-						<h6 class="widget-title">Newsletter</h6>
+						<h6 class="widget-title">Location</h6>
 						<div class="subscribe-form">
-							<div class="text">Signup for our latest news & articles.</div>
+							<!-- <div class="text">Signup for our latest news & articles.</div>
 							<form method="post" action="#">
 								<div class="form-group">
 									<input type="email" name="email" class="email" value="" placeholder="Email Address"
 										required="">
 									<button type="button" class="theme-btn"><i class="fa fa-paper-plane"></i></button>
 								</div>
-							</form>
+							</form> -->
+							<iframe
+								src="https://maps.google.com/maps?q=BSNL%20Office%20Koeri%20Tola%20Ward%20No%2026%20Bettiah%20Bihar%20845438&output=embed"
+								width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy">
+							</iframe>
 						</div>
-						<ul class="social-icon-two">
-							<li><a href="#"><i class="fa fa-x"></i></a></li>
-							<li><a href="#"><i class="fab fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fab fa-pinterest"></i></a></li>
-							<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-						</ul>
+
 
 					</div>
 				</div>

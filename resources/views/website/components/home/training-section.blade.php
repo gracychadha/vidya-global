@@ -2,7 +2,7 @@
     <div class="auto-container">
         <div class="sec-title text-center">
             <span class="sub-title">Learning & Career Programs</span>
-            <h2>Get the Global <br> Education Support you <span class="color3">Deserve</span></h2>
+            <h2>Get the Global <br> Education Support You <span class="color3">Deserve</span></h2>
         </div>
 
         <div class="carousel-outer">
