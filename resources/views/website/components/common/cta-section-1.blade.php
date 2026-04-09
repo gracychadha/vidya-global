@@ -8,7 +8,7 @@
             </h2>
             <div class="btn-box">
                 <a href="{{ route('about-us') }}" class="theme-btn btn-style-one">Explore More</a>
-                <a href="{{ route('contact-us') }}" class="theme-btn btn-style-two">Contact Now</a>
+                <a href="{{ route('contact-us') }}" class="theme-btn btn-style-two">Contact Us</a>
             </div>
         </div>
     </div>

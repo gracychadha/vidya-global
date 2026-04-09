@@ -7,8 +7,8 @@
                 <div class="title-column col-lg-6">
                     <div class="inner-column">
                         <div class="sec-title light">
-                            <span class="sub-title">Frequently Asked Questions</span>
-                            <h2>Your guide to <br>admissions and <span class="color3">support.</span></h2>
+                            <!-- <span class="sub-title">Frequently Asked Questions</span> -->
+                            <h2>Your Guide to <br>Admissions and Support.</h2>
                         </div>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
                 <div class="inner-column">
                     <div class="sec-title">
                         <span class="sub-title">Your Questions Answered</span>
-                        <h2>Find answers to <br>the most <span class="color3">common questions.</span></h2>
+                        <h2>Find Answers to <br>the Most <span class="color3">Common Questions.</span></h2>
                     </div>
 
                     <ul class="accordion-box wow fadeInRight">

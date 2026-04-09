@@ -4,11 +4,11 @@
     <section class="page-title" style="background-image: url(website/images/background/page-title.jpg);">
         <div class="auto-container">
             <div class="title-outer">
-                <h1 class="title">Director Message</h1>
+                <h1 class="title">Director's Message</h1>
                 <ul class="page-breadcrumb">
                     <li><a href="{{ route('home') }}">Home</a></li>
                     <li>Who We Are</li>
-                    <li>Director Message</li>
+                    <li>Director's Message</li>
                 </ul>
             </div>
         </div>

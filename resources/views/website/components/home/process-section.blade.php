@@ -44,7 +44,7 @@
                     <div class="inner">
                         <div class="content">
                             <i class="icon far fa-plus"></i>
-                            <div class="count-box"><span class="count-text" data-speed="3000" data-stop="970">0</span>
+                            <div class="count-box"><span class="count-text" data-speed="3000" data-stop="97">0</span>%
                             </div>
                             <h6 class="counter-title">Success Rate</h6>
                         </div>

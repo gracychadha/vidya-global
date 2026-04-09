@@ -8,7 +8,7 @@
             <div class="title-column col-xl-4 col-lg-12 col-md-12 col-sm-12">
                 <div class="inner-column wow fadeInLeft">
                     <div class="sec-title light">
-                        <h2>You <br>should choose the only quality Consultant</h2>
+                        <h2>You Should Choose the Only Quality Consultant</h2>
                     </div>
                     <a href="{{route('about-us')}}" class="theme-btn btn-style-four small">Read More</a>
                 </div>
@@ -23,8 +23,7 @@
                             <i class="icon flaticon-interview"></i>
                             <i class="bg-icon flaticon-interview"></i>
                             <h6 class="title"><a href="{{route('about-us')}}">Direct Interviews</a></h6>
-                            <div class="text">There are many is variations of passages of rm Ipsum available but the
-                                majority.</div>
+                            <div class="text">Connect directly with top institutions and employers through streamlined interview opportunities designed to fast-track your success.</div>
                         </div>
                     </div>
 
@@ -34,8 +33,7 @@
                             <i class="icon flaticon-low-cost"></i>
                             <i class="bg-icon flaticon-low-cost"></i>
                             <h6 class="title"><a href="{{route('about-us')}}">Cost Effective</a></h6>
-                            <div class="text">There are many is variations of passages of rm Ipsum available but the
-                                majority.</div>
+                            <div class="text">Affordable solutions tailored to your goals, ensuring you receive maximum value without compromising on quality guidance.</div>
                         </div>
                     </div>
 
@@ -44,9 +42,8 @@
                         <div class="inner-box">
                             <i class="icon flaticon-loyalty"></i>
                             <i class="bg-icon flaticon-loyalty"></i>
-                            <h6 class="title"><a href="{{route('about-us')}}">Trusted Customers</a></h6>
-                            <div class="text">There are many is variations of passages of rm Ipsum available but the
-                                majority.</div>
+                            <h6 class="title"><a href="{{route('about-us')}}">Trusted by Students</a></h6>
+                            <div class="text">Thousands of students trust our expertise and personalized support to achieve their academic and career aspirations.</div>
                         </div>
                     </div>
 
@@ -56,8 +53,7 @@
                             <i class="icon flaticon-online-support"></i>
                             <i class="bg-icon flaticon-online-support"></i>
                             <h6 class="title"><a href="{{route('about-us')}}">24/7 Support</a></h6>
-                            <div class="text">There are many is variations of passages of rm Ipsum available but the
-                                majority.</div>
+                            <div class="text">Our dedicated team is available around the clock to guide you at every step of your journey.</div>
                         </div>
                     </div>
 

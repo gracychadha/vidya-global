@@ -5,10 +5,10 @@
     <section class="page-title" style="background-image: url(website/images/background/page-title.jpg);">
         <div class="auto-container">
             <div class="title-outer">
-                <h1 class="title">Blog Details</h1>
+                <h1 class="title">How to Choose the Right College for Your Future</h1>
                 <ul class="page-breadcrumb">
                     <li><a href="{{ route('home') }}">Home</a></li>
-                    <li>Blog</li>
+                    <li>How to Choose the Right College for Your Future</li>
                 </ul>
             </div>
         </div>
@@ -35,101 +35,29 @@
                                         Comments</a>
                                 </li>
                             </ul>
-                            <h3 class="blog-details__title">Reasons for Australian Student Visa Refusal</h3>
-                            <p class="blog-details__text-2">Mauris non dignissim purus, ac commodo diam. Donec sit
-                                amet lacinia nulla. Aliquam quis purus in justo pulvinar tempor. Aliquam tellus
-                                nulla, sollicitudin at euismod nec, feugiat at nisi. Quisque vitae odio nec lacus
-                                interdum tempus. Phasellus a rhoncus erat. Vivamus vel eros vitae est aliquet
-                                pellentesque vitae et nunc. Sed vitae leo vitae nisl pellentesque semper.
+                            <h3 class="blog-details__title">How to Choose the Right College for Your Future</h3>
+                            <p class="blog-details__text-2" align="justify">One of the first steps in choosing the right
+                                college is identifying your career goals. Students should take time to understand their
+                                interests, strengths, and the field they want to pursue in the future. Whether it is
+                                engineering, management, medical studies, or diploma programs, selecting a college that
+                                offers strong programs in your chosen field is essential. A college with experienced
+                                faculty, practical learning opportunities, and updated course content can provide a solid
+                                academic foundation.
+
+
                             </p>
-                            <p class="blog-details__text-2">Mauris non dignissim purus, ac commodo diam. Donec sit
-                                amet lacinia nulla. Aliquam quis purus in justo pulvinar tempor. Aliquam tellus
-                                nulla, sollicitudin at euismod nec, feugiat at nisi. Quisque vitae odio nec lacus
-                                interdum tempus. Phasellus a rhoncus erat. Vivamus vel eros vitae est aliquet
-                                pellentesque vitae et nunc. Sed vitae leo vitae nisl pellentesque semper.
+                            <p class="blog-details__text-2" align="justify"> Another important factor to consider is the
+                                accreditation and reputation of the college.
+                                Accreditation ensures that the institution meets educational standards and offers recognized
+                                degrees. A well-reputed college is more likely to provide quality education, experienced
+                                faculty members, and better industry connections. Students should also review rankings,
+                                student feedback, and alumni success stories to get a clear idea about the credibility of
+                                the institution.
                             </p>
-                            <p class="blog-details__text-2">Mauris non dignissim purus, ac commodo diam. Donec sit
-                                amet lacinia nulla. Aliquam quis purus in justo pulvinar tempor. Aliquam tellus
-                                nulla, sollicitudin at euismod nec, feugiat at nisi. Quisque vitae odio nec lacus
-                                interdum tempus. Phasellus a rhoncus erat. Vivamus vel eros vitae est aliquet
-                                pellentesque vitae et nunc. Sed vitae leo vitae nisl pellentesque semper.
-                            </p>
+
                         </div>
-                        <div class="blog-details__bottom">
-                            <p class="blog-details__tags"> <span>Tags</span> <a href="{{route('blog-details')}}">Immigration</a> <a
-                                    href="{{route('blog-details')}}">Visa Consultancy</a> </p>
-                            <div class="blog-details__social-list"> <a href="{{route('blog-details')}}"><i class="fa fa-x"></i></a>
-                                <a href="{{route('blog-details')}}"><i class="fab fa-facebook"></i></a> <a
-                                    href="{{route('blog-details')}}"><i class="fab fa-pinterest-p"></i></a> <a
-                                    href="{{route('blog-details')}}"><i class="fab fa-instagram"></i></a> </div>
-                        </div>
-                        <div class="nav-links">
-                            <div class="prev">
-                                <a href="{{route('blog-details')}}" rel="prev">True factors of the modern healthy lifestyle</a>
-                            </div>
-                            <div class="next">
-                                <a href="{{route('blog-details')}}" rel="next">How to lead a healthy &amp; well-balanced life</a>
-                            </div>
-                        </div>
-                        <div class="comment-one">
-                            <h3 class="comment-one__title">2 Comments</h3>
-                            <div class="comment-one__single">
-                                <div class="comment-one__image"> <img src="{{ asset('website/images/resource/testimonial-4.jpg') }}" alt=""> </div>
-                                <div class="comment-one__content">
-                                    <h3>Kevin Martin</h3>
-                                    <p>Mauris non dignissim purus, ac commodo diam. Donec sit amet lacinia nulla.
-                                        Aliquam quis purus in justo pulvinar tempor. Aliquam tellus nulla,
-                                        sollicitudin at euismod.
-                                    </p>
-                                    <a href="{{route('blog-details')}}"
-                                        class="theme-btn btn-style-one bg-theme-color4 comment-one__btn"><span
-                                            class="btn-title">Reply</span></a>
-                                </div>
-                            </div>
-                            <div class="comment-one__single">
-                                <div class="comment-one__image"> <img src="{{ asset('website/images/resource/testimonial-5.jpg') }}" alt=""> </div>
-                                <div class="comment-one__content">
-                                    <h3>Sarah Albert</h3>
-                                    <p>Mauris non dignissim purus, ac commodo diam. Donec sit amet lacinia nulla.
-                                        Aliquam quis purus in justo pulvinar tempor. Aliquam tellus nulla,
-                                        sollicitudin at euismod.
-                                    </p>
-                                    <a href="{{route('blog-details')}}"
-                                        class="theme-btn btn-style-one bg-theme-color4 comment-one__btn"><span
-                                            class="btn-title">Reply</span></a>
-                                </div>
-                            </div>
-                            <div class="comment-form">
-                                <h3 class="comment-form__title">Leave a Comment</h3>
-                                <form id="contact_form" name="contact_form" class="" action="includes/sendmail.php"
-                                    method="post">
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="mb-3">
-                                                <input name="form_name" class="form-control" type="text"
-                                                    placeholder="Enter Name">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="mb-3">
-                                                <input name="form_email" class="form-control required email" type="email"
-                                                    placeholder="Enter Email">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mb-3">
-                                        <textarea name="form_message" class="form-control required" rows="5"
-                                            placeholder="Enter Message"></textarea>
-                                    </div>
-                                    <div class="mb-3">
-                                        <input name="form_botcheck" class="form-control" type="hidden" value="" />
-                                        <button type="submit" class="theme-btn btn-style-one"
-                                            data-loading-text="Please wait..."><span class="btn-title">Submit
-                                                Comment</span></button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
+
+
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-5">
@@ -141,91 +69,23 @@
                             </form>
                         </div>
                         <div class="sidebar__single sidebar__post">
-                            <h3 class="sidebar__title">Latest Posts</h3>
+                            <h3 class="sidebar__title">Latest blogs</h3>
                             <ul class="sidebar__post-list list-unstyled">
                                 <li>
-                                    <div class="sidebar__post-image"> <img src="{{ asset('website/images/resource/news-1.jpg') }}" alt=""> </div>
+                                    <div class="sidebar__post-image"> <img
+                                            src="{{ asset('website/images/resource/news-1.jpg') }}" alt=""> </div>
                                     <div class="sidebar__post-content">
                                         <h3> <span class="sidebar__post-content-meta"><i
                                                     class="fas fa-user-circle"></i>Admin</span> <a
-                                                href="{{route('blog-details')}}">Top crypto exchange influencers</a>
+                                                href="{{route('blog-details')}}">How to Choose the Right College for Your
+                                                Future</a>
                                         </h3>
                                     </div>
                                 </li>
-                                <li>
-                                    <div class="sidebar__post-image"> <img src="{{ asset('website/images/resource/news-2.jpg') }}" alt=""> </div>
-                                    <div class="sidebar__post-content">
-                                        <h3> <span class="sidebar__post-content-meta"><i
-                                                    class="fas fa-user-circle"></i>Admin</span> <a
-                                                href="{{route('blog-details')}}">Necessity may give us best virtual court</a> </h3>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="sidebar__post-image"> <img src="{{ asset('website/images/resource/news-3.jpg') }}" alt=""> </div>
-                                    <div class="sidebar__post-content">
-                                        <h3> <span class="sidebar__post-content-meta"><i
-                                                    class="fas fa-user-circle"></i>Admin</span> <a
-                                                href="{{route('blog-details')}}">You should know about business plan</a> </h3>
-                                    </div>
-                                </li>
+
                             </ul>
                         </div>
-                        <div class="sidebar__single sidebar__category">
-                            <h3 class="sidebar__title">Categories</h3>
-                            <ul class="sidebar__category-list list-unstyled">
-                                <li><a href="{{route('blog-details')}}">Abroad Study<span class="icon-right-arrow"></span></a> </li>
-                                <li class="active"><a href="{{route('blog-details')}}">Green card<span
-                                            class="icon-right-arrow"></span></a></li>
-                                <li><a href="{{route('blog-details')}}">PR Applicants<span class="icon-right-arrow"></span></a>
-                                </li>
-                                <li><a href="{{route('blog-details')}}">Travel Insurance<span class="icon-right-arrow"></span></a>
-                                </li>
-                                <li><a href="{{route('blog-details')}}">Visa Consultancy<span class="icon-right-arrow"></span></a>
-                                </li>
-                                <li><a href="{{route('blog-details')}}">Work Permits<span class="icon-right-arrow"></span></a> </li>
-                            </ul>
-                        </div>
-                        <div class="sidebar__single sidebar__tags">
-                            <h3 class="sidebar__title">Tags</h3>
-                            <div class="sidebar__tags-list"> <a href="#">Education</a> <a href="#">Visa</a> <a
-                                    href="#">Immigration</a> <a href="#">Digital</a> <a href="#">Travel</a> <a
-                                    href="#">Language</a> </div>
-                        </div>
-                        <div class="sidebar__single sidebar__comments">
-                            <h3 class="sidebar__title">Recent Comments</h3>
-                            <ul class="sidebar__comments-list list-unstyled">
-                                <li>
-                                    <div class="sidebar__comments-icon"> <i class="fas fa-comments"></i> </div>
-                                    <div class="sidebar__comments-text-box">
-                                        <p>A wordpress commenter on <br>
-                                            launch new mobile app
-                                        </p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="sidebar__comments-icon"> <i class="fas fa-comments"></i> </div>
-                                    <div class="sidebar__comments-text-box">
-                                        <p> <span>John Doe</span> on template:</p>
-                                        <h5>comments</h5>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="sidebar__comments-icon"> <i class="fas fa-comments"></i> </div>
-                                    <div class="sidebar__comments-text-box">
-                                        <p>A wordpress commenter on <br>
-                                            launch new mobile app
-                                        </p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="sidebar__comments-icon"> <i class="fas fa-comments"></i> </div>
-                                    <div class="sidebar__comments-text-box">
-                                        <p> <span>John Doe</span> on template:</p>
-                                        <h5>comments</h5>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+
                     </div>
                 </div>
             </div>

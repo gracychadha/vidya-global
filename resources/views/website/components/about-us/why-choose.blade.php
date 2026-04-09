@@ -4,14 +4,14 @@
     <div class="auto-container">
         <div class="sec-title text-center">
             <span class="sub-title">why choose us</span>
-            <h2>Few reasons to choose <br>our global <span class="color3">education services</span></h2>
+            <h2>Few Reasons to Choose   <br>Our Global <span class="color3">Education Services</span></h2>
         </div>
 
         <div class="row">
             <!-- Features Block -->
             <div class="feature-block col-xl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp">
                 <div class="inner-box">
-                    <i class="icon flaticon-graduation-cap"></i>
+                    <i class="icon flaticon-loyalty"></i>
                     <span class="cat">Expert Guidance</span>
                     <h6 class="title"><a href="{{route('about-us')}}">University Selection</a></h6>
                 </div>

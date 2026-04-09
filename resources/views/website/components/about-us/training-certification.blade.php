@@ -5,7 +5,7 @@
         <div class="sec-title">
             <span class="sub-title">STUDENT PREPARATION PROGRAMS</span>
             <h2>Achieve Academic Excellence   <br> with Personalized <span class="color3">Support</span></h2>
-            <a href="#" class="theme-btn btn-style-two">Discover More</a>
+            <a href="{{ route('contact-us') }}" class="theme-btn btn-style-two">Contact Us</a>
         </div>
 
         <div class="carousel-outer">
@@ -67,7 +67,7 @@
                         </div>
                         <div class="lower-content">
                             <a href="#" class="read-more"><i class="fa fa-long-arrow-alt-right"></i></a>
-                            <h5 class="title"><a href="#">University Admission Guidance</a></h5>
+                            <h5 class="title"><a href="#">University Admission </a></h5>
                             <div class="text">
                                 Step-by-step support in selecting the right colleges, understanding admission criteria, and applications.
 

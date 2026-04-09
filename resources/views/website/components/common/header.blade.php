@@ -38,15 +38,15 @@
 
                 <nav class="nav main-menu">
                     <ul class="navigation">
-                        <li class="current"><a href="{{ route('home') }}">Home</a> </li>
-                        <li class="dropdown"><a href="javascript:void(0)">Who We Are</a>
+                        <li class="{{ request()->routeIs('') ? 'current' : '' }}"><a href="{{ route('home') }}">Home</a> </li>
+                        <li class="dropdown "><a href="javascript:void(0)">Who We Are</a>
                             <ul>
                                 <li><a href="{{ route('about-us') }}">About Us</a></li>
                                 <li><a href="{{ route('director-message') }}">Director's Message</a></li>
                                 <li><a href="{{ route('vision-mission') }}">Vision Mission</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown"><a href="javascript:void(0)">Associate Colleges</a>
+                        <li class="dropdown "><a href="javascript:void(0)">Associate Colleges</a>
                             <ul>
                                 <li><a href="{{ route('andhra-pradesh') }}">Andhra Pradesh</a></li>
                                 <li><a href="{{ route('delhi') }}">Delhi</a></li>
@@ -63,8 +63,8 @@
                             </ul>
                         </li>
 
-                        <li><a href="{{ route('our-blogs') }}">Our Blogs</a></li>
-                        <li><a href="{{ route('contact-us') }}">Contact Us</a></li>
+                        <li class="{{ request()->routeIs('our-blogs') ? 'current' : '' }}"><a href="{{ route('our-blogs') }}">Our Blogs</a></li>
+                        <li class="{{ request()->routeIs('contact-us') ? 'current' : '' }}"><a href="{{ route('contact-us') }}">Contact Us</a></li>
                     </ul>
                 </nav>
                 <!-- Main Menu End-->
