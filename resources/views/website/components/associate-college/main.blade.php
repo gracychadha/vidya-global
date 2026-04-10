@@ -12,7 +12,7 @@
                 <div class="country-content">
                     <h3>Colleges in Andhra Pradesh</h3>
 
-                    <p>
+                    <p align="justify">
                         Andhra Pradesh has a conducive learning environment with different colleges imparting education
                         in different fields. Andhra Pradesh is especially known for its planned course curriculum and
                         focus on technical education.
@@ -20,7 +20,7 @@
 
                     </p>
 
-                    <p>
+                    <p align="justify">
                          We, at Vidya Global, will help you choose colleges based on your academic qualifications and
                         career goals. We are there to help you right from the beginning, including the process of
                         filtering out colleges.

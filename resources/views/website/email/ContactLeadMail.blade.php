@@ -65,7 +65,7 @@
                             </span>
                             <br>
                             <span style="font-size:18px;">
-                                We have successfully received your Contact request.
+                                We have successfully received your enquiry request.
                             </span>
                         </td>
                     </tr>

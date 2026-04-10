@@ -34,7 +34,7 @@ License: copyright commercial
 25. Clients Section
 26. Main Footer
 **********************************************/
-@import url("../../../css2-2");
+/* @import url("../../../css2-2"); */
 @import url("animate.css");
 @import url("owl.css");
 @import url("swiper.min.css");
@@ -2311,7 +2311,7 @@ Main Header
   position: absolute;
   left: 0px;
   top: 100%;
-  width: 220px;
+  width: 230px;
   z-index: 100;
   padding: 10px 0 0;
   background-color: #ffffff;
@@ -10915,7 +10915,7 @@ Page Title
   font-size: 16px;
   line-height: 32px;
   font-weight: 600;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 .services-details__content .feature-list .single-item .title:hover {
   color: var(--text-color-bg-theme-color2);

@@ -2,7 +2,7 @@
     <div class="services-details__content">
         <img src="{{ asset('website/images/resource/service-details.jpg') }}" alt="" />
 
-        <h2 class="mt-4">Diploma Guidance</h2>
+        <h2 class="mt-4">Diploma Admission</h2>
         <p>Diploma programs offer students a focused and practical approach to learning, providing skills and knowledge
             that are directly applicable to specific industries. At Vidya Global, we guide students in choosing the
             right diploma courses based on their interests, career goals, and academic background.
@@ -18,7 +18,7 @@
             <div class="text">
                 <h3>Admission Support Services</h3>
                 <p>
-                    Simplifying Diploma Admissions with Expert Guidance Every Step
+                    Simplifying diploma admissions with expert guidance every step
 
                 </p>
             </div>
@@ -76,8 +76,7 @@
         <div class="mt-25">
             <h3>Frequently Asked Questions</h3>
             <p>
-                Here are some common questions students ask about the admission process and how our guidance services
-                can help them.
+               Here are some common questions students have and how our guidance services can help. 
             </p>
 
             <ul class="accordion-box wow fadeInRight">

@@ -1,14 +1,14 @@
 @extends('website.layout.app')
-@section('title', 'Diploma Guidance | Vidya Global Portal')
+@section('title', 'Diploma Admission | Vidya Global Portal')
 @section('content')
     <!-- Start main-content -->
     <section class="page-title" style="background-image: url(website/images/background/page-title.jpg);">
         <div class="auto-container">
             <div class="title-outer">
-                <h1 class="title">Diploma Guidance</h1>
+                <h1 class="title">Diploma Admission</h1>
                 <ul class="page-breadcrumb">
                     <li><a href="{{ route('home') }}">Home</a></li>
-                    <li>Diploma Guidance</li>
+                    <li>Diploma Admission</li>
                 </ul>
             </div>
         </div>

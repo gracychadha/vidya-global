@@ -19,7 +19,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="sec-title">
-                        <span class="sub-title">our policy your privacy</span>
+                        <span class="sub-title">OUR POLICY, YOUR PRIVACY</span>
                         <h2>Privacy <span class="color3">Policy</span></h2>
 
                         <div class="text">

@@ -12,14 +12,13 @@
                 <div class="country-content">
                     <h3>Colleges in Haryana</h3>
 
-                    <p>
+                    <p align="justify">
                         Haryana has emerged as a growing hub for higher education, offering career-oriented programs
-                        supported by modern facilities and experienced educators. The state focuses on skill
-                        development, innovation, and industry integration.</p>
-                    <p>
-                        With the help of Vidya Global, the students will be guided completely in the process of
-                        selecting the best institution and meeting the admission criteria. Thus, you will understand the
-                        process every step of the way.
+                        supported by modern facilities and experienced educators. The state emphasizes skill
+                        development, innovation, and strong industry integration.</p>
+                    <p align="justify">
+                        At Vidya Global, students receive end-to-end guidance—from selecting the right institution to
+                        meeting admission requirements—ensuring a clear and confident journey at every step.
 
                     </p>
 

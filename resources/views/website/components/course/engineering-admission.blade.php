@@ -19,7 +19,7 @@
             <div class="text">
                 <h3>Admission Support Services</h3>
                 <p>
-                    Making Engineering Admissions Easy, Clear, and Stress-Free
+                    Making engineering admissions easy, clear, and stress-free
                 </p>
             </div>
 
@@ -77,8 +77,7 @@
         <div class="mt-25">
             <h3>Frequently Asked Questions</h3>
             <p>
-                Here are some common questions students ask about the admission process and how our guidance services
-                can help them.
+                Here are some common questions students have and how our guidance services can help. 
             </p>
 
             <ul class="accordion-box wow fadeInRight">

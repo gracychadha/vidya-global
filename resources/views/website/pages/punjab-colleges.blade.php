@@ -5,7 +5,7 @@
     <section class="page-title" style="background-image: url(website/images/background/page-title.jpg);">
         <div class="auto-container">
             <div class="title-outer">
-                <h1 class="title">Colleges In Punjab</h1>
+                <h1 class="title">Colleges in Punjab</h1>
                 <ul class="page-breadcrumb">
                     <li><a href="{{ route('home') }}">Home</a></li>
                     <li>Colleges</li>

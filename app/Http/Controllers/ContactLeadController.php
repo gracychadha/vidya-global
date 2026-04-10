@@ -73,6 +73,6 @@ class ContactLeadController extends Controller
 
         Mail::to($Lead->email)->send(new ContactLeadMail($Lead));
         Mail::to('info@vidyaglobal.in')->send(new ContactLeadMail($Lead));
-        return back()->with('success', 'Your lead has been submitted successfully!');
+        return back()->with('success', 'Your enquiry has been submitted successfully!');
     }
 }

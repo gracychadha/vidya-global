@@ -22,8 +22,8 @@
             <div class="row">
                 <div class="col-xl-7 col-lg-6">
                     <div class="sec-title">
-                        <span class="sub-title">Send us email</span>
-                        <h2>Feel free to write</h2>
+                        <span class="sub-title">SEND US AN EMAIL</span>
+                        <h2>Feel Free to Write to Us</h2>
                     </div>
                     <!-- Contact Form -->
                     <form id="contact-form" action="{{ route('contact-us.store') }}" method="POST">
@@ -48,7 +48,7 @@
 
                             <div class="col-sm-6">
                                 <div class="mb-3">
-                                    <input name="phone" class="form-control" type="text" placeholder="9876543210"
+                                    <input name="phone" class="form-control" type="text" placeholder="Enter Phone Numner"
                                         pattern="[6-9]{1}[0-9]{9}" maxlength="10" required>
                                 </div>
                             </div>
@@ -88,7 +88,7 @@
                         <div class="sec-title mb-0">
                             <span class="sub-title">Need any help?</span>
                             <h2>Get in touch with us</h2>
-                            <div class="text">We’re Here to Help You Take the Next Step in Your Education Journey.
+                            <div class="text">We’re here to help you take the next step in your education journey.
                             </div>
                         </div>
                         <ul class="list-unstyled contact-details__info">
@@ -97,7 +97,7 @@
                                     <span class="lnr-icon-phone-plus"></span>
                                 </div>
                                 <div class="text">
-                                    <h6>Have any question?</h6>
+                                    <h6>Have Any Questions?</h6>
                                     <a href="tel:+918102851589"> +91 810 285 1589</a><br>
                                     <a href="tel:+917539910692"> +91 753 991 0692</a>
                                 </div>
@@ -107,7 +107,7 @@
                                     <span class="lnr-icon-envelope1"></span>
                                 </div>
                                 <div class="text">
-                                    <h6>Write email</h6>
+                                    <h6>Write an Email</h6>
                                     <a href="mailto:info@vidyaglobal.in">info@vidyaglobal.in</a>
                                 </div>
                             </li>
@@ -116,7 +116,7 @@
                                     <span class="fa fa-map-marker"></span>
                                 </div>
                                 <div class="text">
-                                    <h6>Visit anytime</h6>
+                                    <h6>Visit Anytime</h6>
                                     <span>Nearby Bsnl Office, Koeri Tola,<br> Ward No.26, Bettiah, Bihar-845438</span>
                                 </div>
                             </li>

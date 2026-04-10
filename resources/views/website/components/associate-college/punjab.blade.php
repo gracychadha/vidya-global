@@ -12,7 +12,7 @@
                 <div class="country-content">
                     <h3>Colleges in Punjab</h3>
 
-                    <p>
+                    <p align="justify">
                         Punjab provides a dynamic learning environment with reputed institutions offering programs in
                         engineering, management, pharmacy, and more. The state emphasizes practical learning, industry
                         exposure, and overall personality development.
@@ -22,7 +22,7 @@
 
                     </p>
 
-                    <p>
+                    <p align="justify">
                         Vidya Global supports students in exploring suitable colleges and understanding admission
                         pathways. With clear guidance and reliable information, we help you make confident academic
                         choices and move forward with ease.

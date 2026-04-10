@@ -19,8 +19,8 @@
             <div class="row">
                 <div class="col-12">
                     <div class="sec-title">
-                        <span class="sub-title">our Terms your privacy</span>
-                        <h2>Terms <span class="color3">Conditions</span></h2>
+                        <span class="sub-title">OUR TERMS, YOUR PRIVACY</span>
+                        <h2>Terms &  <span class="color3">Conditions</span></h2>
 
                         <div class="text">
                             <p>Welcome to the Vidya Global Portal, operated by Vidya Global Educational Welfare Foundation.

@@ -12,13 +12,13 @@
                 <div class="country-content">
                     <h3>Colleges in Delhi</h3>
 
-                    <p>
+                    <p align="justify">
                         Delhi stands as a premier destination for higher education, with top institutions offering
                         diverse programs in engineering, management, arts, science, and commerce. The city provides
                         unmatched academic exposure and career opportunities.
                        
                     </p>
-                    <p>
+                    <p align="justify">
                         We help you explore the best-fit colleges and simplify the admission process with step-by-step
                         support. We ensure that you make informed decisions and begin your academic journey with
                         confidence.

@@ -3,21 +3,14 @@
         <img src="{{ asset('website/images/resource/service-details.jpg') }}" alt="" />
 
         <h2 class="mt-4">Admission Guidance</h2>
-        <p>
-            Navigating the college admission process can be overwhelming, given the different eligibility criteria,
-            entrance exams, and deadlines. At Vidya Global, we provide comprehensive admission guidance to help students
-            make informed decisions. Our experts assist in selecting the right colleges and courses based on individual
-            interests, academic performance, and career goals, ensuring a smooth and confident transition into higher
-            education.
+        <p align="justify">
+          Navigating the college admission process can be overwhelming, given the varying eligibility criteria, entrance exams, and deadlines. At Vidya Global, we provide comprehensive admission guidance to help students make informed decisions. Our experts assist in selecting the right colleges and courses based on individual interests, academic performance, and career goals, ensuring a smooth and confident transition into higher education.
 
 
         </p>
 
-        <p>
-            We offer personalized guidance at every step of the admission process, from knowing the admission criteria
-            to filling the forms accurately. We help the students understand the entrance examinations, documentation,
-            and other vital aspects of the admission process, which enables the students to take the right decision
-            confidently and gain admission into the top colleges of Andhra Pradesh, Punjab, Delhi, and Haryana.
+        <p align="justify">
+          We offer personalized support at every step of the admission process, from understanding the admission criteria to accurately completing application forms. We also help the students navigate the entrance examinations, documentation, and other essential requirements of the admission process, enabling them to make confident decisions and secure admission to the topcolleges of Andhra Pradesh, Punjab, Delhi, and Haryana.
         </p>
 
         <div class="content mt-40">
