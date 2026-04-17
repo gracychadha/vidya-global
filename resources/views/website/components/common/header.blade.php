@@ -115,6 +115,7 @@
                         <i class="icon lnr-icon-phone-handset"></i>
                         <span class="title">Call Now</span>
                         <a href="tel:+917903134933">+91 790 313 4933</a>
+                        <a href="tel:+918102851589">+91 810 285 1589</a>
                     </div>
                 </li>
                 <li>
@@ -137,9 +138,7 @@
 
 
             <ul class="social-links">
-                <li><a href="#"><i class="fa fa-x"></i></a></li>
                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
                 <li><a href="#"><i class="fab fa-instagram"></i></a></li>
             </ul>
         </nav>
