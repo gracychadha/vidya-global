@@ -114,7 +114,7 @@
                     <div class="contact-info-box">
                         <i class="icon lnr-icon-phone-handset"></i>
                         <span class="title">Call Now</span>
-                        <a href="tel:+917903134933">+91 790 313 4933</a>
+                        <a href="tel:+917903134933">+91 790 313 4933</a><br>
                         <a href="tel:+918102851589">+91 810 285 1589</a>
                     </div>
                 </li>
