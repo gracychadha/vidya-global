@@ -38,7 +38,8 @@
 
                 <nav class="nav main-menu">
                     <ul class="navigation">
-                        <li class="{{ request()->routeIs('') ? 'current' : '' }}"><a href="{{ route('home') }}">Home</a> </li>
+                        <li class="{{ request()->routeIs('') ? 'current' : '' }}"><a href="{{ route('home') }}">Home</a>
+                        </li>
                         <li class="dropdown "><a href="javascript:void(0)">Who We Are</a>
                             <ul>
                                 <li><a href="{{ route('about-us') }}">About Us</a></li>
@@ -46,16 +47,20 @@
                                 <li><a href="{{ route('vision-mission') }}">Vision &amp; Mission</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown "><a href="javascript:void(0)">Associate Colleges</a>
-                            <ul>
-                                <li><a href="{{ route('andhra-pradesh') }}">Andhra Pradesh</a></li>
-                                <li><a href="{{ route('delhi') }}">Delhi</a></li>
-                                <li><a href="{{ route('haryana') }}">Haryana</a></li>
-                                <li><a href="{{ route('punjab') }}">Punjab</a></li>
-                            </ul>
-                        </li>
+                            <li class="dropdown "><a href="javascript:void(0)">Associate Colleges</a>
+                                <ul>
+                                    @php
+                                        $States = \App\Models\CollegeState::where('status', 'active')->get();
+                                    @endphp
+                                    @foreach($States as $state)
+                                        <li><a href="{{ route('associate-colleges', $state->slug) }}">{{ $state->name }}</a></li>
+                                    @endforeach
+                                
+                                </ul>
+                            </li>
                         <li class="dropdown"><a href="javascript:void(0)">Courses</a>
                             <ul>
+
                                 <li><a href="{{ route('admission-guidance') }}">Admission Guidance</a></li>
                                 <li><a href="{{ route('career-counselling') }}">Career Counseling</a></li>
                                 <li><a href="{{ route('diploma-admission') }}">Diploma Admission</a></li>
@@ -63,8 +68,10 @@
                             </ul>
                         </li>
 
-                        <li class="{{ request()->routeIs('our-blogs') ? 'current' : '' }}"><a href="{{ route('our-blogs') }}">Our Blogs</a></li>
-                        <li class="{{ request()->routeIs('contact-us') ? 'current' : '' }}"><a href="{{ route('contact-us') }}">Contact Us</a></li>
+                        <li class="{{ request()->routeIs('our-blogs') ? 'current' : '' }}"><a
+                                href="{{ route('our-blogs') }}">Our Blogs</a></li>
+                        <li class="{{ request()->routeIs('contact-us') ? 'current' : '' }}"><a
+                                href="{{ route('contact-us') }}">Contact Us</a></li>
                     </ul>
                 </nav>
                 <!-- Main Menu End-->

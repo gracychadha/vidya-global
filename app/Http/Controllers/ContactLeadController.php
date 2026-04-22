@@ -9,6 +9,11 @@ use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactLeadMail;
 class ContactLeadController extends Controller
 {
+    public function index()
+    {
+        $leads = ContactLead::latest()->get();
+        return view('admin.views.admin-leads', compact('leads'));
+    }
     //
     public function store(Request $request)
     {
@@ -75,4 +80,20 @@ class ContactLeadController extends Controller
         Mail::to('info@vidyaglobal.in')->send(new ContactLeadMail($Lead));
         return back()->with('success', 'Your enquiry has been submitted successfully!');
     }
+    public function destroy(ContactLead $lead)
+    {
+        $lead->delete();
+        return redirect()->back()->with('success', 'Lead deleted successfully!');
+    }
+    public function deleteSelected(Request $request)
+    {
+        if (!$request->ids || count($request->ids) == 0) {
+            return response()->json(['error' => true, 'message' => 'No IDs received']);
+        }
+
+        ContactLead::whereIn('id', $request->ids)->delete();
+
+        return response()->json(['success' => true, 'message' => 'Deleted successfully']);
+    }
+
 }

@@ -4,29 +4,25 @@
 
             <div class="col-lg-6 col-md-12">
                 <div class="country-details__img">
-                    <img src="{{ asset('website/images/resource/country-details.jpg') }}" alt="">
+                    <img src="{{ asset('storage/' . $state->image) }}" alt="{{ $state->name }}">
                 </div>
             </div>
 
             <div class="col-lg-6 col-md-12">
                 <div class="country-content">
-                    <h3>Colleges in Andhra Pradesh</h3>
+                    <h3>Colleges in {{ $state->name }}</h3>
 
                     <p align="justify">
-                        Andhra Pradesh has a conducive learning environment with different colleges imparting education
-                        in different fields. Andhra Pradesh is especially known for its planned course curriculum and
-                        focus on technical education.
+                       {{ $state->description   }}
                        
 
                     </p>
 
                     <p align="justify">
-                         We, at Vidya Global, will help you choose colleges based on your academic qualifications and
-                        career goals. We are there to help you right from the beginning, including the process of
-                        filtering out colleges.
+                       {{ $state->overview }}
                     </p>
 
-                    <ul class="country-details-list">
+                    <!-- <ul class="country-details-list">
                         <li>
                             <span>Location</span>
                             <span>Andhra Pradesh, India</span>
@@ -46,7 +42,7 @@
                             <span>Education Facilities</span>
                             <span>Advanced Infrastructure & Skilled Faculty</span>
                         </li>
-                    </ul>
+                    </ul> -->
 
                 </div>
             </div>

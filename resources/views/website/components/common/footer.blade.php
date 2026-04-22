@@ -52,10 +52,7 @@
 						<div class="footer-widget col-lg-4 col-md-4 col-ms-12">
 							<h6 class="widget-title">Associate Colleges</h6>
 							<ul class="user-links">
-								<li><a href="{{ route('andhra-pradesh') }}">Andhra Pradesh</a></li>
-								<li><a href="{{ route('punjab') }}">Punjab</a></li>
-								<li><a href="{{ route('haryana') }}">Haryana</a></li>
-								<li><a href="{{ route('delhi') }}">Delhi</a></li>
+								
 							</ul>
 						</div>
 						<div class="footer-widget col-lg-4 col-md-4 col-ms-12">
