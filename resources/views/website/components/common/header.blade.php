@@ -47,24 +47,34 @@
                                 <li><a href="{{ route('vision-mission') }}">Vision &amp; Mission</a></li>
                             </ul>
                         </li>
-                            <li class="dropdown "><a href="javascript:void(0)">Associate Colleges</a>
-                                <ul>
-                                    @php
-                                        $States = \App\Models\CollegeState::where('status', 'active')->get();
-                                    @endphp
-                                    @foreach($States as $state)
-                                        <li><a href="{{ route('associate-colleges', $state->slug) }}">{{ $state->name }}</a></li>
-                                    @endforeach
-                                
-                                </ul>
-                            </li>
+                        <li class="dropdown "><a href="javascript:void(0)">Associate Colleges</a>
+                            <ul>
+                                @php
+                                $States = \App\Models\CollegeState::where('status', 'active')->get();
+                                @endphp
+                                @forelse($States as $state)
+                                <li><a href="{{ route('associate-colleges', $state->slug) }}">{{ $state->name }}</a></li>
+                                @empty
+                                <li>
+                                    <p>No State found yet</p>
+                                </li>
+                                @endforelse
+
+                            </ul>
+                        </li>
                         <li class="dropdown"><a href="javascript:void(0)">Courses</a>
                             <ul>
-
-                                <li><a href="{{ route('admission-guidance') }}">Admission Guidance</a></li>
-                                <li><a href="{{ route('career-counselling') }}">Career Counseling</a></li>
-                                <li><a href="{{ route('diploma-admission') }}">Diploma Admission</a></li>
-                                <li><a href="{{ route('engineering-admission') }}">Engineering Admission</a></li>
+                                @php
+                                $courseHeader = \App\Models\Course::where('status','active')->get();
+                                @endphp
+                                @forelse($courseHeader as $course)
+                                <li><a href="{{ route('courses', $course->slug) }}">{{ $course->name }}</a></li>
+                                @empty
+                                <li>
+                                    <p>No Course found yet</p>
+                                </li>
+                                @endforelse
+                               
                             </ul>
                         </li>
 
@@ -158,12 +168,12 @@
 
         <div class="search-inner">
             <form method="post" action="{{ route('home') }}">
-                <div class="form-group">
-                    <input type="search" name="search-field" value="" placeholder="Search..." required="">
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                </div>
-            </form>
-        </div>
+    <div class="form-group">
+        <input type="search" name="search-field" value="" placeholder="Search..." required="">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </div>
+    </form>
+    </div>
     </div> --}}
     <!-- End Header Search -->
 

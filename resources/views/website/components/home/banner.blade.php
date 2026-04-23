@@ -2,7 +2,7 @@
     <div class="banner-carousel owl-carousel owl-theme">
         <!-- Slide Item -->
         <div class="slide-item">
-            <div class="bg-image" style="background-image: url(website/images/main-slider/5.jpg);"></div>
+            <div class="bg-image" style="background-image: url(website/images/vidya/banner.png);"></div>
             <div class="auto-container">
                 <div class="content-box">
                     <div class="number animate-2">#1</div>

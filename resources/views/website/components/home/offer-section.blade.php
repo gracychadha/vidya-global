@@ -10,12 +10,12 @@
             <div class="service-block-three col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
                 <div class="inner-box">
                     <div class="image-box">
-                        <figure class="image"><a href="{{ route('admission-guidance') }}"><img
-                                    src="{{ asset('website/images/resource/service-3-1.jpg') }}" alt=""></a></figure>
+                        <figure class="image"><a href=""><img
+                                    src="{{ asset('website/images/vidya/course-01.png') }}" alt=""></a></figure>
                     </div>
                     <div class="overlay-content">
                         <i class="icon fa fa-graduation-cap"></i>
-                        <h6 class="title"><a href="{{ route('admission-guidance') }}">Admission Guidance</a></h6>
+                        <h6 class="title"><a href="">Admission Guidance</a></h6>
                         <div class="text">Right college. Smooth admissions.</div>
                     </div>
                 </div>
@@ -26,7 +26,7 @@
                 <div class="inner-box">
                     <div class="image-box">
                         <figure class="image"><a href="{{ route('career-counselling') }}"><img
-                                    src="{{ asset('website/images/resource/service-3-2.jpg') }}" alt=""></a></figure>
+                                    src="{{ asset('website/images/vidya/course-02.png') }}" alt=""></a></figure>
                     </div>
                     <div class="overlay-content">
                         <i class="icon fa fa-briefcase"></i>
@@ -41,7 +41,7 @@
                 <div class="inner-box">
                     <div class="image-box">
                         <figure class="image"><a href="{{ route('diploma-admission') }}"><img
-                                    src="{{ asset('website/images/resource/service-3-3.jpg') }}" alt=""></a></figure>
+                                    src="{{ asset('website/images/vidya/course-03.png') }}" alt=""></a></figure>
                     </div>
                     <div class="overlay-content">
                         <i class="icon fa fa-family"></i>
@@ -56,7 +56,7 @@
                 <div class="inner-box">
                     <div class="image-box">
                         <figure class="image"><a href="{{ route('engineering-admission') }}"><img
-                                    src="{{ asset('website/images/resource/service-3-4.jpg') }}" alt=""></a></figure>
+                                    src="{{ asset('website/images/vidya/course-04.png') }}" alt=""></a></figure>
                     </div>
                     <div class="overlay-content">
                         <i class="icon fa fa-camera"></i>

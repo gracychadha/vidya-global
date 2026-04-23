@@ -6115,7 +6115,7 @@ Section Title
   position: relative;
   display: block;
   height: 80px;
-  width: 80px;
+  width: 90px;
   border-radius: 50%;
   overflow: hidden;
   -webkit-transition: all 300ms ease;
@@ -6128,15 +6128,18 @@ Section Title
   color: var(--theme-color2);
 }
 .country-block .theme-btn {
-  position: relative;
-  font-size: 18px;
-  line-height: 30px;
-  padding: 10px 30px;
-  text-align: center;
-  background-color: #ebeef5;
-  display: inline-block;
-  font-weight: 800;
-  border-radius: 50px;
+      word-break: break-all;
+    overflow-wrap: break-word;
+    position: relative;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 10px;
+    white-space: break-spaces;
+    text-align: center;
+    background-color: #ebeef5;
+    display: inline-block;
+    font-weight: 800;
+    border-radius: 50px;
 }
 .country-block .theme-btn:hover {
   color: var(--theme-color1);
@@ -12718,4 +12721,8 @@ Sidebar
 }
 .footer-bottom .copyright-text a:hover {
   color: #ffffff;
+}
+#course-image{
+  max-height:350px;
+  width:100%;
 }

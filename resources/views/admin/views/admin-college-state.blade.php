@@ -45,9 +45,7 @@
                                         @forelse ($collegeStates as $collegeState)
                                             <tr>
                                                 <td>{{ $loop->iteration }}</td>
-                                                <td><a href="" class="product-list-item-img"><img
-                                                            src="{{ $collegeState->image ? asset('storage/' . $collegeState->image) : asset('placeholder.png') }}"
-                                                            alt="product-list"><span>{{ $collegeState->name }}</span></a></td>
+                                                <td><a href="" class="product-list-item-img"><span>{{ $collegeState->name }}</span></a></td>
                                                 <td> <span
                                                         class="badge bg-{{ $collegeState->status == 'active' ? 'success' : 'danger' }}">
                                                         {{ ucfirst($collegeState->status) }}

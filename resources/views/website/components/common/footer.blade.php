@@ -52,16 +52,28 @@
 						<div class="footer-widget col-lg-4 col-md-4 col-ms-12">
 							<h6 class="widget-title">Associate Colleges</h6>
 							<ul class="user-links">
-								
+								@php
+									$States = \App\Models\CollegeState::where('status', 'active')->limit(5)->get();
+								@endphp
+								@foreach($States as $state)
+									<li><a href="{{ route('associate-colleges', $state->slug) }}">{{ $state->name }}</a>
+									</li>
+								@endforeach
 							</ul>
 						</div>
 						<div class="footer-widget col-lg-4 col-md-4 col-ms-12">
 							<h6 class="widget-title">Courses</h6>
 							<ul class="user-links">
-								<li><a href="{{ route('admission-guidance') }}">Admission Guidance</a></li>
-								<li><a href="{{ route('career-counselling') }}">Career Counseling</a></li>
-								<li><a href="{{ route('diploma-admission') }}">Diploma Admission</a></li>
-								<li><a href="{{ route('engineering-admission') }}">Engineering Admission</a></li>
+								@php
+									$courseHeader = \App\Models\Course::where('status', 'active')->get();
+								@endphp
+								@forelse($courseHeader as $course)
+									<li><a href="{{ route('courses', $course->slug) }}">{{ $course->name }}</a></li>
+								@empty
+									<li>
+										<p>No Course found yet</p>
+									</li>
+								@endforelse
 							</ul>
 						</div>
 

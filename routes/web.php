@@ -6,7 +6,11 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CollegeStateController;
 use Illuminate\Support\Facades\Route;
 use App\Models\CollegeState;
+use App\Models\Course;
 use App\Http\Controllers\CollegeController;
+use App\Http\Controllers\CourseController;
+use App\Http\Controllers\PrivacyPolicyController;
+use App\Http\Controllers\TermsConditionController;
 
 
 Route::get('/', function () {
@@ -34,7 +38,7 @@ Route::get('/career-counselling', function () {
 Route::get('/diploma-admission', function () {
     return view('website.pages.diploma-guidance');
 })->name('diploma-admission');
-Route::get('/admission-guidance', function () {
+Route::get('/admission-guidance/{slug}', function () {
     return view('website.pages.admission-guidance');
 })->name('admission-guidance');
 Route::get('/engineering-admission', function () {
@@ -49,6 +53,11 @@ Route::get('/associate-colleges/{slug}', function ($slug) {
     $state = CollegeState::where('slug', $slug)->firstOrFail();
     return view('website.pages.associate-colleges', compact('state'));
 })->name('associate-colleges');
+Route::get('/courses/{slug}', function ($slug) {
+    $course = Course::where('slug', $slug)->firstOrFail();
+    return view('website.pages.admission-guidance', compact('course'));
+})->name('courses');
+Route::get('/course/{slug}', [CourseController::class, 'show'])->name('course.show');
 Route::get('/punjab', function () {
     return view('website.pages.punjab-colleges');
 })->name('punjab');
@@ -122,125 +131,30 @@ Route::middleware('auth')->group(function () {
     Route::delete('/admin-college-states/{collegeState}', [CollegeStateController::class, 'destroy'])->name('admin-college-states.destroy');
     // collge crud 
     // CRUD (index, create, store, edit, update, delete)
-    Route::resource('colleges', CollegeController::class);
-
+    Route::get('/colleges', [CollegeController::class, 'index'])->name('colleges.index');
+    Route::post('/colleges', [CollegeController::class, 'store'])->name('colleges.store');
+    Route::put('/colleges/{college}', [CollegeController::class, 'update'])->name('colleges.update');
+    Route::delete('/colleges/{college}', [CollegeController::class, 'destroy'])->name('colleges.destroy');
+    Route::post('colleges-import', [CollegeController::class, 'import'])->name('colleges.import');
     // BULK IMPORT
-    Route::post('colleges-import', [CollegeController::class, 'import'])
-        ->name('colleges.import');
-    // admin gallery 
-    Route::get('/admin-gallery', [GalleryController::class, 'index'])->name('admin-gallery');
-    Route::post('/admin-gallery', [GalleryController::class, 'store'])->name('admin-gallery.store');
-    Route::put('/admin-gallery/{gallery}', [GalleryController::class, 'update'])->name('admin-gallery.update');
-    Route::delete('/admin-gallery/{gallery}', [GalleryController::class, 'destroy'])->name('admin-gallery.destroy');
-    // admin partner
-    Route::get('/admin-partners', [PartnerController::class, 'index'])->name('admin-partners');
-    Route::post('/admin-partners', [PartnerController::class, 'store'])->name('admin-partners.store');
-    Route::put('/admin-partners/{partner}', [PartnerController::class, 'update'])->name('admin-partners.update');
-    Route::delete('/admin-partners/{partner}', [PartnerController::class, 'destroy'])->name('admin-partners.destroy');
-    // reviews
-    Route::get('/admin-reviews', [ReviewController::class, 'index'])->name('admin-reviews');
-    Route::post('/admin-reviews', [ReviewController::class, 'store'])->name('admin-reviews.store');
-    Route::put('/admin-reviews/{review}', [ReviewController::class, 'update'])->name('admin-reviews.update');
-    Route::delete('/admin-reviews/{review}', [ReviewController::class, 'destroy'])->name('admin-reviews.destroy');
-    // video
-    Route::get('/admin-videos', [VideoController::class, 'index'])->name('admin-videos');
-    Route::post('/admin-videos', [VideoController::class, 'store'])->name('admin-videos.store');
-    Route::put('/admin-videos/{video}', [VideoController::class, 'update'])->name('admin-videos.update');
-    Route::delete('/admin-videos/{video}', [VideoController::class, 'destroy'])->name('admin-videos.destroy');
+    Route::post('colleges-import', [CollegeController::class, 'import'])->name('colleges.import');
+
+    Route::get('/admin-course', [CourseController::class, 'index'])->name('admin-course.index');
+    Route::post('/admin-course', [CourseController::class, 'store'])->name('admin-course.store');
+    Route::put('/admin-course/{item}', [CourseController::class, 'update'])->name('admin-course.update');
+    Route::delete('/admin-course/{item}', [CourseController::class, 'destroy'])->name('admin-course.destroy');
+
+
+
+   
     // blogs
     Route::get('/admin-blogs', [BlogController::class, 'index'])->name('admin-blogs');
     Route::post('/admin-blogs', [BlogController::class, 'store'])->name('admin-blogs.store');
     Route::put('/admin-blogs/{blog}', [BlogController::class, 'update'])->name('admin-blogs.update');
     Route::delete('/admin-blogs/{blog}', [BlogController::class, 'destroy'])->name('admin-blogs.destroy');
-    // organizer 
-    Route::get('/admin-organizers', [OrganizerController::class, 'index'])->name('admin-organizers');
-    Route::post('/admin-organizers', [OrganizerController::class, 'store'])->name('admin-organizers.store');
-    Route::put('/admin-organizers/{organizer}', [OrganizerController::class, 'update'])->name('admin-organizers.update');
-    Route::delete('/admin-organizers/{organizer}', [OrganizerController::class, 'destroy'])->name('admin-organizers.destroy');
-    //    team
-    Route::get('/admin-team', [TeamController::class, 'index'])->name('admin-team');
-    Route::post('/admin-team', [TeamController::class, 'store'])->name('admin-team.store');
-    Route::put('/admin-team/{team}', [TeamController::class, 'update'])->name('admin-team.update');
-    Route::delete('/admin-team/{team}', [TeamController::class, 'destroy'])->name('admin-team.destroy');
+  
 
-    // Nodal Registration Leads
-    Route::get('/admin-nodal-registration', [NodalRegisterationController::class, 'index'])->name('admin-nodal-registration');
-    Route::delete('/admin-nodal-registration/{nodalRegistration}', [NodalRegisterationController::class, 'destroy'])->name('admin-nodal-registration.destroy');
-    Route::post('/nodal-registrations/delete-selected', [NodalRegisterationController::class, 'deleteSelected'])->name('nodal-registrations.delete-selected');
-    // booking trial leads
-    Route::get('/admin-booking', [BookATrialController::class, 'index'])->name('admin-booking');
-    Route::delete('/admin-booking/{trial}', [BookATrialController::class, 'destroy'])->name('admin-booking.destroy');
-    Route::post('/booking-trials/delete-selected', [BookATrialController::class, 'deleteSelected'])->name('booking-trials.delete-selected');
-    // player registration leads
-    Route::get('/admin-player-registration', [PlayerRegistrationController::class, 'index'])->name('admin-player-registration');
-    Route::delete('/admin-player-registration/{player}', [PlayerRegistrationController::class, 'destroy'])->name('admin-player-registration.destroy');
-    Route::post('/player-registrations/delete-selected', [PlayerRegistrationController::class, 'deleteSelected'])->name('player-registrations.delete-selected');
-    // admin membership access leads
-    Route::get('/admin-membership-access', [MembershipAccessController::class, 'index'])->name('admin-membership-access');
-    Route::delete('/admin-membership-access/{membershipAccess}', [MembershipAccessController::class, 'destroy'])->name('admin-membership-access.destroy');
-    Route::post('/membership-access/delete-selected', [MembershipAccessController::class, 'deleteSelected'])->name('membership-access.delete-selected');
-    // admin influencer leads
-    Route::get('/admin-influencer', [InfluencerController::class, 'index'])->name('admin-influencer');
-    Route::delete('/admin-influencer/{influencer}', [InfluencerController::class, 'destroy'])->name('admin-influencer.destroy');
-    Route::post('/influencers/delete-selected', [InfluencerController::class, 'deleteSelected'])->name('influencers.delete-selected');
-    // sponsor leads
-    Route::get('/admin-sponsor', [SponsorController::class, 'index'])->name('admin-sponsor');
-    ROute::delete('/admin-sponsor/{sponsor}', [SponsorController::class, 'destroy'])->name('admin-sponsor.destroy');
-    Route::post('/sponsors/delete-selected', [SponsorController::class, 'deleteSelected'])->name('sponsors.delete-selected');
-
-    // ************************************************************************************
-    // ************************************************************************************
-    // Sports CRUD CMS
-    // ************************************************************************************
-    // ************************************************************************************
-    Route::get('/admin-sports', [SportController::class, 'index'])->name('admin-sports');
-    Route::post('/admin-sports', [SportController::class, 'store'])->name('admin-sports.store');
-    Route::put('/admin-sports/{sport}', [SportController::class, 'update'])->name('admin-sports.update');
-    Route::delete('/admin-sports/{sport}', [SportController::class, 'destroy'])->name('admin-sports.destroy');
-
-
-    // ************************************************************************************
-    // ************************************************************************************
-    // home page CMS
-    // ************************************************************************************
-    // ************************************************************************************
-    // admin home slider
-    Route::get('/admin-home-slider', [HomeSliderController::class, 'index'])->name('admin-home-slider');
-    Route::post('/admin-home-slider', [HomeSliderController::class, 'store'])->name('admin-home-slider.store');
-    Route::put('/admin-home-slider/{slider}', [HomeSliderController::class, 'update'])->name('admin-home-slider.update');
-    Route::delete('/admin-home-slider/{slider}', [HomeSliderController::class, 'destroy'])->name('admin-home-slider.destroy');
-    // about section
-    Route::get('/admin-home-about', [HomeAboutSectionController::class, 'index'])->name('admin-home-about.index');
-    Route::put('/admin-home-about', [HomeAboutSectionController::class, 'update'])->name('admin-home-about.update');
-    // how we work section
-    Route::get('/admin-how-we-work', [HomeWorkSectionController::class, 'index'])->name('admin-how-we-work.index');
-    Route::put('/admin-how-we-work', [HomeWorkSectionController::class, 'update'])->name('admin-how-we-work.update');
-    // home benefit section
-    Route::get('/admin-home-benefit', [HomeBenefitController::class, 'index'])->name('admin-home-benefit.index');
-    Route::put('/admin-home-benefit/{section}', [HomeBenefitController::class, 'update'])
-        ->name('admin-home-benefit.update');
-    // ************************************************************************************
-    // ************************************************************************************
-    // About page CMS
-    // ************************************************************************************
-    // ************************************************************************************
-    // about page about section
-    Route::get('/admin-about-section', [AboutSectionController::class, 'index'])->name('admin-about-section.index');
-    Route::put('/admin-about-section/{section}', [AboutSectionController::class, 'update'])
-        ->name('admin-about-section.update');
-    // about page values section
-    Route::get('/admin-about-values', [AboutValueController::class, 'index'])->name('admin-about-values.index');
-    Route::put('/admin-about-values/{section}', [AboutValueController::class, 'update'])
-        ->name('admin-about-values.update');
-    // ************************************************************************************
-    // ************************************************************************************
-    // Organizer page CMS
-    // ************************************************************************************
-    // ************************************************************************************
-    // organizer about section
-    Route::get('/admin-organizer-about', [OrganizerAboutSectionController::class, 'index'])->name('admin-organizer-about.index');
-    Route::put('/admin-organizer-about/{section}', [OrganizerAboutSectionController::class, 'update'])
-        ->name('admin-organizer-about.update');
+   
     // ************************************************************************************
     // ************************************************************************************
     // privacy Policy page CMS
@@ -255,20 +169,6 @@ Route::middleware('auth')->group(function () {
     // ************************************************************************************
     Route::get('/admin-terms-condition', [TermsConditionController::class, 'index'])->name('admin-terms-condition.index');
     Route::put('/admin-terms-condition/{section}', [TermsConditionController::class, 'update'])->name('admin-terms-condition.update');
-    // ************************************************************************************
-    // ************************************************************************************
-    // Required Documents CMS
-    // ************************************************************************************
-    // ************************************************************************************
-    Route::get('/admin-required-documents', [RequiredDocumentController::class, 'index'])->name('admin-required-documents.index');
-    Route::put('/admin-required-documents/{section}', [RequiredDocumentController::class, 'update'])->name('admin-required-documents.update');
-    // ************************************************************************************
-    // ************************************************************************************
-    // Selection Process CMS
-    // ************************************************************************************
-    // ************************************************************************************
-    Route::get('/admin-selection-process', [SelectionProcessController::class, 'index'])->name('admin-selection-process.index');
-    Route::put('/admin-selection-process/{section}', [SelectionProcessController::class, 'update'])->name('admin-selection-process.update');
     // ************************************************************************************
     // ************************************************************************************
     // Website settings CMS

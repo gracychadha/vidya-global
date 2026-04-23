@@ -2,100 +2,47 @@
     <div class="auto-container">
 
         <div class="sec-title text-center">
-            <span class="sub-title">Andhra Pradesh Colleges</span>
-            <h2>Top Colleges in <span class="color3">Andhra Pradesh</span></h2>
+            <span class="sub-title">{{ $state->name ?? '' }} Colleges</span>
+            <h2>Top Colleges in <span class="color3">{{ $state->name ?? '' }}</span></h2>
         </div>
 
         <div class="carousel-outer">
             <div class="training-carousel-two owl-carousel owl-theme">
+                @php
+                    $colleges = App\Models\College::where('status', 'active')
+                    ->where('state_id',$state->id)
+                    ->get();
+                @endphp
+                @forelse($colleges as $college)
+                            <div class="training-block-two">
+                                <div class="inner-box">
+                                    <div class="image-box">
+                                        <figure class="image">
+                                            <img src="{{ $college->image
+                    ? asset('storage/' . $college->image)
+                    : asset('website/images/resource/gallery-1.jpg') }}" alt="">
+                                        </figure>
 
-                <!-- SRM University AP -->
-                <div class="training-block-two">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image">
-                                <img src="{{ asset('website/images/resource/gallery-1.jpg') }}" alt="">
-                            </figure>
-                            <h4 class="title">SRM University AP</h4>
-                        </div>
+                                        <h4 class="title">{{ $college->name }}</h4>
+                                    </div>
 
-                        <div class="overlay-content">
-                            <div class="inner">
-                                <h5 class="title">SRM University AP</h5>
-                                <div class="text">
-                                    A leading private university in Andhra Pradesh offering world-class engineering,
-                                    management, and science programs.
+                                    <div class="overlay-content">
+                                        <div class="inner">
+                                            <h5 class="title">{{ $college->name }}</h5>
+
+                                            <div class="text">
+                                                {{ $college->description
+                    ? \Illuminate\Support\Str::limit($college->description, 120)
+                    : 'No description available' }}
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- VIT AP -->
-                <div class="training-block-two">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image">
-                                <img src="{{ asset('website/images/resource/gallery-1.jpg') }}" alt="">
-                            </figure>
-                            <h4 class="title">VIT AP University</h4>
-                        </div>
-
-                        <div class="overlay-content">
-                            <div class="inner">
-                                <h5 class="title">VIT AP University</h5>
-                                <div class="text">
-                                    One of India's top ranked universities known for advanced research and
-                                    high-quality technical education.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- KL University -->
-                <div class="training-block-two">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image">
-                                <img src="{{ asset('website/images/resource/gallery-1.jpg') }}" alt="">
-                            </figure>
-                            <h4 class="title">KL University</h4>
-                        </div>
-
-                        <div class="overlay-content">
-                            <div class="inner">
-                                <h5 class="title">KL University</h5>
-                                <div class="text">
-                                    A prestigious deemed-to-be university offering programs in engineering,
-                                    management, pharmacy, and architecture.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- GITAM University -->
-                <div class="training-block-two">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image">
-                                <img src="{{ asset('website/images/resource/gallery-1.jpg') }}" alt="">
-                            </figure>
-                            <h4 class="title">GITAM University</h4>
-                        </div>
-
-                        <div class="overlay-content">
-                            <div class="inner">
-                                <h5 class="title">GITAM University</h5>
-                                <div class="text">
-                                    A reputed multidisciplinary university offering engineering, medical,
-                                    management, and science programs.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @empty
+                    <p class="text-center">No colleges found for this state</p>
+                @endforelse
 
             </div>
         </div>

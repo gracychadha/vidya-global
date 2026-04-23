@@ -5,37 +5,23 @@
             <div class="service-sidebar wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1200m">
                 <div class="service-list">
                     <ul>
+                        @php
+                        $courseSidebar = \App\Models\Course::where('status', 'active')->get();
+                        @endphp
+                        @forelse($courseSidebar as $course)
                         <li>
-                            <a href="{{ route('admission-guidance') }}"
-                                class="{{ Route::currentRouteName() == 'admission-guidance' ? 'current' : '' }}">
+                            <a href="{{ route('courses', $course->slug) }}"
+                                class="{{ request()->route('slug') == $course->slug ? 'current' : '' }}">
                                 <i class="fas fa-angle-right"></i>
-                                <span>Admission Guidance</span>
+                                <span>{{ $course->name }}</span>
                             </a>
                         </li>
-
+                        @empty
                         <li>
-                            <a href="{{ route('career-counselling') }}"
-                                class="{{ Route::currentRouteName() == 'career-counselling' ? 'current' : '' }}">
-                                <i class="fas fa-angle-right"></i>
-                                <span>Career Counseling</span>
-                            </a>
+                            <p>No Course found yet</p>
                         </li>
-
-                        <li>
-                            <a href="{{ route('diploma-admission') }}"
-                                class="{{ Route::currentRouteName() == 'diploma-admission' ? 'current' : '' }}">
-                                <i class="fas fa-angle-right"></i>
-                                <span>Diploma Admission</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="{{ route('engineering-admission') }}"
-                                class="{{ Route::currentRouteName() == 'engineering-admission' ? 'current' : '' }}">
-                                <i class="fas fa-angle-right"></i>
-                                <span>Engineering Admission</span>
-                            </a>
-                        </li>
+                        @endforelse
+                       
                     </ul>
                 </div>
             </div>

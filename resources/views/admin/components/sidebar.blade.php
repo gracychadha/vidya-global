@@ -42,75 +42,17 @@
                 <li>
                     <a href="{{ route('colleges.index') }}"><i class="fe fe-image"></i> <span>Colleges</span></a>
                 </li>
+               
                 <li>
-                    <a href=""><i class="fe fe-award"></i> <span>Match Result</span></a>
+                    <a href="{{ route('admin-course.index') }}"><i class="fe fe-image"></i> <span>Course</span></a>
                 </li>
-                <li>
-                    <a href="{{ route('admin-organizers') }}"><i class="fe fe-users"></i> <span>Organizers</span></a>
-                </li>
-                <li>
-                    <a href="{{ route('admin-partners') }}"><i class="fe fe-briefcase"></i> <span>Partners</span></a>
-                </li>
-
-                <li>
-                    <a href="{{ route('admin-reviews') }}"><i class="fe fe-star"></i> <span>Review</span></a>
-                </li>
-                <li>
-                    <a href="{{ route('admin-sports') }}"><i class="fe fe-activity"></i> <span>Sports</span></a>
-                </li>
-                <li>
-                    <a href="{{ route('admin-team') }}"><i class="fe fe-users"></i> <span>Team</span></a>
-                </li>
-                <li>
-                    <a href=""><i class="fe fe-calendar"></i> <span>Upcoming Match</span></a>
-                </li>
-                <li>
-                    <a href="{{ route('admin-videos') }}"><i class="fe fe-video"></i> <span>Videos</span></a>
-                </li>
+               
+               
+             
+               
                 <!-- /management -->
 
-                <!-- CMS -->
-                <li class="menu-title"><span>CMS</span></li>
-                <li class="submenu">
-                    <a href="javascript:void(0)"><i class="fe fe-home"></i>
-                        <span> Home Page</span>
-                        <span class="menu-arrow"></span></a>
-                    <ul style="display: none">
-                        <li><a href="{{ route('admin-home-slider') }}">Slider</a></li>
-                        <li><a href="{{ route('admin-home-about.index') }}">About Section</a></li>
-                        <li><a href="{{ route('admin-how-we-work.index') }}">How We Work Section</a></li>
-                        <li><a href="{{ route('admin-home-benefit.index') }}">Benefits Section</a></li>
-                    </ul>
-                </li>
-
-                <li class="submenu">
-                    <a href="javascript:void(0)"><i class="fe fe-info"></i>
-                        <span> About Page</span>
-                        <span class="menu-arrow"></span></a>
-                    <ul style="display: none">
-                        <li><a href="{{ route('admin-about-section.index') }}">About Section</a></li>
-                        <li><a href="{{ route('admin-about-values.index') }}">Values Section</a></li>
-                    </ul>
-                </li>
-                <li class="submenu">
-                    <a href="javascript:void(0)"><i class="fe fe-user"></i>
-                        <span> Organizer About</span>
-                        <span class="menu-arrow"></span></a>
-                    <ul style="display: none">
-                        <li><a href="{{ route('admin-organizer-about.index') }}">Organizer About Section</a></li>
-                    </ul>
-                </li>
-
-                <li>
-                    <a href="{{ route('admin-required-documents.index') }}"><i class="fe fe-folder"></i> 
-                        <span> Required Documents</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ route('admin-selection-process.index') }}"><i class="fe fe-check-circle"></i>
-                        <span> Selection Process</span>
-                    </a>
-                </li>
+             
                 <li>
                     <a href="{{ route('admin-privacy-policy.index') }}"><i class="fe fe-shield"></i>
                         <span> Privacy Policy</span>
