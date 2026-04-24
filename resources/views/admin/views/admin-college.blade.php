@@ -228,52 +228,63 @@
 
                         <table class="table table-bordered table-striped mb-0">
 
-                            <tr>
-                                <th>State :</th>
-                                <td>{{ $item->state->name ?? '-' }}</td>
+                            <div class="row g-3">
 
-                                <th>Name :</th>
-                                <td>{{ $item->name }}</td>
-                            </tr>
+                                <div class="col-md-6">
+                                    <strong>State :</strong>
+                                    <div class="text-muted">{{ $item->state->name ?? '-' }}</div>
+                                </div>
 
-                            <tr>
-                                <th>Email :</th>
-                                <td>{{ $item->email }}</td>
+                                <div class="col-md-6">
+                                    <strong>Name :</strong>
+                                    <div class="text-muted">{{ $item->name }}</div>
+                                </div>
 
-                                <th>Type :</th>
-                                <td>{{ $item->type }}</td>
-                            </tr>
+                                <div class="col-md-6">
+                                    <strong>Email :</strong>
+                                    <div class="text-muted">{{ $item->email }}</div>
+                                </div>
 
-                            <tr>
-                                <th>NAAC Grade :</th>
-                                <td>{{ $item->naac_grade }}</td>
+                                <div class="col-md-6">
+                                    <strong>Type :</strong>
+                                    <div class="text-muted">{{ $item->type }}</div>
+                                </div>
 
-                                <th>Status :</th>
-                                <td>
+                                <div class="col-md-6">
+                                    <strong>NAAC Grade :</strong>
+                                    <div class="text-muted">{{ $item->naac_grade }}</div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <strong>Status :</strong><br>
                                     <span class="badge bg-{{ $item->status == 'active' ? 'success' : 'danger' }}">
                                         {{ ucfirst($item->status) }}
                                     </span>
-                                </td>
-                            </tr>
+                                </div>
 
-                            <tr>
-                                <th>Address :</th>
-                                <td colspan="3">{{ $item->address }}</td>
-                            </tr>
+                                <div class="col-12">
+                                    <strong>Address :</strong>
+                                    <div class="text-muted">{{ $item->address }}</div>
+                                </div>
 
-                            <tr>
-                                <th>Image :</th>
-                                <td>
+                                <div class="col-md-6">
+                                    <strong>Image :</strong><br>
                                     @if($item->image)
-                                        <img src="{{ asset('storage/' . $item->image) }}" width="120" class="img-thumbnail">
+                                        <img src="{{ asset('storage/' . $item->image) }}" class="img-fluid rounded mt-2"
+                                            style="max-height:120px;">
                                     @else
                                         <span class="text-muted">No Image</span>
                                     @endif
-                                </td>
+                                </div>
 
-                                <th>Description :</th>
-                                <td>{{ $item->description }}</td>
-                            </tr>
+                                <div class="col-md-6">
+                                    <strong>Description :</strong>
+                                    <div class="text-muted" style="max-height:120px; overflow:auto;">
+                                        {{ $item->description }}
+                                    </div>
+                                </div>
+
+                            </div>
 
                         </table>
 
