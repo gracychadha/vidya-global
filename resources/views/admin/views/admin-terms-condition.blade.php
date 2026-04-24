@@ -81,12 +81,13 @@
 
                                     </div>
                                 </div>
-
-                                <div class="text-end mt-4">
-                                    <button type="submit" class="btn btn-primary btn-lg px-5">
-                                        <i class="fas fa-save me-2"></i>Update
-                                    </button>
-                                </div>
+                                @can('edit terms conditions')
+                                    <div class="text-end mt-4">
+                                        <button type="submit" class="btn btn-primary btn-lg px-5">
+                                            <i class="fas fa-save me-2"></i>Update
+                                        </button>
+                                    </div>
+                                @endcan
                             </form>
                         </div>
                     </div>

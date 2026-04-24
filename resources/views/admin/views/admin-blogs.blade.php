@@ -10,12 +10,13 @@
                     <div class="list-btn">
                         <ul class="filter-list">
 
-
-                            <li>
-                                <a class="btn btn-primary" href="javascript:void(0);" data-bs-toggle="modal"
-                                    data-bs-target="#add_category"><i class="fa fa-plus-circle me-2"
-                                        aria-hidden="true"></i>Add Blog</a>
-                            </li>
+                            @can('create blog')
+                                <li>
+                                    <a class="btn btn-primary" href="javascript:void(0);" data-bs-toggle="modal"
+                                        data-bs-target="#add_category"><i class="fa fa-plus-circle me-2"
+                                            aria-hidden="true"></i>Add Blog</a>
+                                </li>
+                            @endcan
                         </ul>
                     </div>
                 </div>
@@ -46,38 +47,41 @@
                                             <tr>
                                                 <td>{{ $loop->iteration }}</td>
                                                 <td><a href="" class="product-list-item-img">
-                                                    <!-- <img
-                                                            src="{{ $blog->image ? asset('storage/' . $blog->image) : asset('placeholder.png') }}"
-                                                            alt="product-list"> -->
-                                                            <span>{{ $blog->title }}</span></a></td>
+                                                        <!-- <img
+                                                                                    src="{{ $blog->image ? asset('storage/' . $blog->image) : asset('placeholder.png') }}"
+                                                                                    alt="product-list"> -->
+                                                        <span>{{ $blog->title }}</span></a></td>
                                                 <td>{{ $blog->author }} </td>
                                                 <td class="d-flex align-items-center">
                                                     <a class="btn-action-icon me-2" href="javascript:void(0);"
                                                         data-bs-toggle="modal" data-bs-target="#view_blog{{ $blog->id }}">
                                                         <i class="fe fe-eye"></i>
                                                     </a>
-                                                    <a class=" btn-action-icon me-2" href="javascript:void(0);"
-                                                        data-bs-toggle="modal" data-bs-target="#edit_category"><i
-                                                            class="fe fe-edit"></i></a>
+                                                    @can('edit blog')
+                                                        <a class=" btn-action-icon me-2" href="javascript:void(0);"
+                                                            data-bs-toggle="modal" data-bs-target="#edit_category"><i
+                                                                class="fe fe-edit"></i></a>
+                                                    @endcan
+                                                    @can('delete blog')
+                                                        <form action="{{ route('admin-blogs.destroy', $blog->id) }}" method="POST"
+                                                            class="d-inline delete-form">
+                                                            @csrf
+                                                            @method('DELETE')
 
-                                                    <form action="{{ route('admin-blogs.destroy', $blog->id) }}" method="POST"
-                                                        class="d-inline delete-form">
-                                                        @csrf
-                                                        @method('DELETE')
-
-                                                        <button type="button"
-                                                            class="btn-action-icon border-0 bg-transparent delete-btn">
-                                                            <i class="fe fe-trash-2"></i>
-                                                        </button>
-                                                    </form>
+                                                            <button type="button"
+                                                                class="btn-action-icon border-0 bg-transparent delete-btn">
+                                                                <i class="fe fe-trash-2"></i>
+                                                            </button>
+                                                        </form>
+                                                    @endcan
                                                 </td>
                                             </tr>
                                         @empty
                                             <tr>
-                                               <td></td>
-                                               <td>No blogs found yet.</td>
-                                               <td></td>
-                                               <td></td>
+                                                <td></td>
+                                                <td>No blogs found yet.</td>
+                                                <td></td>
+                                                <td></td>
                                             </tr>
                                         @endforelse
 
@@ -105,6 +109,7 @@
 
                     </button>
                 </div>
+
                 <form action="{{ route('admin-blogs.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
 
@@ -137,8 +142,8 @@
                                 <input type="file" name="image" class="form-control" required>
                                 <span class="form-text text-muted">Size : 770 * 515(max size : 5MB)</span>
                             </div>
- 
-                         
+
+
 
                             <div class="col-lg-12 mb-3">
                                 <label>Description <span class="text-danger">*</span></label>
@@ -195,7 +200,7 @@
                             <tr>
                                 <th>Date :</th>
                                 <td>{{ $item->date }}</td>
-                            
+
                                 <th>Status :</th>
                                 <td>
                                     <span class="badge bg-{{ $item->status == 'active' ? 'success' : 'danger' }}">
@@ -211,7 +216,7 @@
                                     @endif
                                 </td>
 
-                               
+
                             </tr>
 
 

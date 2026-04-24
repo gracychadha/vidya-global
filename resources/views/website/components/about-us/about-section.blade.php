@@ -44,15 +44,15 @@
                                 <figure class="map"><img src="{{ asset('website/images/icons/map.png') }}" alt="">
                                 </figure>
                                 <figure class="image-1 overlay-anim wow fadeInUp"><img
-                                        src="{{ asset('website/images/resource/about-1.jpg') }}" alt=""></figure>
+                                        src="{{ asset('website/images/resource/about-03.png') }}" alt=""></figure>
                                 <figure class="image-2 overlay-anim wow fadeInRight"><img
-                                        src="{{ asset('website/images/resource/about-2.jpg') }}" alt=""></figure>
+                                        src="{{ asset('website/images/resource/about-02.png') }}" alt=""></figure>
                             </div>
                         </div>
                         <div class="column col-lg-6 col-md-6">
                             <div class="image-box">
                                 <figure class="image-3 overlay-anim wow fadeInLeft"><img
-                                        src="{{ asset('website/images/resource/about-3.jpg') }}" alt=""></figure>
+                                        src="{{ asset('website/images/resource/about-01.png') }}" alt=""></figure>
                                 <div class="experience bounce-y">
                                     <div class="inner">
                                         <i class="icon flaticon-loyalty"></i>

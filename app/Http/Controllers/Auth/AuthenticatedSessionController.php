@@ -8,7 +8,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
-
+use Illuminate\Support\Facades\Http;
 class AuthenticatedSessionController extends Controller
 {
     /**
@@ -22,13 +22,42 @@ class AuthenticatedSessionController extends Controller
     /**
      * Handle an incoming authentication request.
      */
-    public function store(LoginRequest $request): RedirectResponse
+    
+
+    public function store(Request $request)
     {
-        $request->authenticate();
+        $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required'],
+            'cf-turnstile-response' => ['required'],
+        ]);
+
+        // Verify Turnstile
+        $response = Http::asForm()->post(
+            'https://challenges.cloudflare.com/turnstile/v0/siteverify',
+            [
+                'secret' => env('TURNSTILE_SECRET_KEY'),
+                'response' => $request->input('cf-turnstile-response'),
+                'remoteip' => $request->ip(),
+            ]
+        );
+
+        if (!data_get($response->json(), 'success')) {
+            return back()->withErrors([
+                'captcha' => 'Verification failed. Try again.',
+            ]);
+        }
+
+        // Default Breeze login
+        if (!Auth::attempt($request->only('email', 'password'))) {
+            return back()->withErrors([
+                'email' => 'Invalid credentials',
+            ]);
+        }
 
         $request->session()->regenerate();
 
-        return redirect()->intended(route('dashboard', absolute: false));
+        return redirect()->intended('/dashboard');
     }
 
     /**

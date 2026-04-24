@@ -24,19 +24,11 @@
             </div>
 
             <!-- Image Column -->
-            <div class="image-column col-xl-6 col-lg-5 col-md-12 col-sm-12">
-                <div class="inner-column">
-                    <div class="image-box">
-                        <figure class="abs-image">
-                            <img src="{{ asset('website/images/resource/image-2.png') }}" alt="">
-                        </figure>
-                        <figure class="image-1 overlay-anim wow fadeInRight">
-                            <img src="{{ asset('website/images/resource/about-7.jpg') }}" alt="">
-                        </figure>
-                        <figure class="image-2 overlay-anim wow fadeInRight">
-                            <img src="{{ asset('website/images/resource/about-8.jpg') }}" alt="">
-                        </figure>
-                    </div>
+            <div class="col-xl-6 col-lg-5 col-md-12 col-sm-12">
+                <div class="image-box">
+                    <figure class="image-1 overlay-anim wow fadeInRight">
+                        <img src="{{ asset('website/images/resource/mission.png') }}" alt="" style="width:80%;">
+                    </figure>
                 </div>
             </div>
         </div>

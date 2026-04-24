@@ -11,7 +11,12 @@ use App\Http\Controllers\CollegeController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\PrivacyPolicyController;
 use App\Http\Controllers\TermsConditionController;
-
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\WebsiteSettingController;
+use App\Http\Controllers\SocialSettingController;
+use App\Models\ContactLead;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
     return view('website.pages.welcome');
@@ -87,9 +92,27 @@ Route::post('/contact-us/store', [ContactLeadController::class, 'store'])->name(
 
 
 
+
 Route::get('/dashboard', function () {
-    return view('admin.views.dashboard');
+    $totalLeads = App\Models\ContactLead::count();
+    $blogs = App\Models\Blog::count();
+    $states = App\Models\CollegeState::count();
+    $collegesCount = App\Models\College::count();
+
+
+    $colleges = App\Models\College::latest()->take(5)->get();
+    $statesData = App\Models\CollegeState::latest()->take(5)->get();
+
+    return view('admin.views.dashboard', [
+        'totalLeads' => $totalLeads,
+        'blogs' => $blogs,
+        'states' => $states,
+        'statesData' => $statesData,
+        'collegesCount' => $collegesCount,
+        'colleges' => $colleges
+    ]);
 })->middleware(['auth', 'verified'])->name('dashboard');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -146,15 +169,15 @@ Route::middleware('auth')->group(function () {
 
 
 
-   
+
     // blogs
     Route::get('/admin-blogs', [BlogController::class, 'index'])->name('admin-blogs');
     Route::post('/admin-blogs', [BlogController::class, 'store'])->name('admin-blogs.store');
     Route::put('/admin-blogs/{blog}', [BlogController::class, 'update'])->name('admin-blogs.update');
     Route::delete('/admin-blogs/{blog}', [BlogController::class, 'destroy'])->name('admin-blogs.destroy');
-  
 
-   
+
+
     // ************************************************************************************
     // ************************************************************************************
     // privacy Policy page CMS
@@ -169,6 +192,13 @@ Route::middleware('auth')->group(function () {
     // ************************************************************************************
     Route::get('/admin-terms-condition', [TermsConditionController::class, 'index'])->name('admin-terms-condition.index');
     Route::put('/admin-terms-condition/{section}', [TermsConditionController::class, 'update'])->name('admin-terms-condition.update');
+
+
+    // routes
+    Route::get('roles', [RoleController::class, 'index'])->name('roles.index');
+    Route::post('roles', [RoleController::class, 'store'])->name('roles.store');
+    Route::put('roles/{id}', [RoleController::class, 'update'])->name('roles.update');
+    Route::delete('roles/{id}', [RoleController::class, 'destroy'])->name('roles.destroy');
     // ************************************************************************************
     // ************************************************************************************
     // Website settings CMS
@@ -187,22 +217,9 @@ Route::middleware('auth')->group(function () {
 
     Route::put('/admin-social-settings', [SocialSettingController::class, 'update'])
         ->name('admin-social-settings.update');
-    // ************************************************************************************
-    // ************************************************************************************
-    // color settings CMS
-    // ************************************************************************************
-    // ************************************************************************************
-    Route::get('/admin-colour-settings', [ColourSettingController::class, 'index'])
-        ->name('admin-colour-settings.index');
-
-    Route::put('/admin-colour-settings', [ColourSettingController::class, 'update'])
-        ->name('admin-colour-settings.update');
+   
 });
-use App\Http\Controllers\Admin\UserController;
 
-Route::middleware(['auth', 'role:admin'])->group(function () {
-
-    // user management
 
     Route::get('/admin-users', [UserController::class, 'index'])->name('admin-users.index');
     Route::post('/users', [UserController::class, 'store'])->name('users.store');
@@ -210,11 +227,7 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::delete('/users/{user}', [UserController::class, 'destroy'])->name('users.destroy');
 
 
-    // roles
-    Route::get('/admin-roles', function () {
-        return view('admin.views.admin-roles');
-    })->name('admin-roles');
+   
 
 
-});
 require __DIR__ . '/auth.php';

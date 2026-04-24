@@ -32,8 +32,18 @@
     <script src="{{ asset('admin/assets/js/layout.js') }}"></script>
     {{-- custom css --}}
     <link rel="stylesheet" href="{{ asset('admin/css/main.css') }}">
-    <link href="https://unpkg.com/cropperjs/dist/cropper.min.css" rel="stylesheet"/>
-<script src="https://unpkg.com/cropperjs/dist/cropper.min.js"></script>
+    
+
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+
+    <style>
+        #calendar {
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 
 <body>

@@ -29,9 +29,9 @@
                         <figure class="abs-image"><img src="{{ asset('website/images/resource/image-2.png') }}" alt="">
                         </figure>
                         <figure class="image-1 overlay-anim wow fadeInRight"><img
-                                src="{{ asset('website/images/vidya/about.png') }}" alt=""></figure>
+                                src="{{ asset('website/images/upload/about-01.png') }}" alt=""></figure>
                         <figure class="image-2 overlay-anim wow fadeInRight"><img
-                                src="{{ asset('website/images/vidya/side-about.png') }}" alt=""></figure>
+                                src="{{ asset('website/images/upload/about-02.png') }}" alt=""></figure>
                     </div>
                 </div>
             </div>

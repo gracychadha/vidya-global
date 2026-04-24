@@ -10,37 +10,14 @@
                     <div class="list-btn">
                         <ul class="filter-list">
 
-                            <li class="">
-                                <div class="dropdown dropdown-action" data-bs-toggle="tooltip" data-bs-placement="top"
-                                    title="download">
-                                    <a href="#" class="btn-filters" data-bs-toggle="dropdown" aria-expanded="false"><span><i
-                                                class="fe fe-download"></i></span></a>
-                                    <div class="dropdown-menu dropdown-menu-end">
-                                        <ul class="d-block">
-                                            <li>
-                                                <a class="d-flex align-items-center download-item"
-                                                    href="javascript:void(0);" download=""><i
-                                                        class="far fa-file-pdf me-2"></i>PDF</a>
-                                            </li>
-                                            <li>
-                                                <a class="d-flex align-items-center download-item"
-                                                    href="javascript:void(0);" download=""><i
-                                                        class="far fa-file-text me-2"></i>CVS</a>
-                                            </li>
-                                        </ul>
+                            @can('delete leads')
+                                <li>
+                                    <div class="ms-auto">
+                                        <a href="javascript:void(0);" class="btn btn-danger btn-rounded deleteSelected">Delete
+                                            Selected</a>
                                     </div>
-                                </div>
-                            </li>
-                            <li>
-                                <a class="btn-filters" href="javascript:void(0);" data-bs-toggle="tooltip"
-                                    data-bs-placement="bottom" title="print"><span><i class="fe fe-printer"></i></span> </a>
-                            </li>
-                            <li>
-                                <div class="ms-auto">
-                                    <a href="javascript:void(0);" class="btn btn-danger btn-rounded deleteSelected">Delete
-                                        Selected</a>
-                                </div>
-                            </li>
+                                </li>
+                            @endcan
 
                         </ul>
                     </div>
@@ -58,7 +35,7 @@
                                 <table class="table table-center table-hover datatable">
                                     <thead class="thead-light">
                                         <tr>
-                                             <th>
+                                            <th>
                                                 <input type="checkbox" id="selectAll">
                                             </th>
                                             <th>Name</th>
@@ -70,19 +47,22 @@
                                     <tbody>
                                         @forelse ($leads as $lead)
                                             <tr>
-                                                 <td>
+                                                <td>
                                                     <input type="checkbox" class="checkItem" value="{{ $lead->id }}">
                                                     {{ $loop->iteration }}
                                                 </td>
                                                 <td>{{ $lead->name }}</td>
                                                 <td>{{ $lead->phone }}</td>
                                                 <td>{{ $lead->email }}</td>
-                                                <td class="d-flex align-items-center">
-                                                    <a class="btn-action-icon me-2" href="javascript:void(0);"
-                                                        data-bs-toggle="modal" data-bs-target="#view_lead{{ $lead->id }}">
-                                                        <i class="fe fe-eye"></i>
-                                                    </a>
 
+                                                <td class="d-flex align-items-center">
+                                                    @can('view leads')
+                                                        <a class="btn-action-icon me-2" href="javascript:void(0);"
+                                                            data-bs-toggle="modal" data-bs-target="#view_lead{{ $lead->id }}">
+                                                            <i class="fe fe-eye"></i>
+                                                        </a>
+                                                    @endcan
+                                                    @can('delete leads')
                                                     <form action="{{ route('admin-leads.destroy', $lead->id) }}" method="POST"
                                                         class="d-inline delete-form">
                                                         @csrf
@@ -93,6 +73,7 @@
                                                             <i class="fe fe-trash-2"></i>
                                                         </button>
                                                     </form>
+                                                    @endcan
                                                 </td>
                                             </tr>
                                         @empty
@@ -202,7 +183,7 @@
 
         });
 
-      // SELECT ALL
+        // SELECT ALL
         $("#selectAll").click(function () {
 
             $(".checkItem").prop('checked', $(this).prop('checked'));

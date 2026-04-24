@@ -9,17 +9,19 @@
                     <h5>College </h5>
                     <div class="list-btn">
                         <ul class="filter-list">
+                            @can('create colleges')
+                                <li>
+                                    <a class="btn btn-success" data-bs-toggle="modal" data-bs-target="#import_excel">
+                                        <i class="fa fa-upload me-2"></i> Import Excel
+                                    </a>
+                                </li>
 
-                            <li>
-                                <a class="btn btn-success" data-bs-toggle="modal" data-bs-target="#import_excel">
-                                    <i class="fa fa-upload me-2"></i> Import Excel
-                                </a>
-                            </li>
-                            <li>
-                                <a class="btn btn-primary" href="javascript:void(0);" data-bs-toggle="modal"
-                                    data-bs-target="#add_category"><i class="fa fa-plus-circle me-2"
-                                        aria-hidden="true"></i>Add </a>
-                            </li>
+                                <li>
+                                    <a class="btn btn-primary" href="javascript:void(0);" data-bs-toggle="modal"
+                                        data-bs-target="#add_category"><i class="fa fa-plus-circle me-2"
+                                            aria-hidden="true"></i>Add </a>
+                                </li>
+                            @endcan
                         </ul>
                     </div>
                 </div>
@@ -56,24 +58,29 @@
                                                         {{ ucfirst($college->status) }}
                                                     </span></td>
                                                 <td class="d-flex align-items-center">
-                                                    <a class="btn-action-icon me-2" href="javascript:void(0);"
-                                                        data-bs-toggle="modal" data-bs-target="#view_college{{ $college->id }}">
-                                                        <i class="fe fe-eye"></i>
-                                                    </a>
-                                                    <a class=" btn-action-icon me-2" href="javascript:void(0);"
-                                                        data-bs-toggle="modal" data-bs-target="#edit_category"><i
-                                                            class="fe fe-edit"></i></a>
+                                                    @can('view colleges')
+                                                        <a class="btn-action-icon me-2" href="javascript:void(0);"
+                                                            data-bs-toggle="modal" data-bs-target="#view_college{{ $college->id }}">
+                                                            <i class="fe fe-eye"></i>
+                                                        </a>
+                                                    @endcan
+                                                    @can('edit colleges')
+                                                        <a class=" btn-action-icon me-2" href="javascript:void(0);"
+                                                            data-bs-toggle="modal" data-bs-target="#edit_category"><i
+                                                                class="fe fe-edit"></i></a>
+                                                    @endcan
+                                                    @can('delete colleges')
+                                                        <form action="{{ route('admin-college-states.destroy', $college->id) }}"
+                                                            method="POST" class="d-inline delete-form">
+                                                            @csrf
+                                                            @method('DELETE')
 
-                                                    <form action="{{ route('admin-college-states.destroy', $college->id) }}"
-                                                        method="POST" class="d-inline delete-form">
-                                                        @csrf
-                                                        @method('DELETE')
-
-                                                        <button type="button"
-                                                            class="btn-action-icon border-0 bg-transparent delete-btn">
-                                                            <i class="fe fe-trash-2"></i>
-                                                        </button>
-                                                    </form>
+                                                            <button type="button"
+                                                                class="btn-action-icon border-0 bg-transparent delete-btn">
+                                                                <i class="fe fe-trash-2"></i>
+                                                            </button>
+                                                        </form>
+                                                    @endcan
                                                 </td>
                                             </tr>
                                         @empty

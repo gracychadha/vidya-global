@@ -25,10 +25,10 @@
             <div class="image-column col-xl-6 col-lg-5 col-md-12 col-sm-12 wow fadeInLeft">
                 <div class="inner-column">
                     <figure class="image-1 overlay-anim wow fadeInRight"><img
-                            src="{{ asset('website/images/resource/about-6.jpg') }}" alt="">
+                            src="{{ asset('website/images/resource/director-01.png') }}" alt="">
                     </figure>
                     <figure class="image-2 overlay-anim wow fadeInRight"><img
-                            src="{{ asset('website/images/resource/about-5.jpg') }}" alt="">
+                            src="{{ asset('website/images/resource/director-02.png') }}" alt="">
                     </figure>
                     {{-- <figure class="abs-image"><img src="{{ asset('website/images/resource/about-4.png') }}" alt="">
                     </figure> --}}

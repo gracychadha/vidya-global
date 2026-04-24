@@ -1,297 +1,253 @@
 @extends('admin.layout.app')
 @section('content')
-    <!-- Page Wrapper -->
-    <div class="page-wrapper">
-        <div class="content container-fluid">
-            <!-- Page Header -->
-            <div class="page-header">
-                <div class="content-page-header ">
-                    <h5>Roles & Permission</h5>
-                    <div class="list-btn">
-                        <ul class="filter-list">
-                            <li>
-                                <div class="short-filter">
-                                    <img class="me-2" src="{{ asset('admin/assets/img/icons/sort.svg') }}" alt="Sort by select">
-                                    <div class="sort-by sort-by-ticket">
-                                        <select class="sort select">
-                                            <option>Sort by: Date</option>
-                                            <option>Sort by: Date 1</option>
-                                            <option>Sort by: Date 2</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <a class="btn btn-filters w-auto popup-toggle" data-bs-toggle="tooltip"
-                                    data-bs-placement="bottom" data-bs-original-title="Filter"><span class="me-2"><img
-                                            src="{{ asset('admin/assets/img/icons/filter-icon.svg') }}" alt="filter"></span>Filter </a>
-                            </li>
-                            <li>
-                                <a class="btn btn-primary" href="#" data-bs-toggle="modal" data-bs-target="#add_role"><i
-                                        class="fa fa-plus-circle me-2" aria-hidden="true"></i>Add Roles</a>
-                            </li>
-                        </ul>
-                    </div>
+<!-- Page Wrapper -->
+<div class="page-wrapper">
+    <div class="content container-fluid">
+        <!-- Page Header -->
+        <div class="page-header">
+            <div class="content-page-header ">
+                <h5>Roles </h5>
+                <div class="list-btn">
+                    <ul class="filter-list">
+                        @can('create roles permissions')
+                        <li>
+                            <a class="btn btn-primary" href="#" data-bs-toggle="modal" data-bs-target="#add_role"><i
+                                    class="fa fa-plus-circle me-2" aria-hidden="true"></i>Add Roles</a>
+                        </li>
+                        @endcan
+                    </ul>
                 </div>
             </div>
-            <!-- /Page Header -->
+        </div>
+        <!-- /Page Header -->
 
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="card-table">
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-center table-hover datatable">
-                                    <thead class="thead-light">
-                                        <tr>
-                                            <th>ID</th>
-                                            <th>Role Name</th>
-                                            <th>Created at</th>
-                                            <th class="no-sort">Actions</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Admin</td>
-                                            <td>19 Dec 2023, 06:12 PM</td>
-                                            <td class="d-flex align-items-center">
-                                                <a href="#" class="btn btn-greys me-2" data-bs-toggle="modal"
-                                                    data-bs-target="#edit_role"><i class="fa fa-edit me-1"></i> Edit
-                                                    Role</a>
-                                                <a href="permission.html" class="btn btn-greys me-2"><i
-                                                        class="fa fa-shield me-1"></i> Permissions</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Customer</td>
-                                            <td>28 Nov 2023, 03:25 PM</td>
-                                            <td class="d-flex align-items-center">
-                                                <a href="#" class="btn btn-greys me-2" data-bs-toggle="modal"
-                                                    data-bs-target="#edit_role"><i class="fa fa-edit me-1"></i> Edit
-                                                    Role</a>
-                                                <a href="permission.html" class="btn btn-greys me-2"><i
-                                                        class="fa fa-shield me-1"></i> Permissions</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Shop Owner</td>
-                                            <td>19 Dec 2023, 06:12 PM</td>
-                                            <td class="d-flex align-items-center">
-                                                <a href="#" class="btn btn-greys me-2" data-bs-toggle="modal"
-                                                    data-bs-target="#edit_role"><i class="fa fa-edit me-1"></i> Edit
-                                                    Role</a>
-                                                <a href="permission.html" class="btn btn-greys me-2"><i
-                                                        class="fa fa-shield me-1"></i> Permissions</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>Receptionist</td>
-                                            <td>9 Dec 2023, 06:12 PM</td>
-                                            <td class="d-flex align-items-center">
-                                                <a href="#" class="btn btn-greys me-2" data-bs-toggle="modal"
-                                                    data-bs-target="#edit_role"><i class="fa fa-edit me-1"></i> Edit
-                                                    Role</a>
-                                                <a href="permission.html" class="btn btn-greys me-2"><i
-                                                        class="fa fa-shield me-1"></i> Permissions</a>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card-table">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-center table-hover datatable">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th>S No.</th>
+                                        <th>Role Name</th>
+                                        <th>Created at</th>
+                                        <th class="no-sort">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @forelse($roles as $role)
+                                    <tr>
+                                        <td></td>
+                                        <td>{{ $role->name }}</td>
+                                        <td>{{ $role->created_at->format('d M Y, h:i A') }}</td>
+                                        <td class="d-flex align-items-center">
+                                            @can('edit roles permissions')
+                                            <!-- Edit -->
+                                            <a class="btn-action-icon me-2" href="javascript:void(0);" data-bs-toggle="modal"
+                                                data-bs-target="#edit_role_{{ $role->id }}">
+                                                <i class="fe fe-edit"></i>
+                                            </a>
+                                            @endcan
+                                            @can('delete roles permissions')
+                                            <!-- Delete -->
+                                            <form action="{{ route('roles.destroy', $role->id) }}" method="POST" class="d-inline delete-form">
+                                                @csrf
+                                                @method('DELETE')
+
+                                                <button type="button" class="btn-action-icon border-0 bg-transparent delete-btn"
+                                                    data-role="{{ $role->name }}">
+                                                    <i class="fe fe-trash-2"></i>
+                                                </button>
+                                            </form>
+                                            @endcan
+
+                                        </td>
+                                    </tr>
+                                    @empty
+                                    <td></td>
+                                    <td>
+                                        <p>No Roles found yet</p>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                    @endforelse
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- /Page Wrapper -->
+</div>
+<!-- /Page Wrapper -->
 
-    <!-- Add Asset -->
-    <div class="toggle-sidebar">
-        <div class="sidebar-layout-filter">
-            <div class="sidebar-header">
-                <h5>Filter</h5>
-                <a href="#" class="sidebar-closes"><i class="fa-regular fa-circle-xmark"></i></a>
-            </div>
-            <div class="sidebar-body">
-                <form action="#" autocomplete="off">
-                    <!-- Customer -->
-                    <div class="accordion" id="accordionMain1">
-                        <div class="card-header-new" id="headingOne">
-                            <h6 class="filter-title">
-                                <a href="javascript:void(0);" class="w-100" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Customer
-                                    <span class="float-end"><i class="fa-solid fa-chevron-down"></i></span>
-                                </a>
-                            </h6>
-                        </div>
 
-                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                            data-bs-parent="#accordionExample1">
-                            <div class="card-body-chat">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div id="checkBoxes1">
-                                            <div class="form-custom">
-                                                <input type="text" class="form-control" id="member_search1"
-                                                    placeholder="Search here">
-                                                <span><img src="{{ asset('admin/assets/img/icons/search.svg') }}" alt="img"></span>
-                                            </div>
-                                            <div class="selectBox-cont">
-                                                <label class="custom_check w-100">
-                                                    <input type="checkbox" name="username">
-                                                    <span class="checkmark"></span> Admin
-                                                </label>
-                                                <label class="custom_check w-100">
-                                                    <input type="checkbox" name="username">
-                                                    <span class="checkmark"></span> Customer
-                                                </label>
-                                                <!-- View All -->
-                                                <div class="view-content">
-                                                    <div class="viewall-One">
-                                                        <label class="custom_check w-100">
-                                                            <input type="checkbox" name="username">
-                                                            <span class="checkmark"></span> Shop Owner
-                                                        </label>
-                                                        <label class="custom_check w-100">
-                                                            <input type="checkbox" name="username">
-                                                            <span class="checkmark"></span> Receptionist
-                                                        </label>
-                                                    </div>
-                                                    <div class="view-all">
-                                                        <a href="javascript:void(0);" class="viewall-button-One"><span
-                                                                class="me-2">View All</span><span><i
-                                                                    class="fa fa-circle-chevron-down"></i></span></a>
-                                                    </div>
-                                                </div>
-                                                <!-- /View All -->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /Customer -->
 
-                    <!-- Select Date -->
-                    <div class="accordion" id="accordionMain2">
-                        <div class="card-header-new" id="headingTwo">
-                            <h6 class="filter-title">
-                                <a href="javascript:void(0);" class="w-100 collapsed" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                                    Select Date
-                                    <span class="float-end"><i class="fa-solid fa-chevron-down"></i></span>
-                                </a>
-                            </h6>
-                        </div>
-
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                            data-bs-parent="#accordionExample2">
-                            <div class="card-body-chat">
-                                <div class="input-block mb-3">
-                                    <label class="form-control-label">From</label>
-                                    <div class="cal-icon">
-                                        <input type="email" class="form-control datetimepicker" placeholder="DD-MM-YYYY">
-                                    </div>
-                                </div>
-                                <div class="input-block mb-3">
-                                    <label class="form-control-label">To</label>
-                                    <div class="cal-icon">
-                                        <input type="email" class="form-control datetimepicker" placeholder="DD-MM-YYYY">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /Select Date -->
-
-                    <button type="submit"
-                        class="d-inline-flex align-items-center justify-content-center btn w-100 btn-primary">
-                        <span><img src="{{ asset('admin/assets/img/icons/chart.svg') }}" class="me-2" alt="Generate report"></span>Generate
-                        report
-                    </button>
-                </form>
-
-            </div>
-        </div>
-    </div>
-    <!--/Add Asset -->
-
-    <!-- Add Role Modal -->
-    <div class="modal custom-modal fade" id="add_role" role="dialog">
-        <div class="modal-dialog modal-dialog-centered modal-md">
-            <div class="modal-content">
-                <div class="modal-header border-0 pb-0">
-                    <div class="form-header modal-header-title text-start mb-0">
-                        <h4 class="mb-0">Add Role</h4>
-                    </div>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-
-                    </button>
+<!-- Add Role Modal -->
+<div class="modal custom-modal fade" id="add_role" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <div class="modal-header border-0 pb-0">
+                <div class="form-header modal-header-title text-start mb-0">
+                    <h4 class="mb-0">Add Role</h4>
                 </div>
-                <form action="#">
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-lg-12 col-md-12">
-                                <div class="input-block mb-0">
-                                    <label>Role Name <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" placeholder="Enter Role Name">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" data-bs-dismiss="modal" class="btn btn-back cancel-btn me-2">Close</button>
-                        <button type="submit" data-bs-dismiss="modal"
-                            class="btn btn-primary paid-continue-btn">Submit</button>
-                    </div>
-                </form>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+
+                </button>
             </div>
-        </div>
-    </div>
-    <!-- /Add Role Modal -->
+            <form action="{{ route('roles.store') }}" method="POST">
+                @csrf
 
-    <!-- Edit Role Modal -->
-    <div class="modal custom-modal fade" id="edit_role" role="dialog">
-        <div class="modal-dialog modal-dialog-centered modal-md">
-            <div class="modal-content">
-                <div class="modal-header border-0 pb-0">
-                    <div class="form-header modal-header-title text-start mb-0">
-                        <h4 class="mb-0">Edit Role</h4>
+                <div class="modal-body">
+
+                    <!-- Role Name -->
+                    <div class="mb-3">
+                        <label>Role Name</label>
+                        <input type="text" name="name" class="form-control" required>
                     </div>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
 
-                    </button>
+                    <!-- Permissions -->
+                    <h5 class="mb-2">Assign Permissions</h5>
+
+                    <div class="row">
+                        @foreach($permissions as $permission)
+                        <div class="col-md-4">
+                            <label>
+                                <input type="checkbox" name="permissions[]" value="{{ $permission->name }}">
+                                {{ $permission->name }}
+                            </label>
+                        </div>
+                        @endforeach
+                    </div>
+
                 </div>
-                <form action="#">
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-lg-12 col-md-12">
-                                <div class="input-block mb-0">
-                                    <label>Role Name <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" value="Admin" placeholder="Enter Role Name">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" data-bs-dismiss="modal" class="btn btn-back cancel-btn me-2">Close</button>
-                        <button type="submit" data-bs-dismiss="modal"
-                            class="btn btn-primary paid-continue-btn">Submit</button>
-                    </div>
-                </form>
-            </div>
+
+                <div class="modal-footer">
+                    <button type="button" data-bs-dismiss="modal" class="btn btn-secondary">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Create Role</button>
+                </div>
+            </form>
         </div>
     </div>
-    <!-- /Edit Role Modal -->
+</div>
+<!-- /Add Role Modal -->
+@foreach($roles as $role)
+<!-- Edit Role Modal -->
 
+<div class="modal custom-modal fade" id="edit_role_{{ $role->id }}">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <form action="{{ route('roles.update', $role->id) }}" method="POST">
+                @csrf
+                @method('PUT')
+
+                <div class="modal-header">
+                    <h5>Edit Role</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+
+                    <!-- Role Name -->
+                    <div class="mb-3">
+                        <label>Role Name</label>
+                        <input type="text" name="name" class="form-control" value="{{ $role->name }}" required>
+                    </div>
+
+                    <!-- Permissions -->
+                    <h5 class="mb-2">Update Permissions</h5>
+
+                    <div class="row">
+                        @foreach($permissions as $permission)
+                        <div class="col-md-4">
+                            <label>
+                                <input type="checkbox" name="permissions[]"
+                                    value="{{ $permission->name }}"
+                                    {{ $role->hasPermissionTo($permission->name) ? 'checked' : '' }}>
+                                {{ $permission->name }}
+                            </label>
+                        </div>
+                        @endforeach
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button class="btn btn-primary">Update</button>
+                </div>
+            </form>
+        </div>
     </div>
-    <!-- /Main Wrapper -->
+</div>
+<!-- /Edit Role Modal -->
+@endforeach
+</div>
+<!-- /Main Wrapper -->
 
 @endsection
+@push('scripts')
+
+@if(session('success'))
+
+<script>
+    Swal.fire({
+        icon: 'success',
+        title: 'Success',
+        text: '{{ session('
+        success ') }}',
+        showConfirmButton: false,
+        timer: 2000
+    })
+</script>
+
+@endif
+@if($errors->any())
+
+<script>
+    Swal.fire({
+        icon: 'error',
+        title: 'Validation Error',
+        text: '{{ $errors->first() }}'
+    })
+</script>
+
+@endif
+<script>
+    $(document).ready(function() {
+
+        $('.delete-btn').click(function(e) {
+            e.preventDefault();
+
+            var form = $(this).closest('form');
+            var roleName = $(this).data('role');
+
+            //Block super-admin
+            if (roleName === 'super-admin') {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Not Allowed',
+                    text: "You can't delete Super Admin role!"
+                });
+                return;
+            }
+
+            //  Normal delete
+            Swal.fire({
+                title: 'Delete Role?',
+                text: "This role will be permanently deleted!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#3085d6',
+                confirmButtonText: 'Yes, delete it'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    form.submit();
+                }
+            });
+
+        });
+
+    });
+</script>
+@endpush

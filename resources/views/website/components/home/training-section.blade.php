@@ -13,7 +13,7 @@
                     <div class="inner-box">
                         <div class="image-box">
                             <figure class="image">
-                                <img src="{{ asset('website/images/resource/training-3-1.jpg') }}" alt="">
+                                <img src="{{ asset('website/images/upload/career-01.png') }}" alt="">
                             </figure>
                             <a href="#" class="read-more"><i class="fa fa-long-arrow-alt-right"></i></a>
                             <h4 class="title">Certifications</h4>
@@ -36,7 +36,7 @@
                     <div class="inner-box">
                         <div class="image-box">
                             <figure class="image">
-                                <img src="{{ asset('website/images/resource/training-3-2.jpg') }}" alt="">
+                                <img src="{{ asset('website/images/upload/career-02.png') }}" alt="">
                             </figure>
                             <a href="#" class="read-more"><i class="fa fa-long-arrow-alt-right"></i></a>
                             <h4 class="title">Practical Experience</h4>
@@ -59,7 +59,7 @@
                     <div class="inner-box">
                         <div class="image-box">
                             <figure class="image">
-                                <img src="{{ asset('website/images/resource/training-3-3.jpg') }}" alt="">
+                                <img src="{{ asset('website/images/upload/career-03.png') }}" alt="">
                             </figure>
                             <a href="#" class="read-more"><i class="fa fa-long-arrow-alt-right"></i></a>
                             <h4 class="title">Career Skills</h4>
@@ -82,7 +82,7 @@
                     <div class="inner-box">
                         <div class="image-box">
                             <figure class="image">
-                                <img src="{{ asset('website/images/resource/training-3-4.jpg') }}" alt="">
+                                <img src="{{ asset('website/images/upload/career-04.png') }}" alt="">
                             </figure>
                             <a href="#" class="read-more"><i class="fa fa-long-arrow-alt-right"></i></a>
                             <h4 class="title">Expert Mentors</h4>

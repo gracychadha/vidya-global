@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="{{ asset('admin/css/main.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="icon" href="{{asset('admin/images/logo/fav.png')}}" type="image/png">
+    <style>
+        .admin-signin-button:disabled{
+            background:grey;
+            cursor: default;
+        }
+    </style>
 </head>
 
 
@@ -27,7 +33,16 @@
 
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
-
+                   
+                    @if ($errors->any())
+                        <div class="text-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
                     <div class="admin-input-group">
                         <label class="admin-input-label">Email address</label>
                         <input type="email" name="email" class="admin-text-input" placeholder="Enter Email" required>
@@ -38,8 +53,14 @@
                         <input type="password" class="admin-text-input" name="password" placeholder="Enter Password"
                             required>
                     </div>
+                    <!-- Turnstile -->
+                    <div class="cf-turnstile" data-sitekey="{{ env('TURNSTILE_SITE_KEY') }}"
+                        data-callback="enableSubmit" data-expired-callback="disableSubmit"></div>
 
-                    <div class="admin-extra-options">
+                    @error('captcha')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
+                     <div class="admin-extra-options">
 
                         <label>
                             <input type="checkbox" name="remember"> Remember for 30 days
@@ -49,7 +70,7 @@
 
                     </div>
 
-                    <button class="admin-signin-button" type="submit">Log In</button>
+                    <button class="admin-signin-button" type="submit" id="loginBtn" disabled>Log In</button>
 
 
 
@@ -81,6 +102,16 @@
 
     {{-- all the scripts will be placed there --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <script>
+        function enableSubmit() {
+            document.getElementById('loginBtn').disabled = false;
+        }
+
+        function disableSubmit() {
+            document.getElementById('loginBtn').disabled = true;
+        }
+    </script>
 </body>
 
 </html>

@@ -2,14 +2,38 @@
 	<div class="bg bg-pattern-7"></div>
 	<div class="auto-container">
 		<div class="footer-upper">
-			<div class="logo-box"><img src="{{ asset('website/images/vidyaglobal-logo.png') }}" alt=""></div>
+			@php
+				$websiteSetting = App\Models\WebsiteSetting::where('is_active', true)->first();
+				$socialSetting = App\Models\SocialSetting::where('is_active', true)->first();
+			@endphp
+			@php
+				$logo = optional($websiteSetting)->logo
+					? asset('storage/' . $websiteSetting->logo)
+					: asset('website/images/vidyaglobal-logo.png');
+			@endphp
+
+			<div class="logo-box">
+				<img src="{{ $logo }}" alt="logo">
+			</div>
 			<ul class="contact-info">
 				<li>
 					<i class="icon fa fa-phone-square"></i>
 					<span class="title">Phone:</span>
 					<div class="text">
-						<a href="tel:+917539910692">+91 753 991 0692</a><br>
-						<a href="tel:+918102851589">+91 810 285 1589</a>
+
+						@php
+							$phone1 = $websiteSetting->phone_1 ?? '917539910692';
+							$phone2 = $websiteSetting->phone_2 ?? '918102851589';
+						@endphp
+
+						<a href="tel:{{ preg_replace('/\D/', '', $phone1) }}">
+							{{ $websiteSetting->phone_1 ?? '+91 753 991 0692' }}
+						</a><br>
+
+						<a href="tel:{{ preg_replace('/\D/', '', $phone2) }}">
+							{{ $websiteSetting->phone_2 ?? '+91 810 285 1589' }}
+						</a>
+
 					</div>
 				</li>
 				<li>

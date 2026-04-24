@@ -17,7 +17,7 @@
                    
                     <div class="country-block">
                         <div class="inner-box">
-                            <div class="flag"><img src="{{ $sSwiper->image ? asset('storage/'.$sSwiper->image) : asset('website/images/resource/flag-1.png') }}" alt="{{ $sSwiper->name }}"></div>
+                            <div class="flag"><img src="{{ $sSwiper->image ? asset('storage/'.$sSwiper->image) : asset('website/images/upload/delhi.png') }}" alt="{{ $sSwiper->name }}"></div>
                             <a href="{{ route('associate-colleges', $sSwiper->slug) }}" class="theme-btn">{{ $sSwiper->name }}</a>
                         </div>
                     </div>

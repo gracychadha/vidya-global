@@ -17,11 +17,7 @@
                 <i class="fe fe-smartphone"></i> <span>Socials Settings</span>
             </a>
         </li>
-        <li class="nav-item">
-            <a href="{{ route('admin-colour-settings.index') }}" class="nav-link">
-                <i class="fe fe-droplet"></i> <span>Colour Settings</span>
-            </a>
-        </li>
+       
 
         <li class="nav-item">
             <a href="company-settings.html" class="nav-link">

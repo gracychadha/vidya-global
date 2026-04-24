@@ -9,13 +9,14 @@
                     <h5>Course </h5>
                     <div class="list-btn">
                         <ul class="filter-list">
+                            @can('create course')
 
-
-                            <li>
-                                <a class="btn btn-primary" href="javascript:void(0);" data-bs-toggle="modal"
-                                    data-bs-target="#add_category"><i class="fa fa-plus-circle me-2"
-                                        aria-hidden="true"></i>Add Course</a>
-                            </li>
+                                <li>
+                                    <a class="btn btn-primary" href="javascript:void(0);" data-bs-toggle="modal"
+                                        data-bs-target="#add_category"><i class="fa fa-plus-circle me-2"
+                                            aria-hidden="true"></i>Add Course</a>
+                                </li>
+                            @endcan
                         </ul>
                     </div>
                 </div>
@@ -45,26 +46,27 @@
                                         @forelse ($course as $item)
                                             <tr>
                                                 <td>{{ $loop->iteration }}</td>
-                                                <td><a href=""
-                                                        class="product-list-item-img"><span>{{ $item->name }}</span></a>
+                                                <td><a href="" class="product-list-item-img"><span>{{ $item->name }}</span></a>
                                                 </td>
                                                 <td> <span
                                                         class="badge bg-{{ $item->status == 'active' ? 'success' : 'danger' }}">
                                                         {{ ucfirst($item->status) }}
                                                     </span></td>
                                                 <td class="d-flex align-items-center">
-                                                    <a class="btn-action-icon me-2" href="javascript:void(0);"
-                                                        data-bs-toggle="modal"
-                                                        data-bs-target="#view_item{{ $item->id }}">
-                                                        <i class="fe fe-eye"></i>
-                                                    </a>
-                                                    <a class=" btn-action-icon me-2" href="javascript:void(0);"
-                                                        data-bs-toggle="modal" data-bs-target="#edit_category"><i
-                                                            class="fe fe-edit"></i></a>
-
-                                                    <form
-                                                        action="{{ route('admin-course.destroy', $item->id) }}"
-                                                        method="POST" class="d-inline delete-form">
+                                                    @can('view course')
+                                                        <a class="btn-action-icon me-2" href="javascript:void(0);"
+                                                            data-bs-toggle="modal" data-bs-target="#view_item{{ $item->id }}">
+                                                            <i class="fe fe-eye"></i>
+                                                        </a>
+                                                    @endcan
+                                                    @can('edit course')
+                                                        <a class=" btn-action-icon me-2" href="javascript:void(0);"
+                                                            data-bs-toggle="modal" data-bs-target="#edit_category"><i
+                                                                class="fe fe-edit"></i></a>
+                                                    @endcan
+                                                    @can('delete course')
+                                                    <form action="{{ route('admin-course.destroy', $item->id) }}" method="POST"
+                                                        class="d-inline delete-form">
                                                         @csrf
                                                         @method('DELETE')
 
@@ -73,6 +75,7 @@
                                                             <i class="fe fe-trash-2"></i>
                                                         </button>
                                                     </form>
+                                                    @endcan
                                                 </td>
                                             </tr>
                                         @empty
@@ -250,8 +253,7 @@
 
                         </button>
                     </div>
-                    <form action="{{ route('admin-course.update', $item->id) }}" method="POST"
-                        enctype="multipart/form-data">
+                    <form action="{{ route('admin-course.update', $item->id) }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
 

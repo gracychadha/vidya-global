@@ -21,7 +21,7 @@
             <div class="col-xl-6 col-lg-5 col-md-12 col-sm-12">
                 <div class="image-box">
                     <figure class="image-1 overlay-anim wow fadeInLeft">
-                        <img src="{{ asset('website/images/resource/about-7.jpg') }}" alt="" style="width:80%;">
+                        <img src="{{ asset('website/images/resource/vision.png') }}" alt="" style="width:80%;">
                     </figure>
                 </div>
             </div>

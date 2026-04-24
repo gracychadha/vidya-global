@@ -2,13 +2,18 @@
     <!-- Header Top -->
     <div class="header-top">
         <div class="inner-container">
-
+            @php
+                $websiteSetting = App\Models\WebsiteSetting::where('is_active', true)->first();
+                $socialSetting = App\Models\SocialSetting::where('is_active', true)->first();
+            @endphp
             <div class="top-left">
                 <!-- Info List -->
                 <ul class="list-style-one">
-                    <li><i class="fa fa-envelope"></i> <a href="mailto:info@vidyaglobal.in">info@vidyaglobal.in</a>
+                    <li><i class="fa fa-envelope"></i> <a
+                            href="mailto:{{ $websiteSetting->email ?? 'info@vidyaglobal.in' }}">{{
+                            $websiteSetting->email ?? 'info@vidyaglobal.in' }}</a>
                     </li>
-                    <li><i class="fa fa-map-marker"></i> Bettiah, Bihar</li>
+                    <li><i class="fa fa-map-marker"></i> {{ $websiteSetting->location ?? 'Bettiah, Bihar' }}</li>
                     <li><i class="fa fa-clock"></i>Mon - Fri : 9:00 AM to 6:00 PM</li>
                 </ul>
             </div>
@@ -16,8 +21,39 @@
             <div class="top-right">
                 <ul class="social-icon-one">
                     <li><span class="text-white">Follow us on :</span></li>
-                    <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
-                    <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+                    @if($socialSetting)
+                        @if($socialSetting->facebook_url)
+                            <li>
+                                <a href="{{ $socialSetting->facebook_url }}" target="_blank">
+                                    <span class="fab fa-facebook-f"></span>
+                                </a>
+                            </li>
+                        @endif
+
+                        @if($socialSetting->instagram_url)
+                            <li>
+                                <a href="{{ $socialSetting->instagram_url }}" target="_blank">
+                                    <span class="fab fa-instagram"></span>
+                                </a>
+                            </li>
+                        @endif
+
+                        @if($socialSetting->twitter_url)
+                            <li>
+                                <a href="{{ $socialSetting->twitter_url }}" target="_blank">
+                                    <span class="fab fa-twitter"></span>
+                                </a>
+                            </li>
+                        @endif
+
+                        @if($socialSetting->linkedin_url)
+                            <li>
+                                <a href="{{ $socialSetting->linkedin_url }}" target="_blank">
+                                    <span class="fab fa-linkedin-in"></span>
+                                </a>
+                            </li>
+                        @endif
+                    @endif
                 </ul>
             </div>
         </div>
@@ -28,9 +64,17 @@
     <div class="header-lower">
         <!-- Main box -->
         <div class="main-box">
+            @php
+                $logo = optional($websiteSetting)->logo
+                    ? asset('storage/' . $websiteSetting->logo)
+                    : asset('website/images/vidyaglobal-logo.png');
+                $logoWhite = optional($websiteSetting)->logo_white
+                    ? asset('storage/' . $websiteSetting->logo_white)
+                    : asset('website/images/vidyaglobal-white.png');
+            @endphp
             <div class="logo-box">
-                <div class="logo"><a href="{{ route('home') }}"><img
-                            src="{{ asset('website/images/vidyaglobal-white.png') }}" alt="" title="Tronis"></a></div>
+                <div class="logo"><a href="{{ route('home') }}"><img src="{{ $logoWhite }}" alt="" title="Tronis"></a>
+                </div>
             </div>
 
             <!--Nav Box-->
@@ -50,14 +94,15 @@
                         <li class="dropdown "><a href="javascript:void(0)">Associate Colleges</a>
                             <ul>
                                 @php
-                                $States = \App\Models\CollegeState::where('status', 'active')->get();
+                                    $States = \App\Models\CollegeState::where('status', 'active')->get();
                                 @endphp
                                 @forelse($States as $state)
-                                <li><a href="{{ route('associate-colleges', $state->slug) }}">{{ $state->name }}</a></li>
+                                    <li><a href="{{ route('associate-colleges', $state->slug) }}">{{ $state->name }}</a>
+                                    </li>
                                 @empty
-                                <li>
-                                    <p>No State found yet</p>
-                                </li>
+                                    <li>
+                                        <p>No State found yet</p>
+                                    </li>
                                 @endforelse
 
                             </ul>
@@ -65,16 +110,16 @@
                         <li class="dropdown"><a href="javascript:void(0)">Courses</a>
                             <ul>
                                 @php
-                                $courseHeader = \App\Models\Course::where('status','active')->get();
+                                    $courseHeader = \App\Models\Course::where('status', 'active')->get();
                                 @endphp
                                 @forelse($courseHeader as $course)
-                                <li><a href="{{ route('courses', $course->slug) }}">{{ $course->name }}</a></li>
+                                    <li><a href="{{ route('courses', $course->slug) }}">{{ $course->name }}</a></li>
                                 @empty
-                                <li>
-                                    <p>No Course found yet</p>
-                                </li>
+                                    <li>
+                                        <p>No Course found yet</p>
+                                    </li>
                                 @endforelse
-                               
+
                             </ul>
                         </li>
 
@@ -117,8 +162,8 @@
         <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
         <nav class="menu-box">
             <div class="upper-box">
-                <div class="nav-logo"><a href="{{ route('home') }}"><img
-                            src="{{ asset('website/images/vidyaglobal-white.png') }}" alt="" title=""></a></div>
+                <div class="nav-logo"><a href="{{ route('home') }}"><img src="{{ $logoWhite }}" alt="" title=""></a>
+                </div>
                 <div class="close-btn"><i class="icon fa fa-times"></i></div>
             </div>
 
@@ -131,8 +176,18 @@
                     <div class="contact-info-box">
                         <i class="icon lnr-icon-phone-handset"></i>
                         <span class="title">Call Now</span>
-                        <a href="tel:+917903134933">+91 790 313 4933</a><br>
-                        <a href="tel:+918102851589">+91 810 285 1589</a>
+                        @php
+                            $phone1 = $websiteSetting->phone_1 ?? '917539910692';
+                            $phone2 = $websiteSetting->phone_2 ?? '918102851589';
+                        @endphp
+
+                        <a href="tel:{{ preg_replace('/\D/', '', $phone1) }}">
+                            {{ $websiteSetting->phone_1 ?? '+91 753 991 0692' }}
+                        </a><br>
+
+                        <a href="tel:{{ preg_replace('/\D/', '', $phone2) }}">
+                            {{ $websiteSetting->phone_2 ?? '+91 810 285 1589' }}
+                        </a>
                     </div>
                 </li>
                 <li>
@@ -140,7 +195,9 @@
                     <div class="contact-info-box">
                         <span class="icon lnr-icon-envelope1"></span>
                         <span class="title">Send Email</span>
-                        <a href="mailto:info@vidyaglobal.in">info@vidyaglobal.in</a>
+                        <a href="{{
+                            $websiteSetting->email ?? 'info@vidyaglobal.in' }}">{{
+                            $websiteSetting->email ?? 'info@vidyaglobal.in' }}</a>
                     </div>
                 </li>
                 <li>
@@ -155,8 +212,39 @@
 
 
             <ul class="social-links">
-                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                @if($socialSetting)
+                    @if($socialSetting->facebook_url)
+                        <li>
+                            <a href="{{ $socialSetting->facebook_url }}" target="_blank">
+                                <span class="fab fa-facebook-f"></span>
+                            </a>
+                        </li>
+                    @endif
+
+                    @if($socialSetting->instagram_url)
+                        <li>
+                            <a href="{{ $socialSetting->instagram_url }}" target="_blank">
+                                <span class="fab fa-instagram"></span>
+                            </a>
+                        </li>
+                    @endif
+
+                    @if($socialSetting->twitter_url)
+                        <li>
+                            <a href="{{ $socialSetting->twitter_url }}" target="_blank">
+                                <span class="fab fa-twitter"></span>
+                            </a>
+                        </li>
+                    @endif
+
+                    @if($socialSetting->linkedin_url)
+                        <li>
+                            <a href="{{ $socialSetting->linkedin_url }}" target="_blank">
+                                <span class="fab fa-linkedin-in"></span>
+                            </a>
+                        </li>
+                    @endif
+                @endif
             </ul>
         </nav>
     </div><!-- End Mobile Menu -->
@@ -168,12 +256,12 @@
 
         <div class="search-inner">
             <form method="post" action="{{ route('home') }}">
-    <div class="form-group">
-        <input type="search" name="search-field" value="" placeholder="Search..." required="">
-        <button type="submit"><i class="fa fa-search"></i></button>
-    </div>
-    </form>
-    </div>
+                <div class="form-group">
+                    <input type="search" name="search-field" value="" placeholder="Search..." required="">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </div>
+            </form>
+        </div>
     </div> --}}
     <!-- End Header Search -->
 
@@ -183,8 +271,7 @@
             <div class="inner-container">
                 <!--Logo-->
                 <div class="logo">
-                    <a href="{{ route('home') }}" title=""><img src="{{ asset('website/images/vidyaglobal-logo.png') }}"
-                            alt="" title=""></a>
+                    <a href="{{ route('home') }}" title=""><img src="{{ $logo }}" alt="" title=""></a>
                 </div>
 
                 <!--Right Col-->
