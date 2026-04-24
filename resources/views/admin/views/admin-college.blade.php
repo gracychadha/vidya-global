@@ -66,7 +66,7 @@
                                                     @endcan
                                                     @can('edit colleges')
                                                         <a class=" btn-action-icon me-2" href="javascript:void(0);"
-                                                            data-bs-toggle="modal" data-bs-target="#edit_category"><i
+                                                            data-bs-toggle="modal" data-bs-target="#edit_category{{ $college->id }}"><i
                                                                 class="fe fe-edit"></i></a>
                                                     @endcan
                                                     @can('delete colleges')
@@ -226,65 +226,67 @@
 
                     <div class="modal-body">
 
-                        <table class="table table-bordered table-striped mb-0">
+                        <table class="table table-bordered table-striped align-middle mb-0 college-view-table">
 
-                            <div class="row g-3">
+                            <tr>
+                                <th width="20%">State</th>
+                                <td width="30%">{{ $item->state->name ?? '-' }}</td>
+                            </tr>
 
-                                <div class="col-md-6">
-                                    <strong>State :</strong>
-                                    <div class="text-muted">{{ $item->state->name ?? '-' }}</div>
-                                </div>
+                            <tr>
+                            <th width="20%">Name</th>
+                            <td width="30%" class="fw-semibold">{{ $item->name }}</td>
+                            </tr>
 
-                                <div class="col-md-6">
-                                    <strong>Name :</strong>
-                                    <div class="text-muted">{{ $item->name }}</div>
-                                </div>
+                            <tr>
+                                <th>Email</th>
+                                <td>{{ $item->email }}</td>
+                            </tr>
 
-                                <div class="col-md-6">
-                                    <strong>Email :</strong>
-                                    <div class="text-muted">{{ $item->email }}</div>
-                                </div>
+                            <tr>
+                                <th>Type</th>
+                                <td>{{ $item->type }}</td>
+                            </tr>
 
-                                <div class="col-md-6">
-                                    <strong>Type :</strong>
-                                    <div class="text-muted">{{ $item->type }}</div>
-                                </div>
+                            <tr>
+                                <th>NAAC Grade</th>
+                                <td>{{ $item->naac_grade }}</td>
+                            </tr>
 
-                                <div class="col-md-6">
-                                    <strong>NAAC Grade :</strong>
-                                    <div class="text-muted">{{ $item->naac_grade }}</div>
-                                </div>
-
-                                <div class="col-md-6">
-                                    <strong>Status :</strong><br>
+                            <tr>
+                                <th>Status</th>
+                                <td>
                                     <span class="badge bg-{{ $item->status == 'active' ? 'success' : 'danger' }}">
                                         {{ ucfirst($item->status) }}
                                     </span>
-                                </div>
+                                </td>
+                            </tr>
 
-                                <div class="col-12">
-                                    <strong>Address :</strong>
-                                    <div class="text-muted">{{ $item->address }}</div>
-                                </div>
+                            <tr>
+                                <th>Address</th>
+                                <td colspan="3">{{ $item->address }}</td>
+                            </tr>
 
-                                <div class="col-md-6">
-                                    <strong>Image :</strong><br>
+                            <tr>
+                                <th>Image</th>
+                                <td>
                                     @if($item->image)
-                                        <img src="{{ asset('storage/' . $item->image) }}" class="img-fluid rounded mt-2"
-                                            style="max-height:120px;">
+                                        <img src="{{ asset('storage/' . $item->image) }}" class="img-fluid rounded"
+                                            style="max-height:100px;">
                                     @else
                                         <span class="text-muted">No Image</span>
                                     @endif
-                                </div>
+                                </td>
+                            </tr>
 
-                                <div class="col-md-6">
-                                    <strong>Description :</strong>
-                                    <div class="text-muted" style="max-height:120px; overflow:auto;">
+                            <tr>
+                                <th>Description</th>
+                                <td style="max-width:250px;">
+                                    <div style="max-height:100px; overflow:auto;">
                                         {{ $item->description }}
                                     </div>
-                                </div>
-
-                            </div>
+                                </td>
+                            </tr>
 
                         </table>
 
@@ -304,7 +306,7 @@
 
 
         <!-- edit Modal -->
-        <div class="modal custom-modal fade" id="edit_category" role="dialog">
+        <div class="modal custom-modal fade" id="edit_category{{ $item->id }}" role="dialog">
             <div class="modal-dialog modal-dialog-centered modal-md">
                 <div class="modal-content">
                     <div class="modal-header border-0 pb-0">
