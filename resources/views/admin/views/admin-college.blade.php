@@ -235,7 +235,7 @@
 
                             <tr>
                             <th width="20%">Name</th>
-                            <td width="30%" class="fw-semibold">{{ $item->name }}</td>
+                            <td width="30%" class="fw-semibold"  style="max-height:100px; overflow:auto;">{{ $item->name }}</td>
                             </tr>
 
                             <tr>
@@ -264,7 +264,7 @@
 
                             <tr>
                                 <th>Address</th>
-                                <td colspan="3">{{ $item->address }}</td>
+                                <td colspan="3"  style="max-height:100px; overflow:auto;">{{ $item->address }}</td>
                             </tr>
 
                             <tr>
