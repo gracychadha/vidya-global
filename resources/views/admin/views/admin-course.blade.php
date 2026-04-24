@@ -65,16 +65,16 @@
                                                                 class="fe fe-edit"></i></a>
                                                     @endcan
                                                     @can('delete course')
-                                                    <form action="{{ route('admin-course.destroy', $item->id) }}" method="POST"
-                                                        class="d-inline delete-form">
-                                                        @csrf
-                                                        @method('DELETE')
+                                                        <form action="{{ route('admin-course.destroy', $item->id) }}" method="POST"
+                                                            class="d-inline delete-form">
+                                                            @csrf
+                                                            @method('DELETE')
 
-                                                        <button type="button"
-                                                            class="btn-action-icon border-0 bg-transparent delete-btn">
-                                                            <i class="fe fe-trash-2"></i>
-                                                        </button>
-                                                    </form>
+                                                            <button type="button"
+                                                                class="btn-action-icon border-0 bg-transparent delete-btn">
+                                                                <i class="fe fe-trash-2"></i>
+                                                            </button>
+                                                        </form>
                                                     @endcan
                                                 </td>
                                             </tr>
@@ -217,11 +217,20 @@
 
                             <tr>
                                 <th>Description :</th>
-                                <td colspan="3">{{ $item->description }}</td>
+                                <td colspan="3" class="tableData">
+                                    <div class="scroll-box">
+                                        {{ $item->description }}
+
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
                                 <th>Overview :</th>
-                                <td colspan="3">{{ $item->overview }}</td>
+                                <td colspan="3" class="tableData">
+                                    <div class="scroll-box">
+                                        {{ $item->overview }}
+                                    </div>
+                                </td>
                             </tr>
 
                         </table>
@@ -384,4 +393,14 @@
         </script>
 
     @endif
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cells = document.getElementsByClassName("tableData");
+
+            for (let i = 0; i < cells.length; i++) {
+                cells[i].style.wordBreak = "break-word";
+                cells[i].style.whiteSpace = "normal";
+            }
+        });
+    </script>
 @endpush

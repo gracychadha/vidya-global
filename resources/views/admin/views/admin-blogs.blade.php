@@ -48,8 +48,8 @@
                                                 <td>{{ $loop->iteration }}</td>
                                                 <td><a href="" class="product-list-item-img">
                                                         <!-- <img
-                                                                                    src="{{ $blog->image ? asset('storage/' . $blog->image) : asset('placeholder.png') }}"
-                                                                                    alt="product-list"> -->
+                                                                                                    src="{{ $blog->image ? asset('storage/' . $blog->image) : asset('placeholder.png') }}"
+                                                                                                    alt="product-list"> -->
                                                         <span>{{ $blog->title }}</span></a></td>
                                                 <td>{{ $blog->author }} </td>
                                                 <td class="d-flex align-items-center">
@@ -191,7 +191,11 @@
 
                             <tr>
                                 <th>Title :</th>
-                                <td>{{ $item->title }}</td>
+                                <td class="tabledata" >
+                                    <div class="scroll-box">
+                                        {{ $item->title }}
+                                    </div>
+                                </td>
 
                                 <th>Author :</th>
                                 <td>{{ $item->author }}</td>
@@ -223,7 +227,11 @@
 
                             <tr>
                                 <th>Description :</th>
-                                <td colspan="3">{{ $item->description }}</td>
+                                <td colspan="3" class="tableData">
+                                    <div class="scroll-box">
+                                        {{ $item->description }}
+                                    </div>
+                                </td>
                             </tr>
 
                         </table>
@@ -389,4 +397,14 @@
         </script>
 
     @endif
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cells = document.getElementsByClassName("tableData");
+
+            for (let i = 0; i < cells.length; i++) {
+                cells[i].style.wordBreak = "break-word";
+                cells[i].style.whiteSpace = "normal";
+            }
+        });
+    </script>
 @endpush
