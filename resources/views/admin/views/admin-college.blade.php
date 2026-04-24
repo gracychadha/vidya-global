@@ -66,7 +66,8 @@
                                                     @endcan
                                                     @can('edit colleges')
                                                         <a class=" btn-action-icon me-2" href="javascript:void(0);"
-                                                            data-bs-toggle="modal" data-bs-target="#edit_category{{ $college->id }}"><i
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#edit_category{{ $college->id }}"><i
                                                                 class="fe fe-edit"></i></a>
                                                     @endcan
                                                     @can('delete colleges')
@@ -230,27 +231,35 @@
 
                             <tr>
                                 <th width="20%">State</th>
-                                <td width="30%">{{ $item->state->name ?? '-' }}</td>
+                                <td class="tableData" colspan="3">
+                                    <div class="scroll-box">
+                                        {{ $item->state->name ?? '-' }}
+                                    </div>
+                                </td>
                             </tr>
 
                             <tr>
-                            <th width="20%">Name</th>
-                            <td width="30%" class="fw-semibold"  style="max-height:100px; overflow:auto;">{{ $item->name }}</td>
+                                <th width="20%">Name</th>
+                                <td class="tableData" colspan="3">
+                                    <div class="scroll-box">
+                                        {{ $item->name }}
+                                    </div>
+                                </td>
                             </tr>
 
                             <tr>
                                 <th>Email</th>
-                                <td>{{ $item->email }}</td>
+                                <td class="tableData">{{ $item->email }}</td>
                             </tr>
 
                             <tr>
                                 <th>Type</th>
-                                <td>{{ $item->type }}</td>
+                                <td class="tableData">{{ $item->type }}</td>
                             </tr>
 
                             <tr>
                                 <th>NAAC Grade</th>
-                                <td>{{ $item->naac_grade }}</td>
+                                <td class="tableData">{{ $item->naac_grade }}</td>
                             </tr>
 
                             <tr>
@@ -264,7 +273,11 @@
 
                             <tr>
                                 <th>Address</th>
-                                <td colspan="3"  style="max-height:100px; overflow:auto;">{{ $item->address }}</td>
+                                <td class="tableData" colspan="3">
+                                    <div class="scroll-box">
+                                        {{ $item->address }}
+                                    </div>
+                                </td>
                             </tr>
 
                             <tr>
@@ -281,8 +294,8 @@
 
                             <tr>
                                 <th>Description</th>
-                                <td style="max-width:250px;">
-                                    <div style="max-height:100px; overflow:auto;">
+                                <td class="tableData" colspan="3">
+                                    <div class="scroll-box">
                                         {{ $item->description }}
                                     </div>
                                 </td>
@@ -513,4 +526,14 @@
         </script>
 
     @endif
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cells = document.getElementsByClassName("tableData");
+
+            for (let i = 0; i < cells.length; i++) {
+                cells[i].style.wordBreak = "break-word";
+                cells[i].style.whiteSpace = "normal";
+            }
+        });
+    </script>
 @endpush
