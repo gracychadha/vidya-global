@@ -219,7 +219,7 @@
 
                     <div class="modal-header border-0 pb-0">
                         <div class="form-header modal-header-title text-start mb-0">
-                            <h4 class="mb-0">View College </h4>
+                            <h4 class="mb-0">View College</h4>
                         </div>
                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     </div>
@@ -229,37 +229,26 @@
                         <table class="table table-bordered table-striped mb-0">
 
                             <tr>
-                                <th>State</th>
+                                <th>State :</th>
                                 <td>{{ $item->state->name ?? '-' }}</td>
-                            </tr>
 
-                            <tr>
-                                <th>Name</th>
+                                <th>Name :</th>
                                 <td>{{ $item->name }}</td>
                             </tr>
 
                             <tr>
-                                <th>Email</th>
+                                <th>Email :</th>
                                 <td>{{ $item->email }}</td>
-                            </tr>
 
-                            <tr>
-                                <th>Type</th>
+                                <th>Type :</th>
                                 <td>{{ $item->type }}</td>
                             </tr>
 
                             <tr>
-                                <th>NAAC Grade</th>
+                                <th>NAAC Grade :</th>
                                 <td>{{ $item->naac_grade }}</td>
-                            </tr>
 
-                            <tr>
-                                <th>Address</th>
-                                <td>{{ $item->address }}</td>
-                            </tr>
-
-                            <tr>
-                                <th>Status</th>
+                                <th>Status :</th>
                                 <td>
                                     <span class="badge bg-{{ $item->status == 'active' ? 'success' : 'danger' }}">
                                         {{ ucfirst($item->status) }}
@@ -268,16 +257,21 @@
                             </tr>
 
                             <tr>
-                                <th>Image</th>
-                                <td>
-                                    @if($item->image)
-                                        <img src="{{ asset('storage/' . $item->image) }}" width="120">
-                                    @endif
-                                </td>
+                                <th>Address :</th>
+                                <td colspan="3">{{ $item->address }}</td>
                             </tr>
 
                             <tr>
-                                <th>Description</th>
+                                <th>Image :</th>
+                                <td>
+                                    @if($item->image)
+                                        <img src="{{ asset('storage/' . $item->image) }}" width="120" class="img-thumbnail">
+                                    @else
+                                        <span class="text-muted">No Image</span>
+                                    @endif
+                                </td>
+
+                                <th>Description :</th>
                                 <td>{{ $item->description }}</td>
                             </tr>
 

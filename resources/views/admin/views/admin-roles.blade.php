@@ -38,7 +38,7 @@
                                 <tbody>
                                     @forelse($roles as $role)
                                     <tr>
-                                        <td></td>
+                                        <td>{{ $loop->iteration }}</td>
                                         <td>{{ $role->name }}</td>
                                         <td>{{ $role->created_at->format('d M Y, h:i A') }}</td>
                                         <td class="d-flex align-items-center">
