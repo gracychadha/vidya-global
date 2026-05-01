@@ -5,7 +5,7 @@
         $termsCondition = App\Models\TermsCondition::where('is_active', true)->first();
     @endphp
     <!-- Start main-content -->
-    <section class="page-title" style="background-image: url(website/images/background/page-title.jpg);">
+    <section class="page-title" style="background-image: url(website/images/upload/banner.png);">
         <div class="auto-container">
             <div class="title-outer">
                 <h1 class="title">Terms </h1>

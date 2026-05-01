@@ -24,7 +24,9 @@
                                 <li><i class="fa fa-comments"></i> {{ random_int(1,10) }} Comments</li>
                             </ul>
                             <h4 class="title"><a href="{{ route('blog-details', $blog->slug) }}">{{ $blog->title }}</a></h4>
-                            <div class="text">{{ $blog->description }} </div>
+                            <div class="text">
+    {{ \Illuminate\Support\Str::limit($blog->description, 100) }}
+</div>
                         </div>
                     </div>
                 </div>

@@ -38,11 +38,11 @@
             <div class="image-column col-lg-6 col-md-12 col-sm-12">
                 <div class="image-box">
                     <span class="sub-title bounce-y">100% Success Rate</span>
-                    <figure class="image-1"><img src="{{ asset('website/images/resource/image-3.png') }}" alt="">
+                    <figure class="image-1"><img src="{{ asset('website/images/upload/faq.png') }}" alt="">
                     </figure>
                     <figure class="image-2"><img src="{{ asset('website/images/upload/faq01.png') }}" alt="">
                     </figure>
-                    <figure class="plane-icon"><img src="{{ asset('website/images/resource/plane-2.png') }}" alt="">
+                    <figure class="plane-icon"><img src="{{ asset('website/images/resource/icon.png') }}" alt="">
                     </figure>
                 </div>
             </div>

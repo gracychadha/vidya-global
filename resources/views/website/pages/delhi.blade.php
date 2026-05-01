@@ -2,7 +2,7 @@
 @section('title', 'Delhi Colleges | Vidya Global Portal')
 @section('content')
     <!-- Start main-content -->
-    <section class="page-title" style="background-image: url(website/images/background/page-title.jpg);">
+    <section class="page-title" style="background-image: url(website/images/upload/banner.png);">
         <div class="auto-container">
             <div class="title-outer">
                 <h1 class="title">Colleges in Delhi</h1>
@@ -16,7 +16,7 @@
     <!-- end main-content -->
     {{-- main section --}}
     @include('website.components.associate-college.delhi')
-    
+
     @include('website.components.associate-college.delhi-colleges')
     {{-- countries section --}}
     @include('website.components.home.countries-section')

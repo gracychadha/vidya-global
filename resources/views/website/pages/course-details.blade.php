@@ -2,13 +2,13 @@
 @section('title', 'Admission Guidance | Vidya Global Portal')
 @section('content')
     <!-- Start main-content -->
-    <section class="page-title" style="background-image: url(website/images/background/page-title.jpg);">
+    <section class="page-title" style="background-image: url(website/images/upload/banner.png);">
         <div class="auto-container">
             <div class="title-outer">
                 <h1 class="title">{{ $course->name ?? 'Course' }}</h1>
                 <ul class="page-breadcrumb">
                     <li><a href="{{ route('home') }}">Home</a></li>
-                    <li>{{ $course->name  ?? 'Course'}}</li>
+                    <li>{{ $course->name ?? 'Course'}}</li>
                 </ul>
             </div>
         </div>
@@ -22,8 +22,8 @@
                 {{-- course sidebar --}}
                 @include('website.components.course.sidebar')
 
-               {{-- main section --}}
-               @include('website.components.course.adminssion-guidance')
+                {{-- main section --}}
+                @include('website.components.course.adminssion-guidance')
             </div>
         </div>
     </section>

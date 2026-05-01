@@ -1,5 +1,5 @@
 <section class="video-section pull-up">
-    <div class="bg bg-image" style="background-image: url(website/images/background/5.jpg)"></div>
+    <div class="bg bg-image" style="background-image: url(website/images/upload/video-bg.png)"></div>
     <div class="auto-container">
         <div class="content">
            

@@ -19,7 +19,7 @@
 
         <!-- Slide Item -->
         <div class="slide-item">
-            <div class="bg-image" style="background-image: url(website/images/banner/hero-banner.jpeg);"></div>
+            <div class="bg-image" style="background-image: url(website/images/upload/main-slider.png);"></div>
             <div class="auto-container">
                 <div class="content-box">
                     <div class="number animate-2">#2</div>

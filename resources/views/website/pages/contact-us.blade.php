@@ -3,7 +3,7 @@
 @section('content')
 
     <!-- Start main-content -->
-    <section class="page-title" style="background-image: url(website/images/background/page-title.jpg);">
+    <section class="page-title" style="background-image: url(website/images/upload/banner.png);">
         <div class="auto-container">
             <div class="title-outer">
                 <h1 class="title">Contact Us</h1>
@@ -130,15 +130,15 @@
 
     <!-- Divider: Google Map -->
     <!-- <section>
-                <div class="container-fluid p-0">
-                    <div class="row">
-                        <iframe
-                            src="https://maps.google.com/maps?q=BSNL%20Office%20Koeri%20Tola%20Ward%20No%2026%20Bettiah%20Bihar%20845438&output=embed"
-                            width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy">
-                        </iframe>
+                    <div class="container-fluid p-0">
+                        <div class="row">
+                            <iframe
+                                src="https://maps.google.com/maps?q=BSNL%20Office%20Koeri%20Tola%20Ward%20No%2026%20Bettiah%20Bihar%20845438&output=embed"
+                                width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy">
+                            </iframe>
+                        </div>
                     </div>
-                </div>
-            </section> -->
+                </section> -->
 @endsection
 @push('scripts')
 

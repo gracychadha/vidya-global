@@ -16,7 +16,7 @@ return new class extends Migration {
             $table->string('slug');
             $table->string('image');
             $table->string('description');
-            $table->string('overview');
+            $table->longText('overview');
             $table->enum('status', ['active', 'inactive'])->default('active');
             $table->timestamps();
         });

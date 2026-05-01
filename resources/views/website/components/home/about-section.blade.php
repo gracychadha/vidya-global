@@ -26,7 +26,7 @@
             <div class="image-column col-xl-6 col-lg-5 col-md-12 col-sm-12">
                 <div class="inner-column">
                     <div class="image-box">
-                        <figure class="abs-image"><img src="{{ asset('website/images/resource/image-2.png') }}" alt="">
+                        <!-- <figure class="abs-image"><img src="{{ asset('website/images/resource/image-2.png') }}" alt=""> -->
                         </figure>
                         <figure class="image-1 overlay-anim wow fadeInRight"><img
                                 src="{{ asset('website/images/upload/about-01.png') }}" alt=""></figure>
