@@ -2,7 +2,7 @@
 @section('title', 'Andhra pradesh Colleges | Vidya Global Portal')
 @section('content')
     <!-- Start main-content -->
-    <section class="page-title" style="background-image: url(website/images/upload/banner.png);">
+    <section class="page-title" style="background-image: url('{{ asset("website/images/upload/banner.png") }}');">
         <div class="auto-container">
             <div class="title-outer">
                 <h1 class="title">Colleges in {{ $state->name }}</h1>

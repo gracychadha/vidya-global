@@ -10,8 +10,8 @@
             <div class="training-carousel-two owl-carousel owl-theme">
                 @php
                     $colleges = App\Models\College::where('status', 'active')
-                    ->where('state_id',$state->id)
-                    ->get();
+                        ->where('state_id', $state->id)
+                        ->get();
                 @endphp
                 @forelse($colleges as $college)
                             <div class="training-block-two">
@@ -28,13 +28,16 @@
 
                                     <div class="overlay-content">
                                         <div class="inner">
-                                            <h5 class="title">{{ $college->name }}</h5>
+                                            <h5 class="title"><a href="{{ route('college.detail', $college->slug) }}">
+                                                    {{ $college->name }}
+                                                </a></h5>
 
                                             <div class="text">
                                                 {{ $college->description
                     ? \Illuminate\Support\Str::limit($college->description, 120)
                     : 'No description available' }}
                                             </div>
+
                                         </div>
                                     </div>
                                 </div>

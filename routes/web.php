@@ -162,6 +162,8 @@ Route::middleware('auth')->group(function () {
     // BULK IMPORT
     Route::post('colleges-import', [CollegeController::class, 'import'])->name('colleges.import');
 
+    Route::get('/colleges/{slug}', [CollegeController::class, 'show'])
+        ->name('college.detail');
     Route::get('/admin-course', [CourseController::class, 'index'])->name('admin-course.index');
     Route::post('/admin-course', [CourseController::class, 'store'])->name('admin-course.store');
     Route::put('/admin-course/{item}', [CourseController::class, 'update'])->name('admin-course.update');
@@ -217,17 +219,17 @@ Route::middleware('auth')->group(function () {
 
     Route::put('/admin-social-settings', [SocialSettingController::class, 'update'])
         ->name('admin-social-settings.update');
-   
+
 });
 
 
-    Route::get('/admin-users', [UserController::class, 'index'])->name('admin-users.index');
-    Route::post('/users', [UserController::class, 'store'])->name('users.store');
-    Route::put('/users/{user}', [UserController::class, 'update'])->name('users.update');
-    Route::delete('/users/{user}', [UserController::class, 'destroy'])->name('users.destroy');
+Route::get('/admin-users', [UserController::class, 'index'])->name('admin-users.index');
+Route::post('/users', [UserController::class, 'store'])->name('users.store');
+Route::put('/users/{user}', [UserController::class, 'update'])->name('users.update');
+Route::delete('/users/{user}', [UserController::class, 'destroy'])->name('users.destroy');
 
 
-   
+
 
 
 require __DIR__ . '/auth.php';

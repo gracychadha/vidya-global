@@ -6,14 +6,14 @@
                 <div class="service-list">
                     <ul>
                         @php
-                        $courseSidebar = \App\Models\Course::where('status', 'active')->get();
+                        $collegeSidebar = \App\Models\College::where('status', 'active')->take(5)->get();
                         @endphp
-                        @forelse($courseSidebar as $course)
+                        @forelse($collegeSidebar as $college)
                         <li>
-                            <a href="{{ route('courses', $course->slug) }}"
-                                class="{{ request()->route('slug') == $course->slug ? 'current' : '' }}">
+                            <a href="{{ route('courses', $college->slug) }}"
+                                class="{{ request()->route('slug') == $college->slug ? 'current' : '' }}">
                                 <i class="fas fa-angle-right"></i>
-                                <span>{{ $course->name }}</span>
+                                <span>{{ $college->name }}</span>
                             </a>
                         </li>
                         @empty

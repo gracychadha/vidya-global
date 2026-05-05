@@ -15,6 +15,15 @@ class CollegeController extends Controller
     /**
      * LIST PAGE
      */
+
+    public function show($slug)
+    {
+        $college = College::where('slug', $slug)
+            ->where('status', 'active')
+            ->firstOrFail();
+
+        return view('website.pages.college-details', compact('college'));
+    }
     public function index()
     {
         $colleges = College::with('state')->latest()->get();
