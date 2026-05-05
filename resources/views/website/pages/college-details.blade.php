@@ -1,6 +1,8 @@
 @extends('website.layout.app')
 @section('title', 'Colleges | Vidya Global Portal')
 @section('content')
+
+  
     <!-- Start main-content -->
     <section class="page-title" style="background-image: url('{{ asset("website/images/upload/banner.png") }}');">
         <div class="auto-container">

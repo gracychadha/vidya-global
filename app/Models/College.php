@@ -18,7 +18,10 @@ class College extends Model
         'naac_grade',
         'status'
     ];
-
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
     // Relation with state
     public function state()
     {

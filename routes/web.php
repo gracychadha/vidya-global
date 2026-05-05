@@ -7,6 +7,7 @@ use App\Http\Controllers\CollegeStateController;
 use Illuminate\Support\Facades\Route;
 use App\Models\CollegeState;
 use App\Models\Course;
+use App\Models\College;
 use App\Http\Controllers\CollegeController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\PrivacyPolicyController;
@@ -18,6 +19,9 @@ use App\Models\ContactLead;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\UserController;
 
+Route::get('/college/{college:slug}', function (College $college) {
+    return view('website.pages.college-details', compact('college'));
+})->name('college.detail');
 Route::get('/', function () {
     return view('website.pages.welcome');
 })->name('home');
@@ -162,8 +166,7 @@ Route::middleware('auth')->group(function () {
     // BULK IMPORT
     Route::post('colleges-import', [CollegeController::class, 'import'])->name('colleges.import');
 
-    Route::get('/colleges/{slug}', [CollegeController::class, 'show'])
-        ->name('college.detail');
+   
     Route::get('/admin-course', [CourseController::class, 'index'])->name('admin-course.index');
     Route::post('/admin-course', [CourseController::class, 'store'])->name('admin-course.store');
     Route::put('/admin-course/{item}', [CourseController::class, 'update'])->name('admin-course.update');
